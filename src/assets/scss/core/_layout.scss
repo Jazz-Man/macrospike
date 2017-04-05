@@ -1,0 +1,16 @@
+@import "../variables";
+@import "../mixin";
+
+#page-header {
+  min-height: 56px;
+  }
+
+#page-content {
+  margin-bottom: 50px;
+  margin-top: 56px;
+  position: relative;
+  }
+
+#page-footer {
+  min-height: 50px;
+  }

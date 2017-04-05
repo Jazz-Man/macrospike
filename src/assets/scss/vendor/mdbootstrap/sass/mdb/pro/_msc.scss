@@ -1,0 +1,107 @@
+// Miscellaneous
+// Advanced tables
+.table {
+  a {
+    margin-left: 1rem;
+    }
+
+  fieldset {
+    margin-bottom: 0;
+
+    label {
+      height: 8px;
+      }
+    }
+
+  }
+
+// Product table
+.product-table {
+
+  img {
+    max-height: 150px;
+    min-width: 50px;
+    }
+
+  td {
+    vertical-align: middle;
+    }
+  }
+
+// Inline list with images
+.inline-ul-img {
+  li {
+    display: inline;
+
+    img {
+      margin: 8px;
+      max-width: 100px;
+      @extend .z-depth-1-half;
+      }
+    }
+  }
+
+// stripes
+.streak {
+  background: #e5e5e5;
+  display: block;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+
+  &.streak-lg {
+    height: 400px;
+    }
+
+  &.streak-photo {
+    @include background-size(cover);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+  &.no-flex {
+    height: auto;
+    padding-bottom: 3.125rem;
+    padding-top: 3.125rem;
+    }
+
+  .flex-center {
+
+    ul {
+      margin-bottom: 0;
+
+      li {
+
+        &:last-child {
+          margin-bottom: 0;
+          }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+          margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+// boxed gallery
+.boxed-gallery {
+  .col-md-6,
+  .col-md-3 {
+    padding: 0.36rem 0.5rem;
+    }
+
+  &.right-aligned {
+    @media (min-width: 768px) {
+      .col-md-6,
+      .col-md-3 {
+        float: right;
+        }
+      }
+    }
+  }

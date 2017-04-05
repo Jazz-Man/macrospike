@@ -1,0 +1,32 @@
+@if $use-flip == true {
+
+  @keyframes flip {
+    0% {
+      animation-timing-function: ease-out;
+      transform: perspective($flipper-perspective) rotateY(0);
+      }
+    40% {
+      transform: perspective($flipper-perspective) translateZ($flipper-translate) rotateY(170deg);
+      animation-timing-function: ease-out;
+      }
+    50% {
+      transform: perspective($flipper-perspective) translateZ($flipper-translate) rotateY(190deg) scale(1);
+      animation-timing-function: ease-in;
+      }
+    80% {
+      transform: perspective($flipper-perspective) rotateY($flipper-degrees-max * 4) scale(0.95);
+      animation-timing-function: ease-in;
+      }
+    100% {
+      transform: perspective($flipper-perspective) scale(1);
+      animation-timing-function: ease-in;
+      }
+    }
+
+  .flip {
+    @include animate-prefixer(transform-style, preserve-3d);
+    @include animate-prefixer(backface-visibility, visible !important);
+    @include animate-prefixer(animation-name, flip)
+    }
+
+  }

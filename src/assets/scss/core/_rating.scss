@@ -1,0 +1,60 @@
+.rating-passive {
+
+  .stars {
+    margin-right: 5px;
+
+    figure {
+      @include opacity(.1);
+      color: $black;
+      font-size: 11px;
+      margin-right: 1px;
+
+      &.active {
+        @include opacity(1);
+        color: $color-default;
+        }
+      }
+    }
+
+  .reviews {
+    @include opacity(.5);
+    font-size: 11px;
+
+    &:after {
+      content: ")";
+      }
+
+    &:before {
+      content: "(";
+      }
+    }
+  }
+
+.star-rating {
+  i {
+    @include transit;
+    display: inline-block;
+    cursor: pointer;
+    padding: 2px;
+    color: rgba($black, .2);
+    &.active, &.hover {
+      color: $color-default;
+      }
+    }
+  }
+
+.visitor-rating {
+  dt {
+    font-weight: normal;
+    }
+  dd {
+    font-weight: bold;
+    color: $color-default;
+    &.star-rating {
+      clear: left;
+      margin-bottom: 10px;
+      text-align: left;
+      padding: 0;
+      }
+    }
+  }

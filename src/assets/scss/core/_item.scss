@@ -1,0 +1,300 @@
+.item {
+  @include transform-style(preserve-3d);
+  @include shadow;
+  margin-bottom: 30px;
+  position: relative;
+
+  > a {
+    display: block;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+
+      .image {
+        @include scale(1.1);
+        }
+
+      .description {
+        will-change: transform;
+        @include transform(translateY(-3px));
+        h4 {
+          will-change: transform;
+          }
+        }
+      }
+
+    .description {
+      @include transit;
+      bottom: 20px;
+      color: $color-white;
+      left: 20px;
+      position: absolute;
+
+      figure {
+        @include shadow-text;
+        font-size: 12px;
+        font-weight: bold;
+
+        i {
+          margin-right: 5px;
+          }
+
+        span {
+          margin-right: 10px;
+          }
+        }
+
+      h3 {
+        @include shadow-text;
+        color: $color-white;
+        font-size: 21px;
+        font-weight: bold;
+        margin-bottom: 2px;
+        margin-top: 5px;
+        }
+
+      h4 {
+        @include shadow-text;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+        }
+      }
+
+    .image {
+      @include transition(.6s ease);
+      @include backface-visibility(hidden);
+      @include scale(1.01);
+      height: 100%;
+      position: absolute;
+      width: 100%;
+
+      &:after {
+        @include opacity(.7);
+        @include gradient-black;
+        background-color: rgba($black, .2);
+        bottom: 0;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        }
+      }
+    }
+
+  &.featured {
+    .label {
+      background-color: transparent;
+      border: 1px solid $color-white;
+      color: $color-white;
+      }
+
+    .additional-info {
+      background-color: darken($color-default, 15%);
+      color: $color-white;
+
+      .rating-passive {
+
+        .stars {
+          figure {
+            color: $color-white;
+            }
+          }
+        }
+
+      .controls-more {
+        &:after {
+          color: $color-white;
+          }
+        }
+      }
+    }
+
+  &.item-row {
+    @include shadow;
+    @include transit;
+    background-color: $color-grey-light;
+    z-index: 2;
+
+    &:hover {
+      @include transform(translateX(5px));
+      background-color: darken($color-grey-light, 2%);
+      }
+
+    > a {
+      display: table;
+      height: 150px;
+      padding-left: 180px;
+      width: 100%;
+
+      &:hover {
+        .image {
+          @include scale(1);
+          }
+
+        .description {
+          @include transform(translateY(0px));
+          }
+        }
+
+      .label {
+        @include box-shadow(none);
+        background-color: transparent;
+        border: 1px solid rgba($black, .2);
+        color: rgba($black, .5);
+        display: inline-block;
+        margin: 8px 0;
+        padding: 4px 8px;
+        }
+
+      .image {
+        @include scale(1);
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 180px;
+
+        &:after {
+          @include opacity(.6);
+          background-color: transparent;
+          }
+
+        figure {
+          @include shadow-text;
+          bottom: 5px;
+          color: $color-white;
+          font-size: 12px;
+          font-weight: bold;
+          padding: 5px;
+          position: absolute;
+          text-align: center;
+          width: 100%;
+          z-index: 1;
+          }
+        }
+
+      .description {
+        bottom: inherit;
+        display: table-cell;
+        left: inherit;
+        padding-left: 20px;
+        position: relative;
+        vertical-align: middle;
+
+        h4,
+        h3 {
+          @include text-shadow(none);
+          will-change: unset;
+          }
+
+        h4 {
+          color: rgba($black, .5);
+          }
+
+        h3 {
+          color: $color-default;
+          font-size: 18px;
+          margin-bottom: 4px;
+          }
+        }
+
+      .map {
+        background-color: rgba($black, .1);
+        display: table-cell;
+        height: 100%;
+        width: 100px;
+        }
+      }
+
+    .additional-info {
+      background-color: transparent;
+      display: table-cell;
+      padding: 0;
+      padding-right: 40px;
+      text-align: right;
+      top: -2px;
+      vertical-align: middle;
+      width: 150px;
+
+      .reviews {
+        color: $black;
+        }
+      }
+
+    .controls-more {
+      z-index: 1;
+      }
+    }
+
+  .price {
+    @include shadow;
+    background-color: $color-white;
+    color: $color-grey-dark;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 5px;
+    position: absolute;
+    right: -6px;
+    top: 30px;
+    z-index: 1;
+
+    &:after {
+      border-color: #ababab transparent transparent transparent;
+      border-style: solid;
+      border-width: 6px 6px 0 0;
+      bottom: -6px;
+      content: "";
+      height: 0;
+      position: absolute;
+      right: 0;
+      width: 0;
+      }
+    }
+
+  .circle {
+    @include shadow;
+    @include border-radius(50%);
+    background-color: $color-white;
+    height: 30px;
+    left: 20px;
+    position: absolute;
+    text-align: center;
+    top: -15px;
+    width: 30px;
+
+    i {
+      color: $color-default;
+      font-size: 12px;
+      line-height: 28px;
+      }
+
+    &.featured {
+      background-color: $color-default;
+      color: $color-white;
+      font-size: 12px;
+      font-weight: 800;
+      height: 45px;
+      line-height: 43px;
+      text-align: center;
+      width: 45px;
+      }
+
+    &.sale {
+      left: 20px;
+      position: absolute;
+      top: -20px;
+      z-index: 1;
+      }
+    }
+
+  .additional-info {
+    background-color: $color-grey-light;
+    padding: 15px 20px;
+    position: relative;
+    }
+
+  }

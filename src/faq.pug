@@ -1,0 +1,237 @@
+extends common/layout
+
+block append content
+	.container
+		+breadcrumb
+		.row
+			.col-md-9.col-sm-9
+				section.page-title
+					h1 Frequently Asked Questions
+				// end section-title
+				section
+					.row
+						.col-md-8.col-sm-8
+							form.form.inputs-underline
+								h3 Search in Answers
+								.form-group
+									input#name.form-control(type='text' name='name' placeholder='Enter your search')
+								// end form-group
+						// end col-md-8
+						.col-md-4.col-sm-4
+							.featured-contact
+								i.icon_comment_alt
+								h4
+									| Didn’t find an answer?
+									br
+									| Call our support
+								h3 228-341-8068
+					// end row
+				section
+					.answer
+						.box
+							h3 Sed tincidunt vel orci sed fermentum. Nullam nec turpis blandit?
+							p
+								| Ut nec vulputate enim. Nulla faucibus convallis dui. Donec arcu enim, scelerisque gravida lacus vel,
+								| dignissim cursus lectus. Aliquam laoreet purus in iaculis sodales. Morbi convallis diam ac accumsan
+								| placerat. Donec ultrices placerat arcu non accumsan
+						figure
+							| Was this answer helpful?
+							a(href='#')
+								| Yes
+								i.fa.fa-thumbs-up
+							a(href='#')
+								| No
+								i.fa.fa-thumbs-down
+					// end answer
+					.answer
+						.box
+							h3 Integer a arcu non libero euismod euismod. Donec non porta leo.
+							p
+								| Curabitur consectetur ligula in cursus sagittis. Praesent purus velit, sagittis vel malesuada
+								| nec, ultricies vitae quam. Maecenas aliquet convallis placerat. Aliquam erat volutpat. Nulla
+								| euismod leo eu nulla scelerisque molestie. Sed vehicula metus est  eget molestie elit iaculis
+								| quis. Nulla elementum sem ex, eu lobortis urna convallis nec. Suspendisse nunc mauris, blandit
+								| sed risus eget, pretium ultricies neque. Vivamus ultricies odio sed vehicula hendrerit.
+								| Nunc ultrices scelerisque ligula sit amet aliquam.
+						figure
+							| Was this answer helpful?
+							a(href='#')
+								| Yes
+								i.fa.fa-thumbs-up
+							a(href='#')
+								| No
+								i.fa.fa-thumbs-down
+					// end answer
+					.answer
+						.box
+							h3 Fusce ut tempus lacus, pretium vestibulum diam
+							p
+								| Ut nec vulputate enim. Nulla faucibus convallis dui. Donec arcu enim, scelerisque gravida lacus
+								| vel, dignissim cursus lectus. Aliquam laoreet purus in iaculis sodales. Morbi convallis diam
+								| ac accumsan placerat. Donec ultrices placerat arcu non accumsan
+						figure
+							| Was this answer helpful?
+							a(href='#')
+								| Yes
+								i.fa.fa-thumbs-up
+							a(href='#')
+								| No
+								i.fa.fa-thumbs-down
+					// end answer
+					.answer
+						.box
+							h3 Mauris et mollis augue. Pellentesque habitant morbi tristique senectus
+							p
+								| Donec facilisis est id orci blandit aliquet. Suspendisse volutpat auctor dui in interdum. Pellentesque porttitor augue
+								| quis neque efficitur auctor. Nulla dictum euismod semper. Suspendisse volutpat rutrum enim. Nunc facilisis,
+								| massa vitae vestibulum ultrices, nulla urna molestie purus, nec ultricies nulla nibh lobortis sapien.
+								| Nulla vitae maximus erat.
+						figure
+							| Was this answer helpful?
+							a(href='#')
+								| Yes
+								i.fa.fa-thumbs-up
+							a(href='#')
+								| No
+								i.fa.fa-thumbs-down
+					// end answer
+					.answer
+						.box
+							h3  Etiam condimentum quam non dui lacinia
+							p
+								| Sed vel erat mi. Donec hendrerit consectetur ipsum, ut lacinia sem egestas sed. Praesent ac
+								| augue dolor. Proin euismod nulla vel ipsum cursus, nec sagittis risus volutpat. Phasellus
+								| eu quam metus. Ut luctus ut nulla vel blandit. Quisque accumsan mauris non rutrum fermentum.
+								| Phasellus non ornare ligula. Duis maximus vitae est ullamcorper condimentum. Sed consequat
+								| pulvinar turpis, sed condimentum nibh pretium in.
+						figure
+							| Was this answer helpful?
+							a(href='#')
+								| Yes
+								i.fa.fa-thumbs-up
+							a(href='#')
+								| No
+								i.fa.fa-thumbs-down
+					// end answer
+				section
+					.center
+						nav(aria-label='Page navigation')
+							ul.pagination
+								li.disabled.previous
+									a(href='#' aria-label='Previous')
+										i.arrow_left
+								li
+									a(href='#') 1
+								li
+									a(href='#') 2
+								li.active
+									a(href='#') 3
+								li
+									a(href='#') 4
+								li
+									a(href='#') 5
+								li.next
+									a(href='#' aria-label='Next')
+										i.arrow_right
+			// end col-md-9
+			.col-md-3.col-sm-3
+				aside.sidebar
+					section
+						h2 Search Filter
+						form.form.inputs-underline
+							.form-group
+								input.form-control(type='text' name='keyword' placeholder='Enter keyword')
+							// end form-group
+							.form-group
+								select.form-control.selectpicker(name='location')
+									option(value='') Location
+									option(value='1') New York
+									option(value='2') Washington
+									option(value='3') London
+									option(value='4') Paris
+							// end form-group
+							.form-group
+								select.form-control.selectpicker(name='category')
+									option(value='') Category
+									option(value='1') Restaurant
+									option(value='2') Event
+									option(value='3') Adrenaline
+									option(value='4') Sport
+									option(value='5') Wellness
+							// end form-group
+							.form-group
+								#price-slider.ui-slider(data-value-min='10' data-value-max='400' data-value-type='price' data-currency='$' data-currency-placement='before')
+									.values.clearfix
+										input.value-min(name='value-min[]' readonly='')
+										input.value-max(name='value-max[]' readonly='')
+									.element
+								// end price-slider
+							// end form-group
+							.form-group
+								button.btn.btn-primary.pull-right(type='submit')
+									| Search Now
+									i.fa.fa-search
+							// end form-group
+					section
+						h2 Recent Items
+						.item(data-id='1')
+							a(href='detail.html')
+								.description
+									figure Average Price: $8 - $30
+									.label.label-default Restaurant
+									h3 Marky’s Restaurant
+									h4 63 Birch Street
+								// end description
+								.image.bg-transfer
+									img(src=require('assets/img/items/1.jpg') alt='')
+								// end image
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+						// end item
+						.item(data-id='2')
+							a(href='detail.html')
+								.description
+									.label.label-default Restaurant
+									h3 Ironapple
+									h4 4209 Glenview Drive
+								// end description
+								.image.bg-transfer
+									img(src=require('assets/img/items/2.jpg') alt='')
+								// end image
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+							// end controls-more
+						// end item
+						.item(data-id='15')
+							figure.ribbon Top
+							a(href='detail.html')
+								.description
+									figure Happy hour: 18:00 - 19:00
+									.label.label-default Bar & Grill
+									h3 Bambi Planet Houseboat Bar& Grill
+									h4 3857 Losh Lane
+								// end description
+								.image.bg-transfer
+									//img(src='assets/img/items/3.jpg' alt='')
+									img(src=require('assets/img/items/3.jpg') alt='')
+								// end image
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail

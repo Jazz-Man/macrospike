@@ -1,0 +1,82 @@
+extends common/layout
+
+block append content
+	.container
+		+breadcrumb
+		section.center.page-title
+			h1 How It Works
+			h3.subtitle Promote your item in three simple steps
+		section
+			.row
+				.col-md-8.cols-m-8.col-md-offset-2
+					.step
+						.circle
+							figure 1
+							i.icon_id.fa.fa-sign-in
+							.circle-bg.opacity-30
+						.box
+							h2 Register an Account
+							p
+								| Ut nec vulputate enim. Nulla faucibus convallis dui. Donec arcu enim, scelerisque gravida
+								| lacus vel, dignissim cursus lectus.
+							a.btn.btn-default.btn-rounded.shadow.btn-xs(href='#') Register an account
+					// end step
+					.step
+						.circle
+							figure 2
+							i.icon_adjust-vert.fa.fa-th-list
+							.circle-bg.opacity-60
+						.box
+							h2 Choose a Plan
+							p
+								| Curabitur consectetur ligula in cursus sagittis. Praesent purus velit, sagittis vel malesuada
+								| nec, ultricies vitae quam.
+							a.btn.btn-default.btn-rounded.shadow.btn-xs(href='#') Choose a plan
+					// end step
+					.step
+						.circle
+							figure 3
+							i.icon_box-checked.fa.fa-check-square
+							.circle-bg.opacity-90
+						.box
+							h2 Submit Your Item
+							p
+								| nteger lacinia sem in libero iaculis, ac sollicitudin tortor elementum.
+								| Donec lorem orci, egestas eu condi
+							a.btn.btn-default.btn-rounded.shadow.btn-xs(href='#') Submit Item
+					// end step
+				// end col-md-8
+			// end row
+		hr
+		section
+			.row
+				.col-md-6.col-sm-6
+					.section-title
+						h2 What Is Included
+						h3.subtitle Check what you’ll get after registration
+					ul.list-unstyled.bullets
+						li Praesent id diam non est molestie elementum
+						li Curabitur cursus, eros vitae tempor eleifend, magna est venenatis lectus
+						li a volutpat lacus tortor a sem. Class aptent taciti sociosqu
+						li ad litora torquent per conubia nostra, per inceptos himenaeos.
+						li Proin efficitur at diam nec pharetra
+				.col-md-6.col-sm-6
+					.section-title
+						h2 Our Satisfied Clients
+						h3.subtitle All we do is for satisfaction of our clients
+					.testimonials
+						.owl-carousel(data-owl-items='1', data-owl-nav='0', data-owl-dots='1')
+							blockquote
+								.image
+									.bg-transfer(data-bg=require('assets/img/person-01.jpg'))
+								h3 Jane Woodstock
+								h4 CEO at ArtBrands
+								p
+									| Ut nec vulputate enim. Nulla faucibus convallis dui. Donec arcu enim, scelerisque gravida lacus vel.
+							blockquote
+								.image
+									.bg-transfer(data-bg=require('assets/img/person-04.jpg'))
+								h3 Peter Doe
+								h4 CEO at ArtBrands
+								p
+									| Donec arcu enim, scelerisque gravida lacus vel, dignissim cursus lectus. Aliquam laoreet purus in iaculis sodales.

@@ -1,0 +1,27 @@
+@if $use-bounceInUp == true {
+
+  @keyframes bounceInUp {
+    0% {
+      opacity: 0;
+      transform: translateY($base-distance-big * 2);
+      }
+
+    60% {
+      opacity: 1;
+      transform: translateY(-$base-distance * 3);
+      }
+
+    80% {
+      transform: translateY($base-distance);
+      }
+
+    100% {
+      transform: translateY(0);
+      }
+    }
+
+  .bounceInUp {
+    @include animate-prefixer(animation-name, bounceInUp);
+    }
+
+  }

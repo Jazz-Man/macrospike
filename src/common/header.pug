@@ -1,0 +1,22 @@
+header#page-header.fixed-top.zindex-sm
+  nav.navbar.navbar-toggleable-md.navbar-dark.bg-primary
+    .container
+      button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      a.navbar-brand(href='#')
+        img.d-inline-block.align-top.logo(src=require('assets/img/svg/logo.svg'))
+      #navbarNav.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item.active
+            +link('/index.html','How it Works')(class="nav-link")
+          li.nav-item.dropdown
+            +link('/index.html','Getting Started')(class="nav-link dropdown-toggle"
+            id="navbar-dropdown-getting-started" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+            .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+              +link('/#','The Strategy')(class="dropdown-item")
+              +link('/#','FAQ')(class="dropdown-item")
+              +link('/#','Downloads')(class="dropdown-item")
+          li.nav-item.dropdown
+            +link('/index.html','How it Works')(class="nav-link")
+          li.nav-item
+            +link('/index.html','How it Works')(class="nav-link")

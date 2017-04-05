@@ -1,0 +1,393 @@
+.picker__list {
+  list-style: none;
+  margin: 0;
+  padding: .75em 0 4.2em;
+  }
+
+.picker__list-item {
+  background: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+  margin-bottom: -1px;
+  padding: .75em 1.25em;
+  position: relative;
+  }
+
+@media (min-height: 46.75em) {
+  .picker__list-item {
+    padding: .5em 1em;
+    }
+  }
+
+
+.picker__list-item:hover {
+  background: #b1dcfb;
+  border-color: #0089ec;
+  color: #000000;
+  cursor: pointer;
+  z-index: 10;
+  }
+
+.picker__list-item--highlighted {
+  border-color: #0089ec;
+  z-index: 10;
+  }
+
+.picker__list-item--highlighted:hover,
+.picker--focused .picker__list-item--highlighted {
+  background: #b1dcfb;
+  color: #000000;
+  cursor: pointer;
+  }
+
+
+.picker__list-item--selected,
+.picker__list-item--selected:hover,
+.picker--focused .picker__list-item--selected {
+  background: #0089ec;
+  color: #ffffff;
+  z-index: 10;
+  }
+
+.picker__list-item--disabled,
+.picker__list-item--disabled:hover,
+.picker--focused .picker__list-item--disabled {
+  background: #f5f5f5;
+  border-color: #dddddd;
+  color: #dddddd;
+  cursor: default;
+  z-index: auto;
+  }
+
+.picker--time .picker__button--clear {
+  background: none;
+  border: 0;
+  color: #666666;
+  display: block;
+  font-size: .67em;
+  font-weight: 500;
+  margin: 1em auto 0;
+  padding: 1em 1.25em;
+  text-align: center;
+  text-transform: uppercase;
+  width: 80%;
+  }
+
+.picker--time .picker__button--clear:hover,
+.picker--time .picker__button--clear:focus {
+  color: #000000;
+  background: #b1dcfb;
+  background: #ee2200;
+  border-color: #ee2200;
+  cursor: pointer;
+  color: #ffffff;
+  outline: none;
+  }
+
+.picker--time .picker__button--clear:before {
+  color: #666666;
+  font-size: 1.25em;
+  font-weight: bold;
+  top: -.25em;
+  }
+
+.picker--time .picker__button--clear:hover:before,
+.picker--time .picker__button--clear:focus:before {
+  color: #ffffff;
+  }
+
+.picker--time .picker__frame {
+  max-width: 320px;
+  min-width: 256px;
+  }
+
+.picker--time .picker__box {
+  background: #f2f2f2;
+  font-size: 1em;
+  padding: 0;
+  }
+
+@media (min-height: 40.125em) {
+  .picker--time .picker__box {
+    margin-bottom: 5em;
+    }
+  }
+
+.picker__footer .clockpicker-button {
+  margin: auto;
+  margin-top: 15px;
+  }
+
+.picker__footer .clockpicker-button:focus {
+  background-color: transparent;
+  }
+
+.picker__footer .clockpicker-button:active {
+  background-color: rgba(0, 150, 136, 0.25);
+  }
+
+.darktheme .picker__box {
+  background-color: #212121;
+  }
+
+.darktheme .picker__date-display {
+  background-color: transparent;
+  }
+
+.darktheme .clockpicker-display {
+  color: white;
+  }
+
+.darktheme .clockpicker-span-am-pm {
+  color: white;
+  }
+
+.darktheme .clockpicker-span-hours.text-primary, .darktheme .clockpicker-span-minutes.text-primary, .darktheme #click-am.text-primary, .darktheme #click-pm.text-primary {
+  color: #ff4081;
+  }
+
+.darktheme .clockpicker-plate {
+  background-color: transparent;
+  }
+
+.darktheme .clockpicker-tick {
+  color: white;
+  background-color: rgba(255, 64, 129, 0);
+  }
+
+.darktheme .clockpicker-tick.active, .darktheme .clockpicker-tick:hover {
+  background-color: rgba(255, 64, 129, 0.25);
+  }
+
+.darktheme .clockpicker-canvas-bearing {
+  fill: white;
+  }
+
+.darktheme .clockpicker-canvas-fg {
+  fill: rgba(255, 64, 129, 0);
+  }
+
+.darktheme .clockpicker-canvas-fg.active {
+  fill: rgba(255, 64, 129, 0.5);
+  }
+
+.darktheme .clockpicker-canvas-bg {
+  fill: rgba(255, 64, 129, 0.25);
+  }
+
+.darktheme .clockpicker-canvas-bg-trans {
+  fill: rgba(255, 64, 129, 0.25);
+  }
+
+.darktheme .clockpicker-canvas line {
+  stroke: rgba(255, 64, 129, 0.25);
+  }
+
+.darktheme button {
+  color: white;
+  }
+
+.darktheme .btn-floating.btn-flat.active {
+  background-color: rgba(255, 64, 129, 0.25);
+  }
+
+.darktheme .btn-floating.btn-flat:active {
+  background-color: rgba(255, 64, 129, 0.5);
+  }
+
+.darktheme .picker__footer .clockpicker-button:active {
+  background-color: rgba(255, 64, 129, 0.25);
+  }
+
+.clockpicker-span-hours.text-primary,
+.clockpicker-span-minutes.text-primary,
+#click-am.text-primary,
+#click-pm.text-primary {
+  color: #ffffff !important;
+  }
+
+
+
+.clockpicker-display {
+  color: #b2dfdb;
+  display: inline-block;
+  font-size: 70px;
+  height: 85px;
+  margin: auto;
+  padding: 10px 10px 0;
+  vertical-align: middle;
+  }
+
+.clockpicker-display-column {
+  float: left;
+  }
+
+.clockpicker-display-am-pm {
+  height: 85px;
+  padding-left: 5px;
+  vertical-align: bottom;
+  }
+
+.clockpicker-span-am-pm {
+  color: #b2dfdb;
+  display: inline-block;
+  font-size: 23px;
+  line-height: 25px;
+  }
+
+.clockpicker-span-hours,
+.clockpicker-span-minutes {
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+  cursor: pointer;
+  transition: color 500ms;
+  }
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+    }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+  to {
+    transform: scale3d(1, 1, 1);
+    }
+  }
+
+#click-am,
+#click-pm {
+  cursor: pointer;
+  }
+
+.clockpicker-span-hours.text-primary,
+.clockpicker-span-minutes.text-primary,
+#click-am.text-primary,
+#click-pm.text-primary {
+  animation-name: pulse;
+  color: white;
+  }
+
+.clockpicker-moving {
+  cursor: move;
+  }
+
+.clockpicker-plate {
+  background-color: #eeeeee;
+  border-radius: 50%;
+  height: 270px;
+  margin: 20px auto auto;
+  overflow: visible;
+  position: relative;
+  user-select: none;
+  width: 270px;
+  }
+
+.clockpicker-canvas,
+.clockpicker-dial {
+  height: 270px;
+  left: -1px;
+  position: absolute;
+  top: -1px;
+  width: 270px;
+  }
+
+.clockpicker-minutes {
+  visibility: hidden;
+  }
+
+.clockpicker-tick {
+  background-color: rgba(0, 150, 136, 0);
+  border-radius: 50%;
+  color: #666666;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  -webkit-transition: background-color 300ms;
+  -moz-transition: background-color 300ms;
+  -ms-transition: background-color 300ms;
+  -o-transition: background-color 300ms;
+  transition: background-color 300ms;
+  width: 40px;
+  }
+
+.clockpicker-tick.active,
+.clockpicker-tick:hover {
+  background-color: rgba(0, 150, 136, 0.25);
+  }
+
+.clockpicker-dial {
+  transition: transform 350ms, opacity 350ms;
+  }
+
+.clockpicker-dial-out {
+  opacity: 0;
+  }
+
+.clockpicker-hours.clockpicker-dial-out {
+  transform: scale(1.2, 1.2);
+  }
+
+.clockpicker-minutes.clockpicker-dial-out {
+  transform: scale(.8, .8);
+  }
+
+.clockpicker-canvas {
+  transition: opacity 300ms;
+  }
+
+.clockpicker-canvas-out {
+  opacity: .25;
+  }
+
+.clockpicker-canvas-bearing {
+  stroke: none;
+  fill: rgba(0, 77, 64, 0.75);
+  }
+
+.clockpicker-canvas-fg {
+  stroke: none;
+  fill: rgba(0, 77, 64, 0);
+  }
+
+.clockpicker-canvas-fg.active {
+  fill: rgba(0, 77, 64, 0.5);
+  }
+
+.clockpicker-canvas-bg {
+  stroke: none;
+  fill: rgba(0, 150, 136, 0.25);
+  }
+
+.clockpicker-canvas-bg-trans {
+  fill: rgba(0, 150, 136, 0.25);
+  }
+
+.clockpicker-canvas line {
+  stroke: rgba(0, 150, 136, 0.25);
+  stroke-linecap: round;
+  stroke-width: 1;
+  }
+
+.clockpicker-am-pm-block {
+  height: 50px;
+  margin-top: -10px;
+  width: 100%;
+  }
+
+.clockpicker-button.am-button {
+  float: left;
+  height: 45px;
+  width: 45px;
+  }
+
+.clockpicker-button.pm-button {
+  float: right;
+  height: 45px;
+  width: 45px;
+  }
+

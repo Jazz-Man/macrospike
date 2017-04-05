@@ -1,0 +1,43 @@
+#slide-out.slideout-menu.nav.flex-column.special-color.h-100.zindex-md
+  li.nav-item.avatar
+    a.nav-link.py-4.flex-center(href='#')
+      img.img-fluid(src=require('assets/img/logo.png'))
+
+  li.nav-item(data-parent="#slide-out" data-toggle='collapse' data-target='#products')
+    a.nav-link(href='#')
+      i.fa.fa-gift.fa-lg
+      |  UI Elements
+      span.arrow
+    ul#products.collapse.collapsible
+      li.active
+        a(href='#') CSS3 Animation
+      li
+        a(href='#') General
+      li
+        a(href='#') Buttons
+      li
+        a(href='#') Tabs & Accordions
+      li
+        a(href='#') Typography
+      li
+        a(href='#') FontAwesome
+      li
+        a(href='#') Slider
+      li
+        a(href='#') Panels
+      li
+        a(href='#') Widgets
+      li
+        a(href='#') Bootstrap Model
+
+  li.nav-item(data-parent="#slide-out" data-toggle='collapse' data-target='#service')
+    a.nav-link(href='#')
+      i.fa.fa-globe.fa-lg
+      |  Services
+      span.arrow
+    ul#service.collapse
+      li.nav-item New Service 1
+      li.nav-item New Service 2
+      li.nav-item New Service 3
+
+  .sidenav-bg.mask-strong

@@ -1,0 +1,79 @@
+extends common/layout
+
+block append defaultTitle
+  title Profile - uPages
+
+block append content
+  .container.py-3
+    section.section.section-intro
+      .divider-new.my-5
+        h2 Statistics
+      .row
+        - var n = 1;
+          while n <= 4
+            -var idCurrent = n++
+            .col-md-3
+              .card
+                .admin-up
+                  i.fa.fa-money.blue.darken-3
+                  .data
+                    p SALES
+                    h3 2000$
+                .card-block
+                  .progress.w-100.rounded-0
+                    -var style = 'width: '+idCurrent+'5%'
+                    .progress-bar.bg-success(role='progressbar' style=style aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+                  p.card-text Better than last week (#{idCurrent}5%)
+
+    section.section.statistics.card
+      .row
+        .col-md-12
+          .row
+            .col-md-5
+            .col-md-7
+              canvas#myChart
+
+
+    section.section.listing-list
+      .divider-new.my-5
+        h2 Manage your listing
+      .card-group
+        - var n = 1;
+          while n <= 3
+            -var idCurrent = n++
+            .card.card-cascade.narrower
+              .view.overlay.hm-white-slight
+                img.img-fluid(src=require('assets/img/items/2' + idCurrent + '.jpg') alt='')
+                a
+                  .mask
+              .card-block.text-xs-center
+                a.text-muted(href='')
+                  h5 Category
+                h4.card-title
+                  strong
+                    a(href='') Product name
+                ul.rating
+                  li
+                    i.fa.fa-star
+                  li
+                    i.fa.fa-star
+                  li
+                    i.fa.fa-star
+                  li
+                    i.fa.fa-star
+                  li
+                    i.fa.fa-star-o
+                p.card-text
+                  | Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam.
+                .card-footer
+                  span.left 49$
+                  span.right
+                    a(href="#" data-toggle='tooltip', data-placement='top', title='', data-original-title='Add to Cart')
+                      i.fa.fa-eye
+                    a(href="#" data-toggle='tooltip', data-placement='top', title='', data-original-title='Share')
+                      i.fa.fa-pencil
+                    a(href="#" data-toggle='tooltip', data-placement='top', title='', data-original-title='Added to Wishlist')
+                      i.fa.fa-remove
+
+      .card-block
+        a.btn.btn-primary(href="#") Переглянути більше

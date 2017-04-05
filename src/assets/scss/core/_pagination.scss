@@ -1,0 +1,40 @@
+.pagination {
+
+  li {
+    a {
+      @include border-radius(100%);
+      background-color: transparent;
+      border: none;
+      border-color: transparent;
+      color: rgba($black, .5);
+      font-weight: bold;
+      margin-left: 5px;
+      margin-right: 5px;
+
+      &:hover {
+        color: rgba($black, .5);
+        }
+      }
+
+    &.active {
+      a {
+        background-color: $color-default;
+        color: $color-white;
+        pointer-events: none;
+        }
+      }
+
+    &.previous,
+    &.next {
+      a {
+        @include border-top-left-radius(100%);
+        @include border-top-right-radius(100%);
+        @include border-bottom-left-radius(100%);
+        @include border-bottom-right-radius(100%);
+        background-color: $color-grey-light;
+        color: inherit;
+        padding: 7px 10px;
+        }
+      }
+    }
+  }

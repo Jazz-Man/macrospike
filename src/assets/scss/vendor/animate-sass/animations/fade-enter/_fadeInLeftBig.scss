@@ -1,0 +1,19 @@
+@if $use-fadeInLeftBig == true {
+
+  @keyframes fadeInLeftBig {
+    0% {
+      opacity: 0;
+      transform: translateX(-$base-distance-big * 2);
+      }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+      }
+    }
+
+  .fadeInLeftBig {
+    @include animate-prefixer(animation-name, fadeInLeftBig);
+    }
+
+  }
