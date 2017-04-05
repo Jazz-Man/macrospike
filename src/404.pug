@@ -1,0 +1,25 @@
+extends common/layout
+block append content
+	.container
+		ol.breadcrumb
+			li
+				a(href='#') Home
+			li
+				a(href='#') Pages
+			li.active Contact
+		// end breadcrumb
+		section.page-title.center.error
+			h1 404
+			h2 Error
+			p Page cannot be found. But this search form is gonna help you!
+		// end page-title
+		.row
+			.col-md-4.col-sm-4.col-md-offset-4.col-sm-offset-4
+				form.form.inputs-underline
+					.input-group
+						input.form-control(type='text' name='search_keyword' placeholder='Search keyword')
+						span.input-group-btn
+							button.btn(type='submit')
+								i.arrow_right
+					// /input-group
+				// end form

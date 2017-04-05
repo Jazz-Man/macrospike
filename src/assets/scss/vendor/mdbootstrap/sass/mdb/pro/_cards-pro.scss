@@ -1,0 +1,439 @@
+// CARDS PRO
+.card {
+  // Data and social icons
+  .card-data {
+    background-color: $stylish-color-dark;
+    color: #ffffff;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+
+    ul {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+
+      li {
+        display: inline;
+
+        .fa-clock-o {
+          margin-left: 10px;
+          }
+        }
+
+      a {
+        color: #ffffff;
+
+        .fa {
+          margin-left: 5px;
+          margin-right: 3px;
+          }
+        }
+      }
+    }
+  // Review card
+  .rating {
+    @extend .inline-ul;
+    color: #ffa000;
+    }
+
+  .btn-action {
+    background-color: $stylish-color;
+    float: right;
+    height: 47px;
+    line-height: 0;
+    margin: -23px 20px;
+    width: 47px;
+
+    .fa,
+    .material-icons {
+      font-size: 18px;
+      margin-top: 5px;
+      }
+    }
+
+  .card-review {
+    background-color: #000000;
+    color: #ffffff;
+    margin-top: -1px;
+    padding: 50px 20px 20px 20px;
+
+    ul {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+
+      li {
+        display: inline;
+        }
+
+      a {
+        color: #ffffff;
+
+        .fa {
+          margin-left: 5px;
+          margin-right: 3px;
+          }
+        }
+      }
+    }
+  //Activator
+  .activator {
+    color: #000000;
+    float: right;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    padding: 1rem;
+    }
+  //Stylish card
+  .link-text {
+    color: #000000;
+    text-align: right;
+
+    i {
+      margin-left: 4px;
+      }
+    }
+  //Dark variant
+  &.card-dark {
+
+    .activator {
+      color: #ffffff
+      }
+
+    .card-block {
+      background-color: $elegant-color;
+      color: #ffffff;
+
+      hr {
+        background-color: #666666;
+        }
+
+      a {
+        color: #ffffff;
+        }
+      }
+    }
+  //Card Reveal
+  .card-reveal {
+    background-color: #ffffff;
+    display: none;
+    height: 100%;
+    overflow-y: auto;
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 1;
+
+    .card-title {
+      cursor: pointer;
+
+      i {
+        color: #9e9e9e;
+        position: absolute;
+        right: 10px;
+        }
+      }
+
+    .content {
+      position: relative;
+
+      h4 {
+        margin-bottom: 15px;
+        margin-top: 20px;
+        }
+
+      h5 {
+        margin-top: 30px;
+        }
+      }
+    }
+  //Social reveal
+  .card-share {
+    position: relative;
+
+    .social-reveal {
+      position: absolute;
+      right: 30px;
+      top: -28px;
+      transform: translateZ(0);
+      transform: translateX(0px);
+      transition: transform 0.35s ease;
+      visibility: hidden;
+      width: auto;
+
+      .btn-floating {
+        @extend .btn-small;
+        margin: 0.3rem;
+        }
+      }
+
+    .social-reveal-active {
+      transform: translateZ(0);
+      transform: translateX(-48px);
+      transition: transform 0.35s ease;
+      visibility: visible;
+      z-index: 11;
+      }
+    }
+
+  &.ovf-hidden {
+    overflow: hidden;
+    }
+
+  .card-footer {
+    background-color: transparent;
+    font-size: 1.3rem;
+
+    .left {
+      float: left;
+
+      .discount {
+        color: #9e9e9e;
+        font-size: 1.1rem;
+        text-decoration: line-through;
+        }
+      }
+
+    .right {
+      display: flex;
+      float: right;
+
+      a {
+        color: #9e9e9e;
+        margin-left: 1rem;
+        @include transition (0.4s);
+        &:hover {
+          color: #d50000;
+          @include transition (0.4s);
+          }
+
+        &.active {
+          color: #d50000;
+          }
+        }
+      }
+    }
+  }
+
+// Rotating card
+.card-wrapper {
+  height: 500px;
+  margin: $element-top-margin 0 $element-bottom-margin 0;
+  perspective: 800px;
+  position: relative;
+
+  .face {
+    background-color: #ffffff;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+    h4 {
+      margin-bottom: 15px;
+      }
+
+    h5 {
+      margin-top: 30px;
+      }
+
+    .content {
+      padding: 15px;
+      text-align: left;
+
+      p {
+        margin-bottom: 30px;
+        }
+
+      .rotate-btn {
+        color: #000000;
+        float: right;
+        font-size: 1.2rem;
+        margin-right: -8px;
+        padding: 1rem;
+        }
+      }
+    }
+
+  .card-up {
+    height: 50%;
+    overflow: hidden;
+
+    img {
+      min-width: 400px;
+      }
+    }
+
+  .avatar {
+    border-radius: 50%;
+    display: block;
+    height: 120px;
+    margin: -65px auto 0;
+    overflow: hidden;
+    width: 120px;
+
+    img {
+      background: none repeat scroll 0 0 #ffffff;
+      border: 5px solid #ffffff;
+      width: 100%;
+      }
+    }
+
+  .card-rotating {
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    transform-style: preserve-3d;
+    width: 100%;
+
+    &.effect__click.flipped {
+
+      .front {
+        transform: rotateY(180deg);
+        }
+
+      .back {
+        transform: rotateY(0);
+        }
+
+      }
+
+    }
+
+  .fa-repeat,
+  .fa-undo {
+    font-size: 20px;
+    margin-top: 30px;
+    }
+
+  .fa-undo {
+    margin-top: 30px;
+    }
+
+  .front,
+  .back {
+    backface-visibility: hidden;
+    transition: transform 1.0s;
+    @extend .z-depth-1;
+    }
+
+  .back {
+    padding: 1rem;
+    transform: rotateY(-180deg);
+
+    .card-title {
+      cursor: pointer;
+
+      i {
+        color: #9e9e9e;
+        position: absolute;
+        right: 20px;
+        }
+      }
+    }
+
+  }
+
+// Card data
+.card-data {
+  height: auto;
+  padding: 10px 10px 10px 0;
+
+  ul {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+
+    li {
+      display: inline;
+      }
+
+    a {
+      color: #666666;
+
+      .fa {
+        margin-left: 5px;
+        margin-right: 3px;
+        }
+      }
+    }
+  }
+
+// Card overlay
+.card-overlay {
+  background-size: cover;
+  border-radius: 2px;
+  padding: 1.5rem;
+  @extend .z-depth-2;
+  @extend .flex-center;
+
+  p {
+    margin-bottom: 1rem;
+    }
+  }
+
+.section-heading {
+  text-align: center;
+
+  h1 {
+    @extend .h1-responsive;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    }
+
+  p {
+    margin-bottom: 3rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    }
+  }
+
+.card-cascade {
+  display: inline-block;
+
+  .view {
+    @extend .z-depth-2;
+    @include border-radius (4px);
+    }
+
+  &.narrower {
+    margin-top: 20px;
+
+    .view {
+      margin-left: 4%;
+      margin-right: 4%;
+      margin-top: -20px;
+      }
+    }
+
+  &.wider {
+    @extend .z-depth-0;
+
+    .card-block {
+      margin-left: 4%;
+      margin-right: 4%;
+      @extend .z-depth-1;
+      }
+    }
+
+  .card-block {
+    padding-top: 1.8rem;
+    }
+  }
+
+.card-cascade-2 {
+  display: inline-block;
+  @extend .z-depth-0;
+
+  .view {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -20px;
+    @include border-radius (4px);
+    @extend .z-depth-2;
+    }
+
+  .card-block {
+    margin-left: 10px;
+    margin-right: 10px;
+    @extend .z-depth-1;
+    }
+  }

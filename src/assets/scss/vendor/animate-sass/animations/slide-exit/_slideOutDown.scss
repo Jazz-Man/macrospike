@@ -1,0 +1,18 @@
+@if $use-slideOutDown == true {
+
+  @keyframes slideOutDown {
+    0% {
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+      }
+
+    100% {
+      transform: translate3d(0, 100%, 0);
+      }
+    }
+
+  .slideOutDown {
+    @include animate-prefixer(animation-name, slideOutDown);
+    }
+
+  }

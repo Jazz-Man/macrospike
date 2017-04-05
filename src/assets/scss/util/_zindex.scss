@@ -1,0 +1,14 @@
+$zindex: (
+  "xl" : 9000,
+  "lg" : 8000,
+  "md" : 7000,
+  "sm" : 6000,
+  "xs" : 5000
+);
+
+@each $index,
+$index_value in $zindex {
+  .zindex-#{$index} {
+    z-index: $index_value !important;
+    }
+  }

@@ -1,0 +1,18 @@
+@if $use-fadeOutDownBig == true {
+
+  @keyframes fadeOutDownBig {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+      }
+
+    100% {
+      opacity: 0;
+      transform: translateY($base-distance-big * 2);
+      }
+    }
+
+  .fadeOutDownBig {
+    @include animate-prefixer(animation-name, fadeOutDownBig);
+    }
+  }

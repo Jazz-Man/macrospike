@@ -1,0 +1,199 @@
+extends common/layout
+
+block append content
+	.container
+		+breadcrumb
+		section.page-title
+			h1 My Listings
+		// end page-title
+		section
+			.my-items.table-responsive
+				table.table
+					thead
+						tr
+							th Listings
+							th Featured
+							th Views
+							th Reviews
+							th Rating
+							th Last Edited
+					tbody
+						tr.my-item
+							td
+								.image-wrapper
+									.circle(data-toggle='tooltip' data-placement='right' title='Top Listing')
+										i.fa.fa-thumbs-up
+									a.image(href='edit-listing.html')
+										.bg-transfer(data-bg=require('assets/img/items/1.jpg'))
+								.info
+									a(href='detail.html')
+										h2 Spring Hotel
+									figure.location Montenegro
+									figure.label.label-info Hotel
+									.additional-info
+										span
+											i.fa.fa-bed
+											| 12
+										span.price-info
+											| From
+											span.price $32
+											span.appendix /night
+									// end additional-info
+								// end info
+							td
+								.featured.yes
+									i.fa.fa-check
+									aside
+							td.views 426
+							td.reviews 45
+							td.rating
+								.rating-passive(data-rating='4')
+									span.stars
+									span.reviews 6
+							td.last-edited
+								| Today 15:32
+								span.last-edit Last edited: Today 12:35
+								.edit-options
+									a.link.icon(href='edit-listing.html')
+										i.fa.fa-edit
+										| Edit
+									a.link.icon(href='reviews.html')
+										i.fa.fa-comment
+										| Reviews
+									a.link.icon.delete(href='#')
+										i.fa.fa-trash
+										| Delete
+								// end edit-options
+						// end my-item
+						tr.my-item
+							td
+								.image-wrapper
+									a.image(href='edit-listing.html')
+										.bg-transfer(data-bg=require('assets/img/items/2.jpg'))
+								.info
+									a(href='detail.html')
+										h2 Iron Apple
+									figure.location 4209 Glenview Drive
+									figure.label.label-info Restaurant
+									.additional-info
+									// end additional-info
+								// end info
+							td.featured
+								i.fa.fa-times
+							td.views 230
+							td.reviews 28
+							td.rating
+								.rating-passive(data-rating='5')
+									span.stars
+									span.reviews 19
+							td.last-edited
+								| Yesterday 10:45
+								span.last-edit Last edited: Today 12:35
+								.edit-options
+									a.link.icon(href='edit-listing.html')
+										i.fa.fa-edit
+										| Edit
+									a.link.icon(href='reviews.html')
+										i.fa.fa-comment
+										| Reviews
+									a.link.icon.delete(href='#')
+										i.fa.fa-trash
+										| Delete
+								// end edit-options
+						// end my-item
+						tr.my-item
+							td
+								.image-wrapper
+									figure.ribbon Top
+									a.image(href='edit-listing.html')
+										.bg-transfer(data-bg=require('assets/img/items/3.jpg'))
+								.info
+									a(href='detail.html')
+										h2 Bamby Planet Houseboat Bar & Grill
+									figure.location 3857 Josh Lane
+									figure.label.label-info Bar & Grill
+									.additional-info
+										span.price-info Happy Hour 18:00 - 19:00
+									// end additional-info
+								// end info
+							td.featured
+								i.fa.fa-times
+							td.views 230
+							td.reviews 28
+							td.rating
+								.rating-passive(data-rating='4')
+									span.stars
+									span.reviews 12
+							td.last-edited
+								| 12.05.2016 11:05
+								span.last-edit Last edited: Today 12:35
+								.edit-options
+									a.link.icon(href='edit-listing.html')
+										i.fa.fa-edit
+										| Edit
+									a.link.icon(href='reviews.html')
+										i.fa.fa-comment
+										| Reviews
+									a.link.icon.delete(href='#')
+										i.fa.fa-trash
+										| Delete
+								// end edit-options
+						// end my-item
+						tr.my-item
+							td
+								.image-wrapper
+									a.image(href='edit-listing.html')
+										.bg-transfer(data-bg=require('assets/img/items/4.jpg'))
+								.info
+									a(href='detail.html')
+										h2 Food Festival
+									figure.location 840 My Drive
+									figure.label.label-info Event
+									.additional-info
+										span.price-info Free Entry
+									// end additional-info
+								// end info
+							td.featured
+								i.fa.fa-times
+							td.views 230
+							td.reviews 28
+							td.rating
+								.rating-passive(data-rating='3')
+									span.stars
+									span.reviews 3
+							td.last-edited
+								| 12.02.2016 08:50
+								span.last-edit Last edited: Today 12:35
+								.edit-options
+									a.link.icon(href='edit-listing.html')
+										i.fa.fa-edit
+										| Edit
+									a.link.icon(href='reviews.html')
+										i.fa.fa-comment
+										| Reviews
+									a.link.icon.delete(href='#')
+										i.fa.fa-trash
+										| Delete
+								// end edit-options
+						// end my-item
+			// end my-items
+		section
+			.center
+				nav(aria-label='Page navigation')
+					ul.pagination
+						li.disabled.previous
+							a(href='#' aria-label='Previous')
+								i.arrow_left
+						li
+							a(href='#') 1
+						li
+							a(href='#') 2
+						li.active
+							a(href='#') 3
+						li
+							a(href='#') 4
+						li
+							a(href='#') 5
+						li.next
+							a(href='#' aria-label='Next')
+								i.arrow_right

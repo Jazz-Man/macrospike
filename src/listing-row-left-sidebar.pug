@@ -1,0 +1,247 @@
+extends common/layout
+
+block append content
+	.container
+		+breadcrumb
+		.row
+			.col-md-3.col-sm-3
+				aside.sidebar
+					section
+						h2 Search Filter
+						form.form.inputs-underline
+							.form-group
+								input.form-control(type='text' name='keyword' placeholder='Enter keyword')
+							.form-group
+								select.form-control.selectpicker(name='location')
+									option(value='') Location
+									option(value='1') New York
+									option(value='2') Washington
+									option(value='3') London
+									option(value='4') Paris
+							.form-group
+								select.form-control.selectpicker(name='category')
+									option(value='') Category
+									option(value='1') Restaurant
+									option(value='2') Event
+									option(value='3') Adrenaline
+									option(value='4') Sport
+									option(value='5') Wellness
+							.form-group
+								#price-slider.ui-slider(data-value-min='10' data-value-max='400' data-value-type='price' data-currency='$' data-currency-placement='before')
+									.values.clearfix
+										input.value-min(name='value-min[]' readonly='')
+										input.value-max(name='value-max[]' readonly='')
+									.element
+							.form-group
+								button.btn.btn-primary.pull-right(type='submit')
+									| Search Now
+									i.fa.fa-search
+					section
+						h2 Recent Items
+						.item(data-id='1')
+							a(href='detail.html')
+								.description
+									figure Average Price: $8 - $30
+									.label.label-default Restaurant
+									h3 Marky’s Restaurant
+									h4 63 Birch Street
+								.image.bg-transfer
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+						.item(data-id='2')
+							a(href='detail.html')
+								.description
+									.label.label-default Restaurant
+									h3 Ironapple
+									h4 4209 Glenview Drive
+								.image.bg-transfer
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+						.item(data-id='15')
+							figure.ribbon Top
+							a(href='detail.html')
+								.description
+									figure Happy hour: 18:00 - 19:00
+									.label.label-default Bar & Grill
+									h3 Bambi Planet Houseboat Bar& Grill
+									h4 3857 Losh Lane
+								.image.bg-transfer
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+			.col-md-9.col-sm-9
+				section.page-title
+					h1 Row Listing
+				section
+					.search-results-controls.clearfix
+						.pull-left
+							a.circle-icon(href='listing-grid-right-sidebar.html')
+								i.fa.fa-th
+							a.circle-icon.active(href='listing-row-right-sidebar.html')
+								i.fa.fa-bars
+						.pull-right
+							.input-group.inputs-underline.min-width-150px
+								select.form-control.selectpicker(name='sort')
+									option(value='') Sort by
+									option(value='1') Price
+									option(value='2') Distance
+									option(value='3') Title
+				section
+					.item.item-row(data-id='1' data-latitude='40.72807182' data-longitude='-73.85735035')
+						a(href='detail.html')
+							.image.bg-transfer
+								figure Average Price: $8 - $30
+							.map
+							.description
+								h3 Marky’s Restaurant
+								h4 63 Birch Street
+								.label.label-default Restaurant
+							.additional-info
+								.rating-passive(data-rating='4')
+									span.stars
+									span.reviews 6
+						.controls-more
+							ul
+								li
+									a(href='#') Add to favorites
+								li
+									a(href='#') Add to watchlist
+								li
+									a.quick-detail(href='#') Quick detail
+					.item.item-row(data-id='2' data-latitude='40.73925841' data-longitude='-73.85348797')
+						a(href='detail.html')
+							.image.bg-transfer
+							.map
+							.description
+								h3 Ironapple
+								h4 4209 Glenview Drive
+								.label.label-default Restaurant
+							.additional-info
+								.rating-passive(data-rating='5')
+									span.stars
+									span.reviews 8
+						.controls-more
+							ul
+								li
+									a(href='#') Add to favorites
+								li
+									a(href='#') Add to watchlist
+								li
+									a.quick-detail(href='#') Quick detail
+					.item.item-row(data-id='15' data-latitude='40.73659201' data-longitude='-73.80778313')
+						figure.ribbon Top
+						a(href='detail.html')
+							.image.bg-transfer
+								figure Happy hour: 18:00 - 19:00
+							.map
+							.description
+								h3 Bambi Planet Houseboat Bar& Grill
+								h4 3857 Losh Lane
+								.label.label-default Bar & Grill
+							.additional-info
+								.rating-passive(data-rating='3')
+									span.stars
+									span.reviews 8
+						.controls-more
+							ul
+								li
+									a(href='#') Add to favorites
+								li
+									a(href='#') Add to watchlist
+								li
+									a.quick-detail(href='#') Quick detail
+					.item.item-row(data-id='3' data-address='Forest Hills, Queens, NY 11375, USA')
+						a(href='detail.html')
+							.image.bg-transfer
+								figure Starts at 19:00
+							.map
+							.description
+								h3 Food Festival
+								h4 23 Hillhaven Drive
+								.label.label-default Event
+							.additional-info
+								.rating-passive(data-rating='5')
+									span.stars
+									span.reviews 4
+						.controls-more
+							ul
+								li
+									a(href='#') Add to favorites
+								li
+									a(href='#') Add to watchlist
+								li
+									a.quick-detail(href='#') Quick detail
+					.item.item-row(data-id='4' data-latitude='40.709016' data-longitude='-73.844969')
+						a(href='detail.html')
+							.image.bg-transfer
+							.map
+							.description
+								h3 Cosmopolit
+								h4 4209 Glenview Drive
+								.label.label-default Lounge
+							.additional-info
+								.rating-passive(data-rating='5')
+									span.stars
+									span.reviews 9
+						.controls-more
+							ul
+								li
+									a(href='#') Add to favorites
+								li
+									a(href='#') Add to watchlist
+								li
+									a.quick-detail(href='#') Quick detail
+					.item.item-row(data-id='5' data-latitude='40.71447628' data-longitude='-73.8821125')
+						figure.ribbon Sale
+						a(href='detail.html')
+							.image.bg-transfer
+							.map
+							.description
+								h3 Beautiful Luxury Villa
+								h4 3284 Hillside Street
+								.label.label-default Real Estate
+						.controls-more
+							ul
+								li
+									a(href='#') Add to favorites
+								li
+									a(href='#') Add to watchlist
+								li
+									a.quick-detail(href='#') Quick detail
+				section
+					.center
+						nav(aria-label='Page navigation')
+							ul.pagination
+								li.disabled.previous
+									a(href='#' aria-label='Previous')
+										i.arrow_left
+								li
+									a(href='#') 1
+								li
+									a(href='#') 2
+								li.active
+									a(href='#') 3
+								li
+									a(href='#') 4
+								li
+									a(href='#') 5
+								li.next
+									a(href='#' aria-label='Next')
+										i.arrow_right

@@ -1,0 +1,98 @@
+script#tmpl-listings-map-view-controll(type='text/html')
+  form.m-1(action='')
+    .btn-group(data-toggle='buttons')
+      label.btn.btn-primary.px-4.active
+        input#view-map(type='radio' name='options' autocomplete='off' checked)
+        i.fa.fa-map-marker(aria-hidden='true')
+      label.btn.btn-primary.px-4
+        input#view-grid(type='radio' name='options' autocomplete='off')
+        i.fa.fa-th(aria-hidden='true')
+      label.btn.btn-primary.px-4
+        input#view-row(type='radio' name='options' autocomplete='off')
+        i.fa.fa-bars(aria-hidden='true')
+
+script#tmpl-listings-map-search-form(type='text/html')
+  .card.m-1
+    .card-block.p-0
+      - var formData = {
+      - results_container:'#results-content',
+      - post_type:'listing',
+      - button_load:'#wpas-load-btn',
+      - show_default:false,
+      - }
+
+      - var formAttributes = {
+      - 'data-ajax-form-option':formData
+      - };
+      form#listings-map-search-form(data-ajax-form)&attributes(formAttributes)
+        .container-fluid
+          .row.no-gutters
+            .col-sm-4
+              - var autocomplete_name = {
+              - 'type':'post',
+              - 'post_type':'listing'
+              - }
+              input.form-control-sm.px-0(
+              type='text'
+              name="search"
+              placeholder='Назва'
+              )&attributes({'data-autocomplete':autocomplete_name})
+            .col-sm-4
+              - var autocomplete_city = {
+              - 'type':'taxonomy',
+              - 'taxonomy':'listing-city'
+              - }
+              input.form-control-sm.px-0(
+              type='text'
+              placeholder='Місто'
+              )&attributes({'data-autocomplete':autocomplete_city})
+            .col-sm-4
+              - var autocomplete_cat = {
+              - 'type':'taxonomy',
+              - 'taxonomy':'listing-category'
+              - }
+              input.form-control-sm.px-0(
+              type='text'
+              placeholder='Категорія'
+              )&attributes({'data-autocomplete':autocomplete_cat})
+
+        input(type='hidden' name="filter[post_type]" value="listing")
+        input(type='hidden' name="per_page" value="100")
+        input#wpas-paged(type='hidden' name="paged" value="1")
+
+script#tmpl-listings-map-result-item(type='text/html')
+  <% $$(data.item).forEach(function(item) { %>
+  - var attributes = {
+  - 'class':'list-group-item list-group-item-action flex-column align-items-start result-item',
+  - 'href':'<%- item.link %>',
+  - 'data-listing-id':'<%- item.id %>',
+  - };
+  a&attributes(attributes)
+    .d-flex.w-100.justify-content-between
+      h3.mb-1.blue-text.h3-responsive <%- item.title.rendered %>
+    .mb-1.media
+      - var imgSrc = {};
+      - imgSrc.class = 'img-fluid w-50 mr-1'
+      - imgSrc.src = '<%- item.acf.listing_main_image.url %>'
+      img&attributes(imgSrc)
+      .media-body
+        h5
+          i.fa.fa-map-marker.fa-fw
+          <%- item.acf.listing_address.address %>
+        .badge.grey <%- item.acf.listing_category.name %>
+        <% $$(item.acf.listing_tags).forEach(function(tags) { %>
+        .badge.grey <%- tags.name %>
+        <% }); %>
+  <% }); %>
+
+script#tmpl-map-marker(type='text/html')
+  .marker&attributes({
+    'data-marker-id':'<%- data.id %>'
+  })
+    .title <%- data.title.rendered %>
+    .marker-wrapper
+      .pin
+        .image&attributes({'style': 'background-image: url(<%- data.acf.listing_main_image.url %>)'})
+    <% $$(data.users).forEach(function(user) { %>
+    li <%- user %>
+    <% }); %>

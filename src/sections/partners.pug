@@ -1,0 +1,11 @@
+section.block
+	.container
+		.center.section-title.opacity-40
+			h5 Partners
+		.logos
+			- var n = 1;
+			while n <= 5
+				-var idCurrent = n++
+				.logo
+					a(href='#')
+						img(src=require('assets/img/logo-'+idCurrent+'.png') alt='')

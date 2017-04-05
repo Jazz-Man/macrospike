@@ -1,0 +1,212 @@
+// NAVBARS PRO
+// Scrolling navbar
+@media only screen and (min-width: 768px) {
+  .scrolling-navbar {
+    padding-bottom: 12px;
+    padding-top: 12px;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+
+    .navbar-nav > li {
+      transition-duration: 1s;
+      }
+    }
+
+  .top-nav-collapse {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    }
+  }
+
+// Don't let Navbar to overlap SideNav
+.scrolling-navbar,
+.double-nav {
+  z-index: 100;
+  }
+
+// Double Navbar style
+.double-nav {
+  color: #ffffff;
+
+  a {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 300;
+    }
+
+  .dropdown .dropdown-menu {
+
+    a {
+      color: #616161;
+      padding: 1rem;
+      }
+    }
+  // Breadcrumb double navbar
+  .breadcrumb-dn {
+    float: left;
+
+    p {
+      font-weight: 300;
+      margin: 0;
+      padding-left: 1rem;
+      padding-top: 6px;
+      }
+    }
+  // Slide-out button for SideNav
+  .button-collapse {
+    font-size: 1.5rem;
+    left: 10px;
+    position: absolute;
+    top: 1px;
+    }
+
+  @media only screen and (min-width: 1440px) {
+    .button-collapse {
+      display: none;
+      }
+    }
+
+  @media only screen and (max-width: 993px) {
+    .breadcrumb-dn {
+      display: none;
+      }
+    }
+
+  @media only screen and (max-width: 992px) {
+    // Font size for icons in Double Navbar
+    .nav-icons {
+      li {
+
+        a {
+          font-size: .7rem;
+          margin-right: 3px;
+
+          .fa {
+            font-size: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+  //nav-counter & nav-icons: MDB 4.0.1 outdated
+  .nav-counter {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 10px;
+    margin-left: -10px;
+    margin-top: -5px;
+    padding: 1px 5px;
+    position: absolute;
+    z-index: 222;
+    @include border-radius(10rem);
+    }
+
+  .nav-icons {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+
+    li {
+      display: inline-block;
+      text-align: center;
+
+      a {
+        color: #ffffff;
+        font-size: 0.7rem;
+        margin-right: 3px;
+
+        .fa {
+          font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+
+.navbar .nav-item {
+  // Nav items with icons
+  .nav-link {
+    .fa {
+      padding-left: 3px;
+      padding-right: 3px;
+      }
+    }
+  // Navbar with avatar
+  &.avatar {
+    padding: 0;
+
+    &.active {
+      background-color: transparent !important;
+      }
+
+    .dropdown-toggle {
+      padding: 0;
+
+      img {
+        height: 35px;
+        }
+
+      &:after {
+        display: none;
+        }
+      }
+    }
+  }
+
+// Smaller navbar for small devices
+@media only screen and (max-width: 992px) {
+  .double-nav {
+    padding-bottom: 4px;
+    padding-top: 4px;
+    }
+  }
+
+// Remove unneccesary containers margin in navbar on mobile
+@media only screen and (max-width: 768px) {
+  .double-nav .container {
+    padding-left: 0;
+    padding-right: 0;
+    }
+  }
+
+// Navbar collapsible
+.navbar {
+
+  .navbar-desktop {
+    @media (max-width: 992px) {
+      display: none;
+      }
+    }
+
+  .button-collapse {
+
+    @media (min-width: 1440px) {
+      display: none;
+      }
+
+    @media (max-width: 1440px) {
+      display: block;
+      font-size: 1.4rem;
+      margin-left: 10px;
+      margin-right: 10px;
+      position: relative;
+      }
+    }
+  }
+
+// header breadcrumb
+.header-breadcrumb {
+  font-size: 15px;
+  padding-bottom: .425rem;
+  padding-top: .425rem;
+
+  .breadcrumb-item {
+
+    &.active {
+      color: #ffffff;
+      }
+
+    &:before {
+      color: #ffffff;
+      }
+    }
+  }

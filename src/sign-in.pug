@@ -1,0 +1,51 @@
+extends common/layout
+
+block append defaultTitle
+  title Login | uPages
+
+block contentClass
+  - var contentClass = 'full-height'
+
+block append content
+  .view.h-100.zindex-xs.full-bg-img
+    .flex-center
+      .container
+        .row
+          .col-md-6.col-lg-5.mx-auto
+            .card
+              .card-block
+                .text-center.text-uppercase
+                  h3 Login
+                form#login-form
+                  .md-form
+                    i.fa.fa-envelope.prefix
+                    input#username(type='username' name='username' placeholder='Your email')
+                  .md-form
+                    i.fa.fa-lock.prefix
+                    input#password(type='password' name='password' placeholder='Your password')
+                  fieldset.form-group
+                    input#checkbox1(type='checkbox' checked)
+                    label(for='checkbox1') Remember my
+                  .text-xs-center
+                    button.btn.elegant-color-dark.width-100#sign-in(type='submit') Sign In
+                .text-right
+                  | Немає аккаунта?
+                  button.btn.btn-info.btn-sm(type='button')
+                    i.fa.fa-user.left
+                    | Зареєструватись
+
+                a(href='#' data-modal-external-file='modal_reset_password.html' data-target='modal-reset-password') Відновити пароль
+  .carousel-fade.full-bg-img.view.hm-stylish-light#myCarousel(data-ride='carousel')
+    ol.carousel-indicators
+      li.active(data-target='#myCarousel', data-slide-to='0')
+      li(data-target='#myCarousel', data-slide-to='1')
+      li(data-target='#myCarousel', data-slide-to='2')
+    .carousel-inner.h-100(role='listbox')
+      .carousel-item.h-100.active
+        img.w-100.img-fluid(src='http://upages.com.ua/wp-content/uploads/2016/09/00_listable_demojpg',
+        alt='First slide')
+      .carousel-item.h-100
+        img.w-100.img-fluid(src='http://upages.com.ua/wp-content/uploads/2016/09/01_listable_demojpg', alt='First slide')
+      .carousel-item.h-100
+        img.w-100.img-fluid(src='http://upages.com.ua/wp-content/uploads/2016/09/03_listable_demojpg', alt='First slide')
+    .mask.pattern-1
