@@ -1,0 +1,220 @@
+// Animation
+
+@mixin animation($args) {
+  animation: $args;
+  }
+
+@mixin animation-delay($delay) {
+  animation-delay: $delay;
+  }
+
+@mixin animation-direction($direction) {
+  animation-direction: $direction;
+  }
+
+@mixin animation-duration($duration) {
+  animation-duration: $duration;
+  }
+
+@mixin animation-fill-mode($mode) {
+  animation-fill-mode: $mode;
+  }
+
+@mixin animation-iteration-count($count) {
+  animation-iteration-count: $count;
+  }
+
+@mixin animation-name($name) {
+  animation-name: $name;
+  }
+
+@mixin animation-play-state($state) {
+  animation-play-state: $state;
+  }
+
+@mixin animation-timing-function($function) {
+  animation-timing-function: $function;
+  }
+
+// Keyframes
+@mixin keyframes($animation-name) {
+  @keyframes #{$animation-name} {
+    @content;
+    }
+  }
+
+// Backface-visibility
+
+@mixin backface-visibility($args) {
+  backface-visibility: $args;
+  }
+
+// Background Size
+
+@mixin background-size($args) {
+  background-size: $args;
+  }
+
+// Box Sizing
+
+@mixin box-sizing($args) {
+  box-sizing: $args;
+  }
+
+@mixin border-box() {
+  @include box-sizing(border-box);
+  }
+
+@mixin content-box() {
+  @include box-sizing(content-box);
+  }
+
+// Columns
+
+@mixin columns($args) {
+  columns: $args;
+  }
+
+@mixin column-count($count) {
+  column-count: $count;
+  }
+
+@mixin column-gap($gap) {
+  column-gap: $gap;
+  }
+
+@mixin column-width($width) {
+  column-width: $width;
+  }
+
+@mixin column-rule($args) {
+  column-rule: $args;
+  }
+
+// Filter
+@mixin filter($args) {
+  -webkit-filter: $args;
+  -moz-filter: $args;
+  -o-filter: $args;
+  -ms-filter: $args;
+  }
+
+// Flexbox
+@mixin flexbox() {
+  display: flex;
+  }
+
+@mixin flex($values) {
+  flex: $values;
+  }
+
+@mixin order($val) {
+  order: $val;
+  }
+
+@mixin align($align) {
+  align-items: $align;
+  }
+
+@mixin justify-content($val) {
+  justify-content: $val;
+  }
+
+// Gradients
+
+@mixin gradient($default: #f5f5f5, $start: #eeeeee, $stop: #ffffff) {
+  @include linear-gradient-top($default, $start, 0%, $stop, 100%);
+  }
+
+@mixin linear-gradient-top($default,$color1,$stop1,$color2,$stop2) {
+  background-color: $default;
+  background-image: linear-gradient(top, $color1 $stop1, $color2 $stop2);
+  }
+
+@mixin linear-gradient-top2($default,$color1,$stop1,$color2,$stop2,$color3,$stop3) {
+  background-color: $default;
+  background-image: linear-gradient(top, $color1 $stop1, $color2 $stop2, $color3 $stop3);
+  }
+
+@mixin linear-gradient-top3($default,$color1,$stop1,$color2,$stop2,$color3,$stop3,$color4,$stop4) {
+  background-color: $default;
+  background-image: linear-gradient(top, $color1 $stop1, $color2 $stop2, $color3 $stop3, $color4 $stop4);
+  }
+
+@mixin linear-gradient-left($default,$color1,$stop1,$color2,$stop2) {
+  background-color: $default;
+  background-image: linear-gradient(left, $color1 $stop1, $color2 $stop2);
+  }
+
+@mixin linear-gradient-left2($default,$color1,$stop1,$color2,$stop2,$color3,$stop3) {
+  background-color: $default;
+  background-image: linear-gradient(left, $color1 $stop1, $color2 $stop2, $color3 $stop3);
+  }
+
+@mixin linear-gradient-left3($default,$color1,$stop1,$color2,$stop2,$color3,$stop3,$color4,$stop4) {
+  background-color: $default;
+  background-image: linear-gradient(left, $color1 $stop1, $color2 $stop2, $color3 $stop3, $color4 $stop4);
+  }
+
+// Text Shadow
+
+@mixin text-shadow($args) {
+  text-shadow: $args;
+  }
+
+// Transforms
+
+@mixin transform($args) {
+  transform: $args;
+  }
+
+@mixin transform-origin($args) {
+  transform-origin: $args;
+  }
+
+@mixin transform-style($style) {
+  transform-style: $style;
+  }
+
+@mixin rotate($deg:45deg) {
+  @include transform(rotate($deg));
+  }
+
+@mixin scale($factor:.5) {
+  @include transform(scale($factor));
+  }
+
+@mixin translate($x,$y) {
+  @include transform(translate($x, $y));
+  }
+
+@mixin translate3d($x,$y,$z) {
+  @include transform(translate3d($x, $y, $z));
+  }
+
+@mixin translateHardware($x,$y) {
+  @include translate($x, $y);
+  transform: translate3d($x, $y, 0);
+  }
+
+// Transitions
+
+@mixin transition($args:200ms) {
+  transition: $args;
+  }
+
+@mixin transition-delay($delay:0) {
+  transition-delay: $delay;
+  }
+
+@mixin transition-duration($duration:200ms) {
+  transition-duration: $duration;
+  }
+
+@mixin transition-property($property:all) {
+  transition-property: $property;
+  }
+
+@mixin transition-timing-function($function:ease) {
+  transition-timing-function: $function;
+  }

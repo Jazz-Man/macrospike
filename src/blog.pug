@@ -1,0 +1,64 @@
+extends common/layout
+
+block append content
+	.container
+		+breadcrumb
+		.row
+			.col-md-9.col-sm-9
+				section.page-title
+					h1 Blog
+				section
+				- var n = 1;
+					while n <= 12
+						-var idCurrent = n++
+						article.blog-post
+							a(href='blog-detail.html')
+								img(src=require('assets/img/items/' + idCurrent + '.jpg') alt='')
+							header
+								a(href='blog-detail.html')
+									h2 Vivamus porta orci eu turpis vulputate ornare fusce hendrerit arcu risu
+							figure.meta
+								a.link.icon(href='#')
+									i.fa.fa-user
+									| Admin
+								a.link.icon(href='#')
+									i.fa.fa-calendar
+									| 06/04/2014
+								.tags
+									a.tag.article(href='#') Architecture
+									a.tag.article(href='#') Design
+									a.tag.article(href='#') Trend
+							p
+								| Fusce quis nulla volutpat, rhoncus ligula ut, pulvinar nisi. In dapibus urna sit amet accumsan
+								| tristique. Donec odio ligula, luctus venenatis varius id, tincidunt ac ipsum. Cras commodo,
+								| velit nec aliquam dictum, tortor velit dictum ipsum, sed ornare nunc leo nec ipsum. Vestibulum
+								| sagittis sapien vitae tristique mollis. Aliquam hendrerit nulla semper, viverra mi et,
+								| hendrerit mauris. Maecenas hendrerit congue ultrices. In laoreet erat blandit eros aliquet,
+								| in malesuada sem rutrum. In placerat porta egestas.
+							a.btn.btn-rounded.btn-default.btn-framed.btn-small(href='blog-detail.html') Read More
+				section
+					.center
+						nav(aria-label='Page navigation')
+							ul.pagination
+								li.disabled.previous
+									a(href='#' aria-label='Previous')
+										i.arrow_left
+								li
+									a(href='#') 1
+								li
+									a(href='#') 2
+								li.active
+									a(href='#') 3
+								li
+									a(href='#') 4
+								li
+									a(href='#') 5
+								li.next
+									a(href='#' aria-label='Next')
+										i.arrow_right
+			.col-md-3.col-sm-3
+				aside.sidebar
+					section
+						//+sidebarSearchFilter
+					section
+						//+recentItems

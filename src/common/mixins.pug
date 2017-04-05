@@ -1,0 +1,319 @@
+if !htmlWebpackPlugin.options
+	- htmlWebpackPlugin.options = {};
+
+mixin title
+	title= htmlWebpackPlugin.options.title
+
+mixin favicon
+	if htmlWebpackPlugin.files.favicon
+		link(rel='shortcut icon', href=htmlWebpackPlugin.files.favicon)
+
+mixin mobile
+	if htmlWebpackPlugin.options.mobile
+		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+
+- var selfclosingTags =  new Set(["area", "base", "br", "col", "embed", "hr", "img", "input", "keygen", "link", "menuitem", "meta", "param", "source", "track", "wbr"]);
+
+mixin link(href, name)
+	a(href=htmlWebpackPlugin.options.homePage+href)&attributes(attributes)= name
+
+mixin injectExtras(extras)
+	each item in extras
+		if typeof item === "string" || item instanceof String
+			if item.endsWith(".css")
+				- item = {tag: "link", href: item, rel: "stylesheet"};
+			else if item.endsWith(".js")
+				- item = {tag: "script", src: item};
+			else
+				- throw new Error("Can't deduce tag from filename: " + item);
+		else if !item.tag
+			- throw new Error("Item " + JSON.stringify(item) + " must have a valid tag property")
+
+		- var attrs = Object.assign({}, item, {tag: null, innerHTML: null});
+		if selfclosingTags.has(item.tag)
+			#{item.tag}&attributes(attrs)/
+		else
+			#{item.tag}&attributes(attrs)!= item.innerHTML
+
+mixin injectExtrasHead
+	if htmlWebpackPlugin.options.injectExtras && htmlWebpackPlugin.options.injectExtras.head
+		+injectExtras(htmlWebpackPlugin.options.injectExtras.head)
+
+mixin injectExtrasBody
+	if htmlWebpackPlugin.options.injectExtras && htmlWebpackPlugin.options.injectExtras.body
+		+injectExtras(htmlWebpackPlugin.options.injectExtras.body)
+
+- const inlined = new Set(), injected = new Set();
+- const cssToInline = new Set(), cssToInject = new Set(), jsToInline = new Set(), jsToInject = new Set();
+- const toInline = htmlWebpackPlugin.options.inline && new Set(Array.isArray(htmlWebpackPlugin.options.inline) ? htmlWebpackPlugin.options.inline : [htmlWebpackPlugin.options.inline]);
+- const substrStart = htmlWebpackPlugin.files.publicPath ? htmlWebpackPlugin.files.publicPath.length : 0;
+- const excludeJSWithCSS = htmlWebpackPlugin.options.excludeJSWithCSS;
+- const excludeJSChunks = htmlWebpackPlugin.options.excludeJSChunks && new Set(Array.isArray(htmlWebpackPlugin.options.excludeJSChunks) ? htmlWebpackPlugin.options.excludeJSChunks : [htmlWebpackPlugin.options.excludeJSChunks]);
+
+if toInline
+	each chunk, name in htmlWebpackPlugin.files.chunks
+		if excludeJSWithCSS && chunk.css.length > 0
+			- var rcSet = toInline.has(name) || toInline.has(name + ":css") ? cssToInline : cssToInject;
+			each css in chunk.css
+				- rcSet.add(css);
+			- continue;
+
+		if excludeJSChunks && excludeJSChunks.has(name)
+			- var rcSet = toInline.has(name) || toInline.has(name + ":css") ? cssToInline : cssToInject;
+			each css in chunk.css
+				- rcSet.add(css);
+			- continue;
+
+		if toInline.has(name)
+			- jsToInline.add(chunk.entry);
+			each css in chunk.css
+				- cssToInline.add(css);
+		else
+			- (toInline.has(name + ":js") ? jsToInline : jsToInject).add(chunk.entry);
+			- var rcSet = toInline.has(name + ":css") ? cssToInline : cssToInject;
+			each css in chunk.css
+				- rcSet.add(css);
+else
+	each css in htmlWebpackPlugin.files.css
+		- cssToInject.add(css);
+	each chunk, name in htmlWebpackPlugin.files.chunks
+		if (excludeJSWithCSS && chunk.css.length > 0) || (excludeJSChunks && excludeJSChunks.has(name))
+			- continue;
+		- jsToInject.add(chunk.entry);
+
+
+- function gatherFiles(filename, searchWithin) {
+	if searchWithin === undefined
+		- searchWithin = htmlWebpackPlugin.files.css.concat(htmlWebpackPlugin.files.js);
+	if filename instanceof RegExp
+		- return searchWithin.filter(fn => filename.test(fn));
+	else
+		- return searchWithin.indexOf(filename) !== -1 ? [filename] : [];
+- }
+
+mixin inline(filename, tag, searchWithin)
+	- var files = gatherFiles(filename, searchWithin)
+	each file in files
+		- var currentTag = tag || (file.endsWith(".css") ? "style" : file.endsWith(".js") ? "script" : "div");
+
+		#{currentTag}&attributes(attributes)!= compilation.assets[file.substr(substrStart)].source()
+
+		- inlined.add(file);
+	else
+		- console.warn("WARNING Nothing to inline for %s query", filename);
+
+mixin inject(filename, tag, searchWithin)
+	- var files = gatherFiles(filename)
+	each file in files
+		- var currentTag = tag || (file.endsWith(".css") ? "link" : file.endsWith(".js") ? "script" : "div");
+		if currentTag === "link"
+			link(rel="stylesheet", href=file)&attributes(attributes)
+		else if currentTag === "script"
+			script(src=file)&attributes(attibutes)
+		else
+			#{currentTag}&attributes(attributes)
+
+		- injected.add(file);
+	else
+		- console.warn("WARNING Nothing to inject for %s query", filename);
+
+mixin inlineCSS(cssList)
+	if cssList === undefined
+		- cssList = cssToInline;
+
+	- var inclExcl = constructIncludeExclude(cssList, cssToInline);
+
+	- var include = inclExcl.include;
+	- var exclude = inclExcl.exclude;
+
+	- processRc(include, (css) => {
+			+inline(css, "style", htmlWebpackPlugin.files.css)
+	- }, exclude);
+
+mixin injectCSS(cssList)
+	if cssList === undefined
+		- cssList = cssToInject;
+
+	- var inclExcl = constructIncludeExclude(cssList, cssToInject);
+
+	- var include = inclExcl.include;
+	- var exclude = inclExcl.exclude;
+
+	- processRc(include, (css) => {
+			+inject(css, "link", htmlWebpackPlugin.files.css)
+	- }, exclude);
+
+mixin inlineJS(jsList)
+	if jsList === undefined
+		- jsList = jsToInline;
+
+	- var inclExcl = constructIncludeExclude(jsList, jsToInline);
+
+	- var include = inclExcl.include;
+	- var exclude = inclExcl.exclude;
+
+	- processRc(include, (js) => {
+			+inline(js, "script", htmlWebpackPlugin.files.js)
+	- }, exclude);
+
+mixin injectJS(jsList)
+	if jsList === undefined
+		- jsList = jsToInject;
+
+	- var inclExcl = constructIncludeExclude(jsList, jsToInject);
+
+	- var include = inclExcl.include;
+	- var exclude = inclExcl.exclude;
+
+	- processRc(include, (js) => {
+			+inject(js, "script", htmlWebpackPlugin.files.js)
+	- }, exclude);
+
+mixin CSS
+	each css in htmlWebpackPlugin.files.css
+		if injected.has(css) || inlined.has(css)
+			- continue;
+
+		if cssToInline.has(css)
+			+inline(css, "style")
+		else if cssToInject.has(css)
+			+inject(css, "link")
+
+mixin JS
+	each js in htmlWebpackPlugin.files.js
+		if injected.has(js) || inlined.has(js)
+			- continue;
+
+		if jsToInline.has(js)
+			+inline(js, "script")
+		else if jsToInject.has(js)
+			+inject(js, "script")
+
+- function processRc(rcList, cb, excludeSet) {
+	if !Array.isArray(rcList)
+		- rcList = [rcList];
+
+	each rc in rcList
+		if !injected.has(rc) && !inlined.has(rc) && !excludeSet.has(rc)
+			- cb(rc);
+- }
+
+
+- function constructIncludeExclude(set, defaultSet) {
+	- var include;
+	- const exclude = new Set();
+	if (typeof set === "string" || set instanceof String) && set[0] === "!"
+		- exclude.add(set.slice(1));
+		- include = Array.from(defaultSet);
+	else if Array.isArray(set)
+		- var allExcluded = true;
+		each css in set
+			if (typeof css === "string" || css instanceof String) && css[0] ==="!"
+				- exclude.add(css);
+			else
+				- allExcluded = false;
+		- include = allExcluded ? Array.from(defaultSet) : set;
+	else
+		- include = set;
+
+	- return {include, exclude};
+- }
+
+mixin inlineChunk(chunkNames, type)
+	if !Array.isArray(chunkNames)
+		- chunkNames = [chunkNames];
+
+	each chunkName in chunkNames
+		- var chunk = htmlWebpackPlugin.files.chunks[chunkName];
+		if !chunk
+			- console.warn("No such chunk", chunkName);
+			- continue;
+
+		if type === "css"
+			each file in chunk.css
+				style!= compilation.assets[file.substr(substrStart)].source()
+				- inlined.add(file);
+			else
+				- console.warn("No css files in %s chunk", chunkName);
+		else if type === "js"
+			script!= compilation.assets[chunk.entry.substr(substrStart)].source()
+			- inlined.add(chunk.entry);
+		else
+			each file in chunk.css
+				style!= compilation.assets[file.substr(substrStart)].source()
+				- inlined.add(file);
+
+			script!= compilation.assets[chunk.entry.substr(substrStart)].source()
+			- inlined.add(chunk.entry);
+
+
+mixin injectChunk(chunkNames, type)
+	if !Array.isArray(chunkNames)
+		- chunkNames = [chunkNames];
+
+	each chunkName in chunkNames
+		- var chunk = htmlWebpackPlugin.files.chunks[chunkName];
+		if !chunk
+			- console.warn("No such chunk", chunkName);
+			- continue;
+
+		if type === "css"
+			each file in chunk.css
+				link(rel="stylesheet", href=file)
+				- injected.add(file);
+			else
+				- console.warn("No css files in %s chunk", chunkName);
+		else if type === "js"
+			script(src=chunk.entry)
+			- injected.add(chunk.entry);
+		else
+			each file in chunk.css
+				link(rel="stylesheet", href=file)
+				- injected.add(file);
+
+			script(src=chunk.entry)
+			- injected.add(chunk.entry);
+
+
+
+mixin listingCard(itemClass)
+	- var listingCardClass = `col-md-${itemClass} col-sm-${itemClass}`
+	div(class=listingCardClass)
+		.item(data-id='15')
+			figure.ribbon Top
+			a(href='detail.html')
+				.description
+					figure Happy hour: 18:00 - 19:00
+					.label.label-default Bar & Grill
+					h3 Bambi Planet Houseboat Bar& Grill
+					h4 3857 Losh Lane
+				.image.bg-transfer(data-bg=require('assets/img/items/3.jpg'))
+			.additional-info
+				figure.circle(title='Featured')
+					i.fa.fa-check
+				.rating-passive(data-rating='5')
+					span.stars
+					span.reviews 56
+				+controlsMore
+
+mixin hr
+	.container
+		hr
+
+mixin controlsMore
+	.controls-more
+		ul
+			li
+				a(href='#') Add to favorites
+			li
+				a(href='#') Add to watchlist
+			li
+				a.quick-detail(href='#') Quick detail
+
+mixin breadcrumb
+	ol.breadcrumb
+		li
+			a(href='#') Home
+		li
+			a(href='#') Pages
+		li.active Contact

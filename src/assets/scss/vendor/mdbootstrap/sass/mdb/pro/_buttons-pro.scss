@@ -1,0 +1,187 @@
+
+.btn-floating {
+  background-color: $button-color;
+  color: $button-color-raised;
+  cursor: pointer;
+  display: inline-block;
+  height: $button-floating-size;
+  line-height: $button-floating-size;
+  margin: 10px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  @include border-radius(50%);
+  @extend .z-depth-1;
+  transition: .3s;
+  vertical-align: middle;
+  width: $button-floating-size;
+  z-index: 1;
+
+  i {
+    color: $button-color-raised;
+    display: inline-block;
+    font-size: $button-large-icon-font-size;
+    line-height: $button-floating-size;
+    text-align: center;
+    width: inherit;
+    }
+
+  &:hover {
+    @extend .z-depth-1-half;
+    }
+
+  &:before {
+    border-radius: 0;
+    }
+
+  &.btn-large {
+    height: $button-floating-size * 1.5;
+    width: $button-floating-size * 1.5;
+
+    i {
+      line-height: $button-floating-size * 1.5;
+      }
+    }
+
+  &.btn-small {
+    height: 47px;
+    line-height: 0;
+    width: 47px;
+
+    .fa,
+    .material-icons {
+      font-size: 18px;
+      margin-top: 5px;
+      }
+    }
+  }
+
+
+.btn-floating.btn-flat:focus, .btn-floating.btn-flat:visited {
+  background-color: transparent;
+  }
+
+.btn-floating.btn-flat:hover {
+  box-shadow: none;
+  background-color: transparent;
+  }
+
+.btn-floating.btn-flat {
+  padding: 0;
+  background: $primary-color;
+  &:hover,
+  &:focus {
+    background-color: lighten($primary-color, 5%) !important;
+    }
+  &.active {
+    background-color: darken($primary-color, 20%) !important;
+    @extend .z-depth-1-half;
+    }
+  }
+
+.btn-floating.btn-flat.active {
+  background-color: rgba(0, 150, 136, 0.25);
+  }
+
+.btn-floating.btn-flat:active {
+  background-color: rgba(0, 150, 136, 0.5);
+  }
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  appearance: none;
+  }
+
+// Floating Action Button (FAB)
+.btn-fab {
+  font-size: 26px;
+  height: 56px;
+  margin: 0;
+  padding: 15px;
+  width: 56px;
+
+  &:hover {
+    //.variations(#{""}, background-color, transparent);
+    }
+
+  &,
+  .ripple-wrapper {
+    border-radius: 100%;
+    }
+
+  &.btn-mini {
+    font-size: 15px;
+    height: 40px;
+    padding: 13px;
+    width: 40px;
+    }
+  }
+
+// Fixed Action Button
+.fixed-action-btn {
+  bottom: 23px;
+  margin-bottom: 0;
+  padding-top: 15px;
+  position: fixed;
+  right: 23px;
+  z-index: 998;
+
+  ul {
+    bottom: 64px;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+
+    li {
+      margin-bottom: 15px;
+      }
+
+    a.btn-floating {
+      opacity: 0;
+      }
+    }
+  }
+
+// Transparen flat button
+.btn-flat {
+  background-color: transparent;
+  border: none;
+  margin: 10px;
+  outline: none !important;
+  padding: 8px 30px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:focus {
+    background-color: transparent;
+    }
+  }
+
+// Rounded buttons
+.btn-rounded {
+  @include border-radius(10em);
+  }
+
+.nav-pills {
+  &.md-pills {
+    .nav-item {
+      .active {
+        background-color: $primary-color;
+        border: none;
+        color: #ffffff;
+        }
+
+      &:hover {
+        background-color: red;
+        border-left: none;
+        color: $mdb-color;
+        font-weight: 500;
+        }
+      }
+    }
+  }
