@@ -1,0 +1,192 @@
+extends common/layout
+block append vars
+	- var bodyClass = 'subpage-detail'
+
+block append content
+	.container
+		ol.breadcrumb
+			li
+				a(href='#') Home
+			li
+				a(href='#') Pages
+			li.active Contact
+		section.page-title.pull-left
+			h1 Marky’s Restaurant
+			h3 63 Birch Street
+			.rating-passive(data-rating='4')
+				span.stars
+				span.reviews 6
+		// end page-title
+		a.btn.btn-primary.btn-framed.btn-rounded.btn-light-frame.icon.scroll.pull-right(href='#write-a-review')
+			i.fa.fa-star
+			| Write a review
+	section
+		.gallery.detail
+			.owl-carousel(data-owl-items='3' data-owl-loop='1' data-owl-auto-width='1' data-owl-nav='1' data-owl-dots='0' data-owl-margin='2' data-owl-nav-container='#gallery-nav')
+				- var n = 1;
+					while n <= 9
+						-var idCurrent = n++
+						.image
+							.bg-transfer(data-bg=require('assets/img/items/' + idCurrent + '.jpg'))
+	.container
+		.row
+			.col-md-7.col-sm-7
+				#gallery-nav
+				section
+					h2 About this listing
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur tristique enim, ac tincidunt
+						| massa pulvinar non. Donec scelerisque libero eu tincidunt cursus. Phasellus vel commodo nunc, nec suscipit
+						| enim. Integer suscipit, mauris consectetur pharetra ultrices, neque sem malesuada mauris, id tristique
+						| ante leo vel magna. Phasellus ac risus vel erat elementum fringilla et non massa. Pellentesque habitant
+						| morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+					p
+						| In ut varius magna. Integer ullamcorper tincidunt molestie. Morbi consequat sem non nulla laoreet,
+						| non commodo tellus elementum. Sed tincidunt, lorem vitae rhoncus pharetra, diam ex pharetra erat, eu
+						| lacinia mi libero vitae lectus. Nullam cursus bibendum magna ut elementum. Fusce eget mauris in erat
+						| gravida pretium sed eget massa.
+						| gravida pretium sed eget massa.
+				section
+					h2 Features
+					ul.tags
+						li Wi-Fi
+						li Parking
+						li TV
+						li Alcohol
+						li Vegetarian
+						li Take-out
+						li Balcony
+				section
+					h2 Reviews
+					.review
+						.image
+							.bg-transfer(data-bg=require('assets/img/person-02.jpg'))
+								//img(src=require('assets/img/person-02.jpg') alt='')
+						.description
+							figure
+								.rating-passive(data-rating='4')
+									span.stars
+									span.reviews 6
+								span.date 09.05.2016
+							p
+								| Donec nec tristique sapien. Aliquam ante felis, sagittis sodales diam sollicitudin, dapibus semper turpis
+					// end review
+					.review
+						.image
+							.bg-transfer(data-bg=require('assets/img/person-01.jpg'))
+								//img(src=require('assets/img/person-01.jpg') alt='')
+						.description
+							figure
+								.rating-passive(data-rating='5')
+									span.stars
+									span.reviews 6
+								span.date 09.05.2016
+							p
+								| Vestibulum vel est massa. Integer pellentesque non augue et accumsan. Maecenas molestie elit nibh,
+								| vel vestibulum leo condimentum quis. Duis ac orci a magna auctor vehicula.
+					// end review
+				section#write-a-review
+					h2 Write a Review
+					form.clearfix.form.inputs-underline
+						.box
+							.comment
+								.row
+									.col-md-8
+										.comment-title
+											h4 Review your experience
+										// end title
+										.form-group
+											label(for='name')
+												| Title of your review
+												em *
+											input#name.form-control(type='text' name='name' placeholder='Beautiful place!' required='')
+										.form-group
+											label(for='message')
+												| Your Message
+												em *
+											textarea#message.form-control(rows='8' name='message' required='' placeholder='Describe your experience')
+										// end form-group
+										.form-group.pull-right
+											button.btn.btn-primary.btn-rounded(type='submit') Send Review
+										// end form-group
+									// end col-md-8
+									.col-md-4
+										.comment-title
+											h4 Rating
+										// end title
+										dl.visitor-rating
+											dt Comfort
+											dd.star-rating(data-name='comfort')
+											dt Location
+											dd.star-rating.active(data-name='location' data-rating='4')
+											dt Facilities
+											dd.star-rating.active(data-name='facilities' data-rating='6')
+											dt Staff
+											dd.star-rating.active(data-name='staff' data-rating='8')
+											dt Value for money
+											dd.star-rating.active(data-name='value' data-rating='10')
+									// end col-md-4
+								// end row
+							// end comment
+						// end review
+					// end form
+			// end col-md-7
+			.col-md-5.col-sm-5
+				.detail-sidebar
+					section.shadow
+						-var mapOption = {"very-long": "piece of' ","data": true}
+						#map-detail.map.height-250px(data-map-container data-map-type='simple' data-json=mapOption)
+						// end map
+						.content
+							.vertical-aligned-elements
+								.element
+									img(src=require('assets/img/logo-2.png') alt='')
+								.element.text-align-right
+									a.btn.btn-primary.btn-rounded.btn-xs(href='#') Claim
+							hr
+							address
+								figure
+									i.fa.fa-map-marker
+									| 3858 Marion Street
+									br
+									| Morrisville, VT 05661
+								figure
+									i.fa.fa-envelope
+									a(href='#') email@example.com
+								figure
+									i.fa.fa-phone
+									| 316-436-8619
+								figure
+									i.fa.fa-globe
+									a(href='#') www.markysrestaurant.com
+					section
+						h2 Opening Hours
+						dl
+							dt Monday
+							dd 08:00am - 11:00pm
+							dt Tuesday
+							dd 08:00am - 11:00pm
+							dt Wednesday
+							dd 12:00am - 11:00pm
+							dt Thursday
+							dd 08:00am - 11:00pm
+							dt Friday
+							dd 03:00pm - 02:00am
+							dt Saturday
+							dd 03:00pm - 02:00am
+							dt Sunday
+							dd Closed
+					section
+						h2 Share This Listing
+						.social-share
+				// end detail-sidebar
+			// end col-md-5
+		// end row
+
+block scripts
+	script.
+		var _latitude = 40.7344458;
+		var _longitude = -73.86704922;
+		var element = "map-detail";
+		//		simpleMap(_latitude, _longitude, element);

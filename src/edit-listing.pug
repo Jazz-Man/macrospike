@@ -1,0 +1,416 @@
+extends common/layout
+
+
+block append content
+	.container
+		+breadcrumb
+		section.page-title.center
+			h1 Edit Listing
+		// end page-title
+		section
+			.row
+				.col-md-8.col-sm-8.col-md-offset-2.col-sm-offset-2
+					form.form.inputs-underline(enctype='multipart/form-data')
+						section
+							h3 About
+							.row
+								.col-md-9.col-sm-9
+									.form-group
+										label(for='title') Listing Title
+										input#title.form-control(type='text' name='title' placeholder='Title' value="Marky's Restaurant")
+									// end form-group
+								// end col-md-9
+								.col-md-3.col-sm-3
+									.form-group
+										label(for='category') Category
+										select#category.form-control.selectpicker(name='category')
+											option(value='1') Restaurant
+											option(value='') Category
+											option(value='2') Event
+											option(value='3') Adrenaline
+											option(value='4') Sport
+											option(value='5') Wellness
+									// end form-group
+								// col-md-3
+							// end row
+							.form-group
+								label(for='description') Description
+								textarea#description.form-control(rows='4' name='description')
+									| Nunc vitae consectetur orci, eu consequat magna. Fusce tortor ex, feugiat sed ipsum accumsan, ornare suscipit nibh. Mauris scelerisque euismod elit nec auctor. Nulla eu turpis pharetra, finibus turpis consectetur, porttitor sapien. Curabitur ornare euismod congue. Nunc quis placerat risus.
+							// end form-group
+							.form-group
+								label(for='tags') Tags
+								input#tags.form-control(type='text' name='tags' value='Free Wi-Fi, Parking, TV, Vegetarian')
+							// end form-group
+						section
+							h3 Contact
+							.row
+								.col-md-6.col-sm-6
+									.form-group
+										label(for='address-autocomplete') Address
+										input#address-autocomplete.form-control(type='text' name='address' value='63 Birch Street, London')
+									// end form-group
+									#map-submit.map.height-200px.shadow(data-map-container data-map-type='hero')
+									// end map
+									.form-group.hidden
+										input#latitude.form-control(type='text' name='latitude' hidden='')
+										input#longitude.form-control(type='text' name='longitude' hidden='')
+									p.note Enter the exact address or drag the map marker to position
+								// end col-md-6
+								.col-md-6.col-sm-6
+									.form-group
+										label(for='region') Listing Region
+										select#region.form-control.selectpicker(name='region')
+											option(value='3') London
+											option(value='') Select Region
+											option(value='1') New York
+											option(value='2') Washington
+											option(value='4') Paris
+									// end form-group
+									.form-group
+										label(for='phone') Listing Phone
+										input#phone.form-control(type='text' name='phone' value='361-492-2356')
+									// end form-group
+									.form-group
+										label(for='email') Listing Email
+										input#email.form-control(type='email' name='email' value='hello@markys.com')
+									// end form-group
+									.form-group
+										label(for='website') Listing Website
+										input#website.form-control(type='text' name='website' value='http://www.markys.com')
+									// end form-group
+								// end col-md-6
+						section
+							h3 Gallery
+							.file-uploaded-images
+								.image
+									figure
+										i.fa.fa-close
+									//img(src='assets/img/items/1.jpg' alt='')
+									img(src=require('assets/img/items/1.jpg') alt='')
+								.image
+									figure
+										i.fa.fa-close
+									//img(src='assets/img/items/2.jpg' alt='')
+									img(src=require('assets/img/items/2.jpg') alt='')
+								.image
+									figure
+										i.fa.fa-close
+									//img(src='assets/img/items/4.jpg' alt='')
+									img(src=require('assets/img/items/4.jpg') alt='')
+							.file-upload-previews
+							.file-upload
+								input.file-upload-input.with-preview(type='file' name='files[]' multiple='' title='Click to add files' maxlength='10' accept='gif|jpg|png')
+								span Click or drag images here
+							.form-group
+								label(for='video') Video URL
+								input#video.form-control(type='text' name='video' placeholder='http://')
+							// end form-group
+						section
+							h3 Social
+							.row
+								.col-md-6.col-sm-6
+									.form-group
+										label(for='facebook') Facebook URL
+										input#facebook.form-control(type='text' name='facebook' value='http://www.facebook.com/markys-restaurant')
+									// end form-group
+									.form-group
+										label(for='youtube') Youtube URL
+										input#youtube.form-control(type='text' name='youtube' value='http://www.youtube.com/markys-restaurant')
+									// end form-group
+								// end col-md-6
+								.col-md-6.col-sm-6
+									.form-group
+										label(for='twitter') Twitter URL
+										input#twitter.form-control(type='text' name='twitter' value='http://www.twitter.com/markys-restaurant')
+									// end form-group
+									.form-group
+										label(for='pinterest') Pinterest URL
+										input#pinterest.form-control(type='text' name='pinterest' placeholder='http://')
+									// end form-group
+								// end col-md-6
+							// end row
+						section
+							h3
+								| Opening Hours
+								span.note (optional)
+							#accordion.panel-group(role='tablist' aria-multiselectable='true')
+								.panel.panel-default
+									#accordion-heading-1.panel-heading(role='tab')
+										h4.panel-title
+											a(role='button' data-toggle='collapse' data-parent='#accordion' href='#accordion-collapse-1' aria-expanded='false' aria-controls='accordion-collapse-1')
+												i.fa.fa-clock-o
+												| Add opening hours
+									// end panel-heading
+									#accordion-collapse-1.panel-collapse.collapse.in(role='tabpanel' aria-labelledby='accordion-heading-1')
+										.panel-body
+											.row
+												.col-md-4.col-sm-4.horizontal-input-title
+													strong Monday
+												// end col-md-4
+												.col-md-4.col-sm-4
+													.form-group
+														input.form-control(type='text' name='open_hours[]' value='08:00')
+													// end form-group
+												// end col-md-4
+												.col-md-4.col-sm-4
+													.form-group
+														input.form-control(type='text' name='close_hours[]' value='20:00')
+													// end form-group
+												// end col-md-4
+											// end row
+											.row
+												.col-md-4.col-sm-4.horizontal-input-title
+													strong Tuesday
+												// end col-md-4
+												.col-md-4.col-sm-4
+													.form-group
+														input.form-control(type='text' name='open_hours[]' value='08:00')
+													// end form-group
+												// end col-md-4
+												.col-md-4.col-sm-4
+													.form-group
+														input.form-control(type='text' name='close_hours[]' value='20:00')
+													// end form-group
+												// end col-md-4
+											// end row
+											.row
+												.col-md-4.col-sm-4.horizontal-input-title
+													strong Wednesday
+												// end col-md-4
+												.col-md-4.col-sm-4
+													.form-group
+														input.form-control(type='text' name='open_hours[]' value='08:00')
+													// end form-group
+												// end col-md-4
+												.col-md-4.col-sm-4
+													.form-group
+														input.form-control(type='text' name='close_hours[]' value='20:00')
+													// end form-group
+												// end col-md-4
+											// end row
+											.row
+												.col-md-4.col-sm-4.horizontal-input-title
+													strong Thursday
+												// end col-md-4
+												.col-md-4.col-sm-4
+													.form-group
+														input.form-control(type='text' name='open_hours[]' value='08:00')
+													// end form-group
+												// end col-md-4
+												.col-md-4.col-sm-4
+													.form-group
+														input.form-control(type='text' name='close_hours[]' value='20:00')
+													// end form-group
+												// end col-md-4
+											// end row
+											.row
+												.col-md-4.col-sm-4.horizontal-input-title
+													strong Friday
+												// end col-md-4
+												.col-md-4.col-sm-4
+													.form-group
+														input.form-control(type='text' name='open_hours[]' value='08:00')
+													// end form-group
+												// end col-md-4
+												.col-md-4.col-sm-4
+													.form-group
+														input.form-control(type='text' name='close_hours[]' value='24:00')
+													// end form-group
+												// end col-md-4
+											// end row
+											.row
+												.col-md-4.col-sm-4.horizontal-input-title
+													strong Saturday
+												// end col-md-4
+												.col-md-4.col-sm-4
+													.form-group
+														input.form-control(type='text' name='open_hours[]' value='10:00')
+													// end form-group
+												// end col-md-4
+												.col-md-4.col-sm-4
+													.form-group
+														input.form-control(type='text' name='close_hours[]' value='22:00')
+													// end form-group
+												// end col-md-4
+											// end row
+											.row
+												.col-md-4.col-sm-4.horizontal-input-title
+													strong Sunday
+												// end col-md-4
+												.col-md-4.col-sm-4
+													.form-group
+														input.form-control(type='text' name='open_hours[]' value='08:00')
+													// end form-group
+												// end col-md-4
+												.col-md-4.col-sm-4
+													.form-group
+														input.form-control(type='text' name='close_hours[]' value='20:00')
+													// end form-group
+												// end col-md-4
+											// end row
+									// end panel-collapse
+								// end panel
+							// end panel-group
+						section
+							h3
+								| Restaurant Menu
+								span.note (optional)
+							#accordion-2.panel-group(role='tablist' aria-multiselectable='true')
+								.panel.panel-default
+									#accordion-heading-2.panel-heading(role='tab')
+										h4.panel-title
+											a(role='button' data-toggle='collapse' data-parent='#accordion-2' href='#accordion-collapse-2' aria-expanded='false' aria-controls='accordion-collapse-2')
+												i.fa.fa-cutlery
+												| Add restaurant menu
+									// end panel-heading
+									#accordion-collapse-2.panel-collapse.collapse(role='tabpanel' aria-labelledby='accordion-heading-2')
+										.panel-body
+											.wrapper
+												.row
+													.col-md-3.col-sm-3
+														strong Title
+														span.note (Optional)
+													.col-md-6.col-sm-6
+														strong Description
+													.col-md-3.col-sm-3
+														strong Meal Type
+												// end row
+												.row
+													.col-md-3.col-sm-3
+														.form-group
+															input.form-control(type='text' name='menu_title[]' placeholder='Title')
+														// end form-group
+													// end col-sm-3
+													.col-md-6.col-sm-6
+														.form-group
+															input.form-control(type='text' name='menu_description[]' placeholder='Description')
+														// end form-group
+													// end col-sm-6
+													.col-md-3.col-sm-3
+														.form-group
+															select.form-control.selectpicker(name='menu_type[]')
+																option(value='') Select meal type
+																option(value='1') Starter
+																option(value='2') Soup
+																option(value='3') Main Course
+																option(value='4') Desert
+														// end form-group
+													// end col-sm-3
+												// end row
+												.row
+													.col-md-3.col-sm-3
+														.form-group
+															input.form-control(type='text' name='menu_title[]' placeholder='Title')
+														// end form-group
+													// end col-sm-3
+													.col-md-6.col-sm-6
+														.form-group
+															input.form-control(type='text' name='menu_description' placeholder='Description')
+														// end form-group
+													// end col-sm-6
+													.col-md-3.col-sm-3
+														.form-group
+															select.form-control.selectpicker(name='menu_type[]')
+																option(value='') Select meal type
+																option(value='1') Starter
+																option(value='2') Soup
+																option(value='3') Main Course
+																option(value='4') Desert
+														// end form-group
+													// end col-sm-3
+												// end row
+												#duplicate-meal.row
+													.col-md-3.col-sm-3
+														.form-group
+															input.form-control(type='text' name='menu_title[]' placeholder='Title')
+														// end form-group
+													// end col-sm-3
+													.col-md-6.col-sm-6
+														.form-group
+															input.form-control(type='text' name='menu_description' placeholder='Description')
+														// end form-group
+													// end col-sm-6
+													.col-md-3.col-sm-3
+														.form-group
+															select.form-control.selectpicker(name='menu_type[]')
+																option(value='') Select meal type
+																option(value='1') Starter
+																option(value='2') Soup
+																option(value='3') Main Course
+																option(value='4') Desert
+														// end form-group
+													// end col-sm-3
+												// end row
+											// end wrapper
+											.center
+												a.btn.btn-rounded.btn-primary.btn-framed.btn-light-frame.btn-xs.icon.duplicate(href='#duplicate-meal')
+													i.fa.fa-plus
+													| Add another meal
+										// end panel-body
+									// end panel-collapse
+								// end panel
+							// end panel-group
+						section
+							h3
+								| Schedule
+								span.note (optional)
+							#accordion-3.panel-group(role='tablist' aria-multiselectable='true')
+								.panel.panel-default
+									#accordion-heading-3.panel-heading(role='tab')
+										h4.panel-title
+											a(role='button' data-toggle='collapse' data-parent='#accordion-3' href='#accordion-collapse-3' aria-expanded='false' aria-controls='accordion-collapse-3')
+												i.fa.fa-calendar
+												| Add schedule plan
+									// end panel-heading
+									#accordion-collapse-3.panel-collapse.collapse(role='tabpanel' aria-labelledby='accordion-heading-3')
+										.panel-body
+											.wrapper
+												.row
+													.col-md-2.col-sm-3
+														strong Date
+													// end col-md-2
+													.col-md-2.col-sm-3
+														strong Time
+													// end col-md-2
+													.col-md-4.col-sm-3
+														strong Place
+													// end col-md-3
+													.col-md-4.col-sm-3
+														strong Address
+													// end col-md-4
+												#duplicate-schedule.row
+													.col-md-2.col-sm-3
+														.form-group
+															input.form-control(type='text' name='schedule_date[]' placeholder='Date')
+														// end form-group
+													// end col-md-2
+													.col-md-2.col-sm-3
+														.form-group
+															input.form-control(type='text' name='schedule_time[]' placeholder='Time')
+														// end form-group
+													// end col-md-2
+													.col-md-4.col-sm-3
+														.form-group
+															input.form-control(type='text' name='schedule_place[]' placeholder='Place')
+														// end form-group
+													// end col-md-3
+													.col-md-4.col-sm-3
+														.form-group
+															input.form-control(type='text' name='schedule_address[]' placeholder='Address')
+														// end form-group
+													// end col-md-4
+												// end row
+											// end wrapper
+											.center
+												a.btn.btn-rounded.btn-primary.btn-framed.btn-light-frame.btn-xs.icon.duplicate(href='#duplicate-schedule')
+													i.fa.fa-plus
+													| Add another schedule item
+										// end panel-body
+									// end panel-collapse
+								// end panel
+							// end panel-group
+						hr
+						section.center
+							.form-group
+								button.btn.btn-primary.btn-rounded(type='submit') Preview & Submit Listing

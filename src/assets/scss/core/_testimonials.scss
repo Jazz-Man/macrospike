@@ -1,0 +1,75 @@
+.testimonials {
+  padding: 0;
+
+  &.center {
+
+    .owl-carousel {
+      top: -30px;
+      position: relative;
+      }
+
+    blockquote {
+      text-align: center;
+      padding-left: 20px;
+
+      p {
+        font-size: 14px;
+        font-style: italic;
+        }
+
+      .image {
+        @include border-radius(50%);
+        @include shadow;
+        display: inline-block;
+        width: 95px;
+        height: 95px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 15px;
+
+        img {
+          @include transform-style(flat);
+          }
+        }
+      }
+    }
+
+  blockquote {
+    border-left: none;
+    margin-bottom: 0;
+    padding-left: 120px;
+    position: relative;
+
+    h3 {
+      font-size: 18px;
+      font-weight: normal;
+      margin-bottom: 0;
+      }
+    h4 {
+      @include opacity(.5);
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 3px;
+      }
+    p {
+      font-size: 16px;
+      font-style: italic;
+      }
+    .image {
+      @include border-radius(100%);
+      @include shadow;
+      display: inline-block;
+      width: 90px;
+      height: 90px;
+      overflow: hidden;
+      position: absolute;
+      z-index: 1;
+      left: 2px;
+      top: 0;
+      img {
+        @include transform-style(flat);
+        }
+      }
+    }
+  }

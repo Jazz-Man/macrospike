@@ -1,0 +1,23 @@
+@if $use-bounceOutRight == true {
+
+  @keyframes bounceOutRight {
+    0% {
+      transform: translateX(0);
+      }
+
+    20% {
+      opacity: 1;
+      transform: translateX(-$base-distance * 2);
+      }
+
+    100% {
+      opacity: 0;
+      transform: translateX($base-distance-big * 2);
+      }
+    }
+
+  .bounceOutRight {
+    @include animate-prefixer(animation-name, bounceOutRight);
+    }
+
+  }

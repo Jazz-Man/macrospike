@@ -1,0 +1,18 @@
+@if $use-fadeOutRightBig == true {
+
+  @keyframes fadeOutRightBig {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+      }
+
+    100% {
+      opacity: 0;
+      transform: translateX($base-distance-big * 2);
+      }
+    }
+
+  .fadeOutRightBig {
+    @include animate-prefixer(animation-name, fadeOutRightBig);
+    }
+  }

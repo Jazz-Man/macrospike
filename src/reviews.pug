@@ -1,0 +1,261 @@
+extends common/layout
+
+block append head
+	style.
+		.box {  padding: 10px;  font-size: 12px;  font-weight: bold;  line-height: 50px;  }
+		.row { margin-bottom: 30px;  }
+
+block append content
+	.container
+		+breadcrumb
+		section.page-title
+			h1 Reviews
+		// end page-title
+		section.reviews
+			.review
+				.ribbon.right.new
+					figure New
+				.row
+					.col-md-2
+						aside.name John Doe
+						aside.date 10.03.2015
+					// end col-md-3
+					.col-md-10
+						.comment
+							.row
+								.col-md-8
+									.comment-title
+										figure.rating 9.5
+										h4 Beautiful Holiday
+									// end title
+									p
+										| Consectetur adipiscing elit. Vivamus nec augue ac dui sodales euismod.
+										| Suspendisse at dui sit amet felis commodo dictum. Class aptent taciti
+										| sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+										| Integer commodo eleifend erat, vitae tincidunt urna volutpat et.
+										| Mauris laoreet, sem ut sodales sodales, massa turpis posuere lectus, non
+										| aliquet massa nisl ac orci.
+									.options
+										a.btn.btn-framed.btn-primary.btn-rounded.btn-small.icon(href='#reply_1' data-toggle='collapse' aria-expanded='false' aria-controls='reply_1')
+											| Reply
+											i.fa.fa-reply.font-color-default
+									// end options
+									#reply_1.collapse.in
+										.answer
+											form#form_reply_1.form.labels-uppercase.clearfix
+												.row
+													.col-md-6
+														.form-group
+															label(for='form_reply_1-name')
+																| Your Name
+																em *
+															input#form_reply_1-name.form-control(type='text' name='name' placeholder='Name' required='')
+													// end col-md-6
+													.col-md-6
+														.form-group
+															label(for='form_reply_1-email') Your Position (optional)
+															input#form_reply_1-email.form-control(type='text' name='position' placeholder='e.g. Owner')
+													// end col-md-6
+												// end row
+												.form-group
+													label(for='form_reply_1-message')
+														| Your Answer
+														em *
+													textarea#form_reply_1-message.form-control(rows='8' name='answer' required='' placeholder='Message')
+												// end form-group
+												.form-group.pull-right
+													button.btn.btn-primary.btn-rounded(type='submit') Send Message
+												// end form-group
+											// end form
+										// end answer
+									// end collapse
+								// end col-md-8
+								.col-md-4
+									.comment-title
+										h4 Rating
+									// end title
+									dl.visitor-rating
+										dt Cleanliness
+										dd 10
+										dt Comfort
+										dd 9
+										dt Location
+										dd 8
+										dt Facilities
+										dd 10
+										dt Staff
+										dd 8
+										dt Value for money
+										dd 9
+								// end col-md-4
+							// end row
+						// end comment
+					// end col-md-9
+				// end row
+			// end review
+			.review.muted
+				.ribbon.right.new.white
+					figure
+						i.fa.fa-check
+						| Answered
+				.row
+					.col-md-2
+						aside.name Peter Green
+						aside.date 08.03.2015
+					// end col-md-3
+					.col-md-10
+						.comment
+							.row
+								.col-md-8
+									.comment-title
+										figure.rating 9.8
+										h4 Very Good Hotel
+									// end title
+									p
+										| Sed facilisis mi turpis, sed suscipit risus consequat sed. Donec cursus
+										| feugiat nulla sit amet viverra. Nulla sit amet condimentum mi, et suscipit
+										| justo. Pellentesque maximus lectus sit amet rutrum vulputate. Vivamus neque
+										| tortor, rutrum eu consectetur eget, posuere eu eros. Aenean fringilla vel libero
+										| eu mollis. Phasellus vitae ultricies mauris. In vel est interdum, dictum mi eget,
+										| fermentum nibh. Quisque vitae porttitor massa. Proin non diam tincidunt, consectetur
+										| tortor eget, consequat diam. Praesent dictum odio lorem, nec imperdiet turpis
+										| vestibulum ac.
+									.options
+										a.btn.btn-framed.btn-primary.btn-rounded.btn-small.icon(href='#reply_2' data-toggle='collapse' aria-expanded='false' aria-controls='reply_2')
+											| Reply
+											i.fa.fa-reply.font-color-default
+									// end options
+									#reply_2.collapse
+										.answer
+											form#form_reply_2.form.labels-uppercase.clearfix
+												.row
+													.col-md-6
+														.form-group
+															label(for='form_reply_1-name')
+																| Your Name
+																em *
+															input#form_reply_2-name.form-control(type='text' name='name' placeholder='Name' required='')
+													// end col-md-6
+													.col-md-6
+														.form-group
+															label(for='form_reply_1-email') Your Position (optional)
+															input#form_reply_2-email.form-control(type='text' name='position' placeholder='e.g. Owner')
+													// end col-md-6
+												// end row
+												.form-group
+													label(for='form_reply_1-message')
+														| Your Answer
+														em *
+													textarea#form_reply_2-message.form-control(rows='8' name='answer' required='' placeholder='Message')
+												// end form-group
+												.form-group.pull-right
+													button.btn.btn-primary.btn-rounded(type='submit') Send Message
+												// end form-group
+											// end form
+										// end answer
+									// end collapse
+								// end col-md-8
+								.col-md-4
+									.comment-title
+										h4 Rating
+									// end title
+									dl.visitor-rating
+										dt Cleanliness
+										dd 10
+										dt Comfort
+										dd 9
+										dt Location
+										dd 8
+										dt Facilities
+										dd 10
+										dt Staff
+										dd 8
+										dt Value for money
+										dd 9
+								// end col-md-4
+							// end row
+						// end comment
+					// end col-md-9
+				// end row
+			// end review
+			.review
+				.row
+					.col-md-2
+						aside.name Suzanne Broke
+						aside.date 01.03.2015
+					// end col-md-3
+					.col-md-10
+						.comment
+							.row
+								.col-md-8
+									.comment-title
+										figure.rating 9.2
+										h4 Nice Stay!
+									// end title
+									p
+										| Maecenas porta velit nec semper rutrum. Vestibulum ac lorem imperdiet metus
+										| ullamcorper porttitor. In quis iaculis dui. Sed lorem dui, scelerisque sodales
+										| feugiat aliquet, finibus et magna. Aenean sit amet tincidunt nunc.
+										| Vestibulum commodo at nisi ut pellentesque.
+									.options
+										a.btn.btn-framed.btn-primary.btn-rounded.btn-small.icon(href='#reply_3' data-toggle='collapse' aria-expanded='false' aria-controls='reply_3')
+											| Reply
+											i.fa.fa-reply.font-color-default
+									// end options
+									#reply_3.collapse
+										.answer
+											form#form_reply_3.form.labels-uppercase.clearfix
+												.row
+													.col-md-6
+														.form-group
+															label(for='form_reply_1-name')
+																| Your Name
+																em *
+															input#form_reply_3-name.form-control(type='text' name='name' placeholder='Name' required='')
+													// end col-md-6
+													.col-md-6
+														.form-group
+															label(for='form_reply_1-email') Your Position (optional)
+															input#form_reply_3-email.form-control(type='text' name='position' placeholder='e.g. Owner')
+													// end col-md-6
+												// end row
+												.form-group
+													label(for='form_reply_1-message')
+														| Your Answer
+														em *
+													textarea#form_reply_3-message.form-control(rows='8' name='answer' required='' placeholder='Message')
+												// end form-group
+												.form-group.pull-right
+													button.btn.btn-primary.btn-rounded(type='submit') Send Message
+												// end form-group
+											// end form
+										// end answer
+									// end collapse
+								// end col-md-8
+								.col-md-4
+									.comment-title
+										h4 Rating
+									// end title
+									dl.visitor-rating
+										dt Cleanliness
+										dd 10
+										dt Comfort
+										dd 9
+										dt Location
+										dd 8
+										dt Facilities
+										dd 10
+										dt Staff
+										dd 8
+										dt Value for money
+										dd 9
+								// end col-md-4
+							// end row
+						// end comment
+					// end col-md-9
+				// end row
+			// end review
+		// end reviews
+		section.center
+			a.btn.btn-primary.btn-light-frame.btn-rounded.btn-framed.btn-large(href='') Load More
+		// end center

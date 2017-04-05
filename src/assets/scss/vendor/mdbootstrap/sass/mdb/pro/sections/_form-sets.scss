@@ -1,0 +1,19 @@
+// Form sets
+.card .form-header {
+  color: #ffffff;
+  margin-bottom: 3rem;
+  margin-top: -50px;
+  padding: 1rem;
+  text-align: center;
+  @extend .z-depth-1-half;
+  @include border-radius(2px);
+
+  h3 {
+    margin: 0;
+    padding: .7rem;
+    }
+  }
+
+.call .fa {
+  margin-right: 5px;
+  }

@@ -1,0 +1,29 @@
+// Charts Pro
+.min-chart {
+  display: inline-block;
+  height: 110px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  position: relative;
+  text-align: center;
+  width: 110px;
+
+  canvas {
+    left: 0;
+    position: absolute;
+    top: 0;
+    }
+  }
+
+
+.percent {
+  display: inline-block;
+  line-height: 110px;
+  z-index: 2;
+
+  &:after {
+    content: "%";
+    font-size: .8em;
+    margin-left: .1em;
+    }
+}

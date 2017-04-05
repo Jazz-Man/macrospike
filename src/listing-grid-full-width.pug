@@ -1,0 +1,298 @@
+extends common/layout
+
+block append content
+	.container.full-width
+		+breadcrumb
+		section.page-title
+			h1 Grid Listing
+		section
+			.search-results-controls.clearfix
+				.pull-left
+					a.circle-icon.active(href='listing-grid-right-sidebar.html')
+						i.fa.fa-th
+					a.circle-icon(href='listing-row-right-sidebar.html')
+						i.fa.fa-bars
+				.pull-right
+					.input-group.inputs-underline.min-width-150px
+						select.form-control.selectpicker(name='sort')
+							option(value='') Sort by
+							option(value='1') Price
+							option(value='2') Distance
+							option(value='3') Title
+		section
+			.row
+				.col-md-2.col-sm-2
+					.item(data-id='1')
+						a(href='detail.html')
+							.description
+								figure Average Price: $8 - $30
+								.label.label-default Restaurant
+								h3 Marky’s Restaurant
+								h4 63 Birch Street
+							.image.bg-transfer
+								//img(src='assets/img/items/1.jpg' alt='')
+						.additional-info
+							.rating-passive(data-rating='4')
+								span.stars
+								span.reviews 6
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+				.col-md-2.col-sm-2
+					.item(data-id='2')
+						a(href='detail.html')
+							.description
+								.label.label-default Restaurant
+								h3 Ironapple
+								h4 4209 Glenview Drive
+							.image.bg-transfer
+						.additional-info
+							.rating-passive(data-rating='3')
+								span.stars
+								span.reviews 13
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+				.col-md-2.col-sm-2
+					.item(data-id='15')
+						figure.ribbon Top
+						a(href='detail.html')
+							.description
+								figure Happy hour: 18:00 - 19:00
+								.label.label-default Bar & Grill
+								h3 Bambi Planet Houseboat Bar& Grill
+								h4 3857 Losh Lane
+							.image.bg-transfer
+						.additional-info
+							figure.circle(title='Featured')
+								i.fa.fa-check
+							.rating-passive(data-rating='5')
+								span.stars
+								span.reviews 56
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+				.col-md-2.col-sm-2
+					.item(data-id='3')
+						figure.ribbon Top
+						a(href='detail.html')
+							.description
+								figure Starts at: 19:00
+								.label.label-default Event
+								h3 Food Festival
+								h4 840 My Drive
+							.image.bg-transfer
+						.additional-info
+							figure.circle(title='Featured')
+								i.fa.fa-check
+							.rating-passive(data-rating='5')
+								span.stars
+								span.reviews 12
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+				.col-md-2.col-sm-2
+					.item(data-id='4')
+						a(href='detail.html')
+							.description
+								.label.label-default Lounge
+								h3 Cosmopolit
+								h4 2896 Ripple Street
+							.image.bg-transfer
+						.additional-info
+							.rating-passive(data-rating='5')
+								span.stars
+								span.reviews 43
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+				.col-md-2.col-sm-2
+					.item(data-id='6')
+						a(href='detail.html')
+							.description
+								figure Free entry
+								.label.label-default Concert
+								h3 Stand Up Show
+								h4 371 Kinney Street
+							.image.bg-transfer
+						.additional-info
+							.rating-passive(data-rating='0')
+								span.stars
+								span.reviews 0
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+				.col-md-2.col-sm-2
+					.item(data-id='5')
+						a(href='detail.html')
+							.description
+								.label.label-default Real Estate
+								h3 Beautiful Luxury Villa
+								h4 3284 Hillside Street
+							.image.bg-transfer
+						.additional-info
+							.rating-passive(data-rating='4')
+								span.stars
+								span.reviews 6
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+				.col-md-2.col-sm-2
+					.item(data-id='6')
+						a(href='detail.html')
+							.description
+								.label.label-default Event
+								h3 Stand Up Show
+								h4 534 Sycamore Road
+							.image.bg-transfer
+						.additional-info
+							.rating-passive(data-rating='3')
+								span.stars
+								span.reviews 13
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+				.col-md-2.col-sm-2
+					.item(data-id='7')
+						a(href='detail.html')
+							.description
+								.label.label-default Event
+								h3 University Day
+								h4 Central Town University
+							.image.bg-transfer
+						.additional-info
+							figure.circle(title='Featured')
+								i.fa.fa-check
+							.rating-passive(data-rating='5')
+								span.stars
+								span.reviews 56
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+				.col-md-2.col-sm-2
+					.item(data-id='9')
+						a(href='detail.html')
+							.description
+								.label.label-default Adrenaline
+								h3 High Mountain Trip
+								h4 East Alps
+							.image.bg-transfer
+						.additional-info
+							figure.circle(title='Featured')
+								i.fa.fa-check
+							.rating-passive(data-rating='5')
+								span.stars
+								span.reviews 12
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+				.col-md-2.col-sm-2
+					.item(data-id='10')
+						a(href='detail.html')
+							.description
+								.label.label-default Car
+								h3 Hyundai i30
+								h4 580 Briarhill Lane
+							.image.bg-transfer
+						.additional-info
+							.rating-passive(data-rating='5')
+								span.stars
+								span.reviews 43
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+				.col-md-2.col-sm-2
+					.item(data-id='11')
+						a(href='detail.html')
+							.description
+								.label.label-default Relax
+								h3 Thai Massage
+								h4 1360 Meadowbrook Mall Road
+							.image.bg-transfer
+						.additional-info
+							.rating-passive(data-rating='0')
+								span.stars
+								span.reviews 0
+							.controls-more
+								ul
+									li
+										a(href='#') Add to favorites
+									li
+										a(href='#') Add to watchlist
+									li
+										a.quick-detail(href='#') Quick detail
+		section
+			.center
+				nav(aria-label='Page navigation')
+					ul.pagination
+						li.disabled.previous
+							a(href='#' aria-label='Previous')
+								i.arrow_left
+						li
+							a(href='#') 1
+						li
+							a(href='#') 2
+						li.active
+							a(href='#') 3
+						li
+							a(href='#') 4
+						li
+							a(href='#') 5
+						li.next
+							a(href='#' aria-label='Next')
+								i.arrow_right
