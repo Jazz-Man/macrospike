@@ -1,0 +1,420 @@
+extends common/layout
+
+block append defaultTitle
+    title MacroTrader
+
+block append content
+    .container
+        section
+            .row.profile
+                .col-md-3.col-sm-3.profile-sidebar
+                    .profile-userpic.half-bottom-margin
+                        img.img-responsive.img-circle.center-block(src=require('assets/img/person-04.jpg') alt='')
+                    .profile-usertitle.text-center.half-bottom-margin
+                        h3
+                            | Marcus Doe
+                            br
+                            small Developer
+                    .profile-userbuttons.text-center.half-bottom-margin
+                        button.btn.btn-success.btn-sm(type='button') Follow
+                        button.btn.btn-danger.btn-sm(type='button') Message
+                    .profile-usermenu
+                        ul.nav
+                            li.active
+                                a(href='#')
+                                    i.fa.fa-home.fa-fw
+                                    |              Overview
+                            li
+                                a(href='#')
+                                    i.fa.fa-user.fa-fw
+                                    |              Account Settings
+                            li
+                                a(href='#', target='_blank')
+                                    i.fa.fa-check.fa-fw
+                                    |              Tasks
+                            li
+                                a(href='#')
+                                    i.fa.fa-info.fa-fw
+                                    |              Help
+                            li
+                                a(href='#mail-inbox.html')
+                                    i.fa.fa-inbox.fa-fw
+                                    |  Inbox
+                                    span.badge.pull-right 7
+                            li
+                                a(href='#mail-compose.html')
+                                    i.fa.fa-envelope-o.fa-fw
+                                    |  Send Mail
+                                    span.badge.pull-right 7
+                            li
+                                a(href='#')
+                                    i.fa.fa-certificate.fa-fw
+                                    |  Important
+                                    span.badge.pull-right 7
+                            li
+                                a(href='#')
+                                    i.fa.fa-file-text-o.fa-fw
+                                    |  Drafts
+                                    span.badge.pull-right 35
+                            li
+                                a(href='#')
+                                    i.fa.fa-trash-o.fa-fw
+                                    |  Trash
+                                    span.badge.pull-right 7
+                .col-sm-9.col-md-9
+                    .row
+                        .col-lg-3
+                            .panel.panel-info
+                                .panel-heading
+                                    .row
+                                        .col-xs-6
+                                            i.fa.fa-envelope-o.fa-5x
+                                        .col-xs-6.text-right
+                                            p.announcement-heading 1
+                                a(href='#')
+                                    .panel-footer.announcement-bottom
+                                        .row
+                                            .col-xs-6
+                                                | Messages
+                                            .col-xs-6.text-right
+                                                i.fa.fa-arrow-circle-right
+                        .col-lg-3
+                            .panel.panel-warning
+                                .panel-heading
+                                    .row
+                                        .col-xs-6
+                                            i.fa.fa-comment-o.fa-5x
+                                        .col-xs-6.text-right
+                                            p.announcement-heading 12
+                                a(href='#')
+                                    .panel-footer.announcement-bottom
+                                        .row
+                                            .col-xs-6
+                                                | Interests
+                                            .col-xs-6.text-right
+                                                i.fa.fa-arrow-circle-right
+                        .col-lg-3
+                            .panel.panel-danger
+                                .panel-heading
+                                    .row
+                                        .col-xs-6
+                                            i.fa.fa-bell-o.fa-5x
+                                        .col-xs-6.text-right
+                                            p.announcement-heading 18
+                                            p.announcement-text Crawl
+                                a(href='#')
+                                    .panel-footer.announcement-bottom
+                                        .row
+                                            .col-xs-6
+                                                | Requests
+                                            .col-xs-6.text-right
+                                                i.fa.fa-arrow-circle-right
+                        .col-lg-3
+                            .panel.panel-success
+                                .panel-heading
+                                    .row
+                                        .col-xs-6
+                                            i.fa.fa-comments.fa-5x
+                                        .col-xs-6.text-right
+                                            p.announcement-heading 56
+                                            p.announcement-text  Orders!
+                                a(href='#')
+                                    .panel-footer.announcement-bottom
+                                        .row
+                                            .col-xs-6
+                                                | Complete
+                                            .col-xs-6.text-right
+                                                i.fa.fa-arrow-circle-right
+                    .panel.shadow
+                        .panel-heading.row.no-gutters
+                            .col-sm-6.col-md-6
+                                h3 My Listings
+
+                            .col-md-5
+                                ul.nav.nav-pills.pull-right
+                                    li.dropdown
+                                        a#drop1.dropdown-toggle(href='#', data-toggle='dropdown', data-trigger='mouseover', aria-haspopup='true', role='button', aria-expanded='false', tabindex='0')
+                                            | Pill
+                                            span.caret
+                                        ul.dropdown-menu(role='menu', aria-labelledby='drop1')
+                                            li(role='presentation')
+                                                a(role='menuitem', tabindex='-1', href='#') Action
+                                            li(role='presentation')
+                                                a(role='menuitem', tabindex='-1', href='#') Another action
+                                            li.dropdown(role='presentation')
+                                                a(role='menuitem', tabindex='0', href='#', data-toggle='dropdown', aria-expanded='false')
+                                                    | This is nesting
+                                                    span.caret
+                                                ul.dropdown-menu.right(role='menu', aria-labelledby='drop2')
+                                                    li(role='presentation')
+                                                        a(role='menuitem', tabindex='-1', href='#') Action
+                                                    li(role='presentation')
+                                                        a(role='menuitem', tabindex='-1', href='#') Another action
+                                                    li(role='presentation')
+                                                        a(role='menuitem', tabindex='-1', href='#') Something else here
+                                                    li.divider(role='presentation')
+                                                    li.dropdown(role='presentation')
+                                                        a(role='menuitem', tabindex='0', href='#', data-toggle='dropdown', aria-expanded='false')
+                                                            | Sub-menu
+                                                            span.caret
+                                                        ul.dropdown-menu.right(role='menu', aria-labelledby='drop3')
+                                                            li(role='presentation')
+                                                                a(role='menuitem', tabindex='-1', href='#') Level 1
+                                                            li(role='presentation')
+                                                                a(role='menuitem', tabindex='-1', href='#') Nested Menu
+                                                            li.dropdown(role='presentation')
+                                                                a(role='menuitem', tabindex='0', href='#', data-toggle='dropdown', aria-expanded='false')
+                                                                    | Other stuff
+                                                                    span.caret
+                                                                ul.dropdown-menu.right(role='menu', aria-labelledby='drop4')
+                                                                    li(role='presentation')
+                                                                        a(role='menuitem', tabindex='-1', href='#') Level 2
+                                                                    li(role='presentation')
+                                                                        a(role='menuitem', tabindex='-1', href='#') Nested Menu
+                                                                    li.dropdown(role='presentation')
+                                                                        a(role='menuitem', tabindex='0', href='#', data-toggle='dropdown', aria-expanded='false')
+                                                                            | Even more stuff
+                                                                            span.caret
+                                                                        ul.dropdown-menu.right(role='menu', aria-labelledby='drop5')
+                                                                            li(role='presentation')
+                                                                                a(role='menuitem', tabindex='-1', href='#') Level 3
+                                                                            li(role='presentation')
+                                                                                a(role='menuitem', tabindex='-1', href='#') Nested Menu
+                                            li.divider(role='presentation')
+                                            li(role='presentation')
+                                                a(role='menuitem', tabindex='-1', href='http://google.cn', target='_blank') External link
+                                    li.dropdown
+                                        a#drop2.dropdown-toggle(href='#', data-toggle='dropdown', data-trigger='mouseover', aria-haspopup='true', role='button', aria-expanded='false', tabindex='0')
+                                            | Nested
+                                            span.caret
+                                        ul.dropdown-menu.pull-right(role='menu', aria-labelledby='drop2')
+                                            li(role='presentation')
+                                                a(role='menuitem', tabindex='-1', href='#') Action
+                                            li(role='presentation')
+                                                a(role='menuitem', tabindex='-1', href='#') Another action
+                                            li(role='presentation')
+                                                a(role='menuitem', tabindex='-1', href='#') Something else here
+                                            li.divider(role='presentation')
+                                            li.dropdown(role='presentation')
+                                                a(role='menuitem', tabindex='0', href='#', data-toggle='dropdown', aria-expanded='false')
+                                                    | Sub-menu
+                                                    span.caret
+                                                ul.dropdown-menu.left(role='menu', aria-labelledby='drop3')
+                                                    li(role='presentation')
+                                                        a(role='menuitem', tabindex='-1', href='#') Level 1
+                                                    li(role='presentation')
+                                                        a(role='menuitem', tabindex='-1', href='#') Nested Menu
+                                                    li.dropdown(role='presentation')
+                                                        a(role='menuitem', tabindex='0', href='#', data-toggle='dropdown', aria-expanded='false')
+                                                            | Other stuff
+                                                            span.caret
+                                                        ul.dropdown-menu.left(role='menu', aria-labelledby='drop4')
+                                                            li(role='presentation')
+                                                                a(role='menuitem', tabindex='-1', href='#') Level 2
+                                                            li(role='presentation')
+                                                                a(role='menuitem', tabindex='-1', href='#') Nested Menu
+                                                            li.dropdown(role='presentation')
+                                                                a(role='menuitem', tabindex='0', href='#', data-toggle='dropdown', aria-expanded='false')
+                                                                    | Even more stuff
+                                                                    span.caret
+                                                                ul.dropdown-menu.left(role='menu', aria-labelledby='drop4')
+                                                                    li(role='presentation')
+                                                                        a(role='menuitem', tabindex='-1', href='#') Level 3
+                                                                    li(role='presentation')
+                                                                        a(role='menuitem', tabindex='-1', href='#') Nested Menu
+                        .panel-body
+                            section
+                                .my-items.table-responsive
+                                    table.table
+                                        thead
+                                            tr
+                                                th Listings
+                                                th Featured
+                                                th Views
+                                                th Reviews
+                                                th Rating
+                                                th Last Edited
+                                        tbody
+                                            tr.my-item
+                                                td
+                                                    .image-wrapper
+                                                        .circle(data-toggle='tooltip' data-placement='right' title='Top Listing')
+                                                            i.fa.fa-thumbs-up
+                                                        a.image(href='edit-listing.html')
+                                                            .bg-transfer(data-bg=require('assets/img/items/1.jpg'))
+                                                    .info
+                                                        a(href='detail.html')
+                                                            h2 Spring Hotel
+                                                        figure.location Montenegro
+                                                        figure.label.label-info Hotel
+                                                        .additional-info
+                                                            span
+                                                                i.fa.fa-bed
+                                                                | 12
+                                                            span.price-info
+                                                                | From
+                                                                span.price $32
+                                                                span.appendix /night
+                                                        // end additional-info
+                                                    // end info
+                                                td
+                                                    .featured.yes
+                                                        i.fa.fa-check
+                                                        aside
+                                                td.views 426
+                                                td.reviews 45
+                                                td.rating
+                                                    .rating-passive(data-rating='4')
+                                                        span.stars
+                                                        span.reviews 6
+                                                td.last-edited
+                                                    | Today 15:32
+                                                    span.last-edit Last edited: Today 12:35
+                                                    .edit-options
+                                                        a.link.icon(href='edit-listing.html')
+                                                            i.fa.fa-edit
+                                                            | Edit
+                                                        a.link.icon(href='reviews.html')
+                                                            i.fa.fa-comment
+                                                            | Reviews
+                                                        a.link.icon.delete(href='#')
+                                                            i.fa.fa-trash
+                                                            | Delete
+                                                    // end edit-options
+                                            // end my-item
+                                            tr.my-item
+                                                td
+                                                    .image-wrapper
+                                                        a.image(href='edit-listing.html')
+                                                            .bg-transfer(data-bg=require('assets/img/items/2.jpg'))
+                                                    .info
+                                                        a(href='detail.html')
+                                                            h2 Iron Apple
+                                                        figure.location 4209 Glenview Drive
+                                                        figure.label.label-info Restaurant
+                                                        .additional-info
+                                                        // end additional-info
+                                                    // end info
+                                                td.featured
+                                                    i.fa.fa-times
+                                                td.views 230
+                                                td.reviews 28
+                                                td.rating
+                                                    .rating-passive(data-rating='5')
+                                                        span.stars
+                                                        span.reviews 19
+                                                td.last-edited
+                                                    | Yesterday 10:45
+                                                    span.last-edit Last edited: Today 12:35
+                                                    .edit-options
+                                                        a.link.icon(href='edit-listing.html')
+                                                            i.fa.fa-edit
+                                                            | Edit
+                                                        a.link.icon(href='reviews.html')
+                                                            i.fa.fa-comment
+                                                            | Reviews
+                                                        a.link.icon.delete(href='#')
+                                                            i.fa.fa-trash
+                                                            | Delete
+                                                    // end edit-options
+                                            // end my-item
+                                            tr.my-item
+                                                td
+                                                    .image-wrapper
+                                                        figure.ribbon Top
+                                                        a.image(href='edit-listing.html')
+                                                            .bg-transfer(data-bg=require('assets/img/items/3.jpg'))
+                                                    .info
+                                                        a(href='detail.html')
+                                                            h2 Bamby Planet Houseboat Bar & Grill
+                                                        figure.location 3857 Josh Lane
+                                                        figure.label.label-info Bar & Grill
+                                                        .additional-info
+                                                            span.price-info Happy Hour 18:00 - 19:00
+                                                        // end additional-info
+                                                    // end info
+                                                td.featured
+                                                    i.fa.fa-times
+                                                td.views 230
+                                                td.reviews 28
+                                                td.rating
+                                                    .rating-passive(data-rating='4')
+                                                        span.stars
+                                                        span.reviews 12
+                                                td.last-edited
+                                                    | 12.05.2016 11:05
+                                                    span.last-edit Last edited: Today 12:35
+                                                    .edit-options
+                                                        a.link.icon(href='edit-listing.html')
+                                                            i.fa.fa-edit
+                                                            | Edit
+                                                        a.link.icon(href='reviews.html')
+                                                            i.fa.fa-comment
+                                                            | Reviews
+                                                        a.link.icon.delete(href='#')
+                                                            i.fa.fa-trash
+                                                            | Delete
+                                                    // end edit-options
+                                            // end my-item
+                                            tr.my-item
+                                                td
+                                                    .image-wrapper
+                                                        a.image(href='edit-listing.html')
+                                                            .bg-transfer(data-bg=require('assets/img/items/4.jpg'))
+                                                    .info
+                                                        a(href='detail.html')
+                                                            h2 Food Festival
+                                                        figure.location 840 My Drive
+                                                        figure.label.label-info Event
+                                                        .additional-info
+                                                            span.price-info Free Entry
+                                                        // end additional-info
+                                                    // end info
+                                                td.featured
+                                                    i.fa.fa-times
+                                                td.views 230
+                                                td.reviews 28
+                                                td.rating
+                                                    .rating-passive(data-rating='3')
+                                                        span.stars
+                                                        span.reviews 3
+                                                td.last-edited
+                                                    | 12.02.2016 08:50
+                                                    span.last-edit Last edited: Today 12:35
+                                                    .edit-options
+                                                        a.link.icon(href='edit-listing.html')
+                                                            i.fa.fa-edit
+                                                            | Edit
+                                                        a.link.icon(href='reviews.html')
+                                                            i.fa.fa-comment
+                                                            | Reviews
+                                                        a.link.icon.delete(href='#')
+                                                            i.fa.fa-trash
+                                                            | Delete
+                                                    // end edit-options
+                                            // end my-item
+                                // end my-items
+
+                            section.comment-list
+                                article.row
+                                    .col-md-2.col-sm-2.hidden-xs
+                                        figure.thumbnail
+                                            img.img-responsive(src='http://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg')
+                                            figcaption.text-center username
+                                    .col-md-10.col-sm-10
+                                        .panel.panel-default.arrow.left
+                                            .panel-body
+                                                header.text-left
+                                                    .comment-user
+                                                        i.fa.fa-user
+                                                        |  That Guy
+                                                    time.comment-date(datetime='16-12-2014 01:05')
+                                                        i.fa.fa-clock-o
+                                                        |  Dec 16, 2014
+                                                .comment-post
+                                                    p
+                                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                p.text-right
+                                                    a.btn.btn-default.btn-sm(href='#')
+                                                        i.fa.fa-reply
+                                                        |  reply

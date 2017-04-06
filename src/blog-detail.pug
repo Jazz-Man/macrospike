@@ -2,12 +2,8 @@ extends common/layout
 
 block append content
 	.container
-		+breadcrumb
 		.row
 			.col-md-9.col-sm-9
-				section.page-title
-					h1 Blog
-				// end section-title
 				article.blog-post
 					a(href='blog-detail.html')
 						img(src=require('assets/img/items/20.jpg') alt='')
@@ -155,6 +151,6 @@ block append content
 			.col-md-3.col-sm-3
 				aside.sidebar
 					section
-						+sidebarSearchFilter
+						//+sidebarSearchFilter
 					section
-						+recentItems
+						//+recentItems

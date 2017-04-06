@@ -5,35 +5,27 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var pages = [
-	// '404',
+	'404',
 	'blog',
-	// 'blog-detail',
-	// 'contact',
-	// 'detail',
-	// 'detail-2',
+	'blog-detail',
+	'contact',
+	'detail',
+	'detail-2',
 	'index',
-	'map',
-	// 'submit',
-	'profile',
-	// 'user',
-	// 'faq',
-	'sign-in',
+	'downloads',
+	'submit',
+	'account',
+	'macrotrader',
+	'faq',
+	'login',
 	'register',
 	'reset-password',
-	// 'edit-listing',
-	// 'my-listings',
-	// 'reviews',
-	// 'terms-and-conditions',
-	// 'how-it-works',
-	// 'pricing',
-	// 'listing-grid-3-items',
-	// 'listing-grid-4-items',
-	// 'listing-grid-different-widths',
-	// 'listing-grid-full-width',
-	// 'listing-grid-left-sidebar',
-	// 'listing-grid-right-sidebar',
-	// 'listing-row-left-sidebar',
-	// 'listing-row-right-sidebar'
+	'fx-bolt',
+	'newstrading',
+	'calendar',
+	'terms-and-conditions',
+	'how-it-works',
+	'products'
 ];
 
 var isProd = process.env.NODE_ENV === 'production' ? true : false;
@@ -87,7 +79,7 @@ function jadePage(name) {
 				"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
 				{
 					tag: 'link',
-					href: 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=cyrillic',
+					href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400',
 					rel: "stylesheet",
 					type: "text/css"
 				}
@@ -131,11 +123,6 @@ function getPlugins() {
 			"window.jQuery": "jquery"
 		}),
 		extractSCSS
-		// bootstrapGrid,
-		// new StyleExtHtmlWebpackPlugin({
-		//   filename:'assets/css/inline.css',
-		//   position:'head-top'
-		// })
 	);
 	
 	forEach(pages, function (e) {

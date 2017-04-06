@@ -1,53 +1,38 @@
 extends common/layout
 
 block append defaultTitle
-  title MacroSpike
+	title MacroSpike
 
 block contentClass
-  - var contentClass = 'full-height'
+	- var contentClass = 'full-height'
 
 block append content
-  .view.h-100.zindex-xs.full-bg-img
-    .flex-center
-      .container
-        .row
-          .col-md-12.text-center
-            h1.white-text.display-1.font-weight-normal.text-uppercase UPAGES
-            h2.white-text.font-up.font-bold Бізнес довідка, місто Івано-Франківськ, карта
-            .hr-m
-              hr.hr-lgt.w-100.mb-1-half
+	.view.h-100.zindex-xs.full-bg-img
+		.flex-center
+			.container
+				.row
+					.col-md-12.text-center
+						h1.white-text.display-1.font-weight-normal.text-uppercase UPAGES
+						h2.white-text.font-up.font-bold Бізнес довідка, місто Івано-Франківськ, карта
+						.hr-m
+							hr.hr-lgt.w-100.mb-1-half
 
-            form.form-inline.warning-color-dark.pt-3.pb-0
-              .container
-                .row.no-gutters
-                  .col-md-4.col-sm-4
-                    .md-form.form-group
-                      input.form-control.mt-0.p-3.h-100.w-100.white.border-bottom-0(
-                      type='text' placeholder="What are you looking for?")
-                  .col-md-4.col-sm-4
-                    .md-form.form-group.dropdown(id="autocomplete")
-                      input.form-control.mt-0.p-3.h-100.w-100.white.border-bottom-0(
-                      type='text' placeholder="Location")
-                  .col-md-3.col-sm-4
-                    .md-form.form-group
-                      input.form-control.mt-0.p-3.h-100.w-100.white.border-bottom-0(
-                      type='text' placeholder="Choose a category…")
-                  .col-md-1.col-sm-4
-                    .md-form.form-group.mr-0
-                      button.btn.elegant-color-dark.btn-block.h-100.p-3.m-0(type='submit')
-                        i.fa.fa-search
-
-  .carousel-fade.full-bg-img.view.hm-stylish-light#myCarousel(data-ride='carousel')
-    ol.carousel-indicators
-      li.active(data-target='#myCarousel', data-slide-to='0')
-      li(data-target='#myCarousel', data-slide-to='1')
-      li(data-target='#myCarousel', data-slide-to='2')
-    .carousel-inner.h-100(role='listbox')
-      .carousel-item.h-100.active
-        img.w-100.img-fluid(src='http://upages.com.ua/wp-content/uploads/2016/09/00_listable_demojpg',
-        alt='First slide')
-      .carousel-item.h-100
-        img.w-100.img-fluid(src='http://upages.com.ua/wp-content/uploads/2016/09/01_listable_demojpg', alt='First slide')
-      .carousel-item.h-100
-        img.w-100.img-fluid(src='http://upages.com.ua/wp-content/uploads/2016/09/03_listable_demojpg', alt='First slide')
-    .mask
+						form.form-inline.warning-color-dark.pt-3.pb-0
+							.container
+								.row.no-gutters
+									.col-md-4.col-sm-4
+										.md-form.form-group
+											input.form-control.mt-0.p-3.h-100.w-100.white.border-bottom-0(
+											type='text' placeholder="What are you looking for?")
+									.col-md-4.col-sm-4
+										.md-form.form-group.dropdown(id="autocomplete")
+											input.form-control.mt-0.p-3.h-100.w-100.white.border-bottom-0(
+											type='text' placeholder="Location")
+									.col-md-3.col-sm-4
+										.md-form.form-group
+											input.form-control.mt-0.p-3.h-100.w-100.white.border-bottom-0(
+											type='text' placeholder="Choose a category…")
+									.col-md-1.col-sm-4
+										.md-form.form-group.mr-0
+											button.btn.elegant-color-dark.btn-block.h-100.p-3.m-0(type='submit')
+												i.fa.fa-search
