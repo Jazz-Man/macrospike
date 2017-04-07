@@ -164,8 +164,7 @@ Slideout.prototype._translateXTo = function (translateX) {
 	css[prefix + "transform"] = css['transform'];
 	
 	self.panel.css(css);
-//	self.panel.css(css);
-	
+
 	return self;
 };
 Slideout.prototype._setTransition = function () {
@@ -250,7 +249,6 @@ Slideout.prototype._initTouchEvents = function () {
 			if (!(self._moved && html.classList.contains("slideout-open"))) {
 				html.classList.add("slideout-open");
 			}
-//			self.panel.style[prefix + "transform"] = self.panel.style.transform = "translateX(" + translateX + "px)";
 			var css = {
 				'transform': "translateX(" + translateX + "px)"
 			};

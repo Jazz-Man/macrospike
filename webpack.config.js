@@ -56,6 +56,7 @@ var uglifyOption = {
 		warnings: false
 	}
 };
+
 var extractSCSS = new ExtractTextPlugin({
 	filename: 'css/[name].css',
 	disable: false,
@@ -202,17 +203,14 @@ module.exports = {
 				]
 			},
 			{
-				test: /index.scss/,
+				test: /\.scss$/,
 				include: path.join(__dirname, 'src'),
 				use: extractSCSS.extract({
 					publicPath: '/assets/',
 					fallback: 'style',
 					use: [
 						{
-							loader: 'css',
-							// options: {
-							//   sourceMap: !isProd
-							// }
+							loader: 'css'
 						},
 						{
 							loader: 'autoprefixer'
@@ -253,6 +251,18 @@ module.exports = {
 						options: {
 							publicPath: '/assets/',
 							name: 'img/[name].[ext]'
+						}
+					}
+				]
+			},
+			{
+				test: /\.(webm|mp4|ogv)$/,
+				use: [
+					{
+						loader: 'file',
+						options: {
+							publicPath: '/assets/',
+							name: 'video/[name].[ext]'
 						}
 					}
 				]

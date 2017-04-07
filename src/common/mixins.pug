@@ -16,8 +16,8 @@ mixin mobile
 
 mixin link(href, name)
     a(href=htmlWebpackPlugin.options.homePage + href)&attributes(attributes)= name
-    if block
-        block
+        if block
+            block
 
 mixin dropdownMenu(href, name)
     - var attributes = {
@@ -30,6 +30,7 @@ mixin dropdownMenu(href, name)
     .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
         if block
             block
+
 
 mixin injectExtras(extras)
     each item in extras

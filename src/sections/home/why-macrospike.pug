@@ -1,0 +1,36 @@
+mixin promoCardIcon(text)
+	.card.z-depth-0.transparent
+		.card-block
+			h4.display-4.card-title.mx-auto
+				if block
+					block
+			p.card-text=text
+
+
+.container
+	.row
+		.col-md-12
+			.card-group.text-center.promo
+				+promoCardIcon('Events Every Month')
+					small +
+					| 50
+
+				+promoCardIcon('High Automation')
+					small >
+					| 85
+					small %
+
+				+promoCardIcon('Profitable Trades')
+					small >
+					| 90
+					small %
+
+				+promoCardIcon('Low Screen Time')
+					small <
+					| 1
+					small h
+
+				+promoCardIcon('Overtrading')
+					span
+						| 0
+						small %
