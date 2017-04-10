@@ -13,13 +13,17 @@ function responsive_init() {
 
     if (fullWrapper.length) {
         var fullWrapperHeight = (window.innerHeight - pageHeaderHeight - pageFooterHeight);
-        var heightPercent =fullWrapper.attr('data-height-percent');
-        if(heightPercent){
-            fullWrapperHeight = fullWrapperHeight * heightPercent / 100;
-        }
-        // console.log(fullWrapperHeight * heightPercent / 100);
-        fullWrapper.css({
-          'height': fullWrapperHeight+'px'
+
+        fullWrapper.forEach(function (e) {
+            var _this = $$(e);
+            var heightPercent = _this.attr('data-height-percent');
+            if (heightPercent) {
+                fullWrapperHeight = fullWrapperHeight * heightPercent / 100;
+            }
+            // console.log(fullWrapperHeight * heightPercent / 100);
+            _this.css({
+                'height': fullWrapperHeight + 'px'
+            });
         });
     }
 }

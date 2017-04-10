@@ -5,11 +5,11 @@ header#page-header.fixed-top.zindex-sm
 			button.navbar-toggler.navbar-toggler-right(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
 				span.navbar-toggler-icon
 			+link('/index.html')(class="navbar-brand")
-				img.d-inline-block.align-top.logo(src=require('assets/img/svg/logo.svg'))
+				img.d-inline-block.align-top.logo(src=require('assets/img/logos/logo.svg'))
 
 			#navbarNav.collapse.navbar-collapse
 				ul.navbar-nav.ml-auto
-					li.nav-item.active
+					li.nav-item
 						+link('/how-it-works.html','How it Works')(class="nav-link")
 					li.nav-item.dropdown
 						+dropdownMenu('','Getting Started')

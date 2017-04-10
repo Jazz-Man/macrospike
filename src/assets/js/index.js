@@ -12,7 +12,7 @@ doc.ready(init);
 
 function init(e) {
 	
-	require('./module/auch');
+	// require('./module/auch');
 	
 	// require('./module/side-nav');
 	

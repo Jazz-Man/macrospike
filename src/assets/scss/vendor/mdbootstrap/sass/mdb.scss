@@ -5,7 +5,7 @@
 @import "mdb/free/data/mixins";
 // Variables
 @import "mdb/free/data/colors";
-@import "mdb/free/data/variables-b4";
+//@import "mdb/free/data/variables-b4";
 @import "mdb/free/data/variables";
 //Global
 @import "mdb/free/global"; 
@@ -56,8 +56,8 @@
 //@import "mdb/pro/sections/blog";
 //@import "mdb/pro/sections/magazine";
 //@import "mdb/pro/sections/pricing";
-//@import "mdb/pro/sections/testimonials";
-//@import "mdb/pro/sections/features";
+@import "mdb/pro/sections/testimonials";
+@import "mdb/pro/sections/features";
 //@import "mdb/pro/sections/team";
 //@import "mdb/pro/sections/form-sets";
 //@import "mdb/pro/sections/templates";

@@ -1,36 +1,21 @@
-mixin promoCardIcon(text)
+mixin promoCardIcon(text,icon)
 	.card.z-depth-0.transparent
 		.card-block
-			h4.display-4.card-title.mx-auto
+			- var attributes = {
+			- 'class':'display-4 card-title font-weight-normal mx-auto '+icon,
+			- };
+			h4&attributes(attributes)
 				if block
 					block
 			p.card-text=text
 
 
-.container
+section.container.section
 	.row
 		.col-md-12
 			.card-group.text-center.promo
-				+promoCardIcon('Events Every Month')
-					small +
-					| 50
-
-				+promoCardIcon('High Automation')
-					small >
-					| 85
-					small %
-
-				+promoCardIcon('Profitable Trades')
-					small >
-					| 90
-					small %
-
-				+promoCardIcon('Low Screen Time')
-					small <
-					| 1
-					small h
-
-				+promoCardIcon('Overtrading')
-					span
-						| 0
-						small %
+				+promoCardIcon('Events Every Month','icon-50')
+				+promoCardIcon('High Automation','icon-85')
+				+promoCardIcon('Profitable Trades','icon-90')
+				+promoCardIcon('Low Screen Time','icon-1')
+				+promoCardIcon('Overtrading','icon-0')

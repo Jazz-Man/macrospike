@@ -154,7 +154,6 @@ module.exports = {
 		filename: 'js/[name].js',
 		chunkFilename: "js/[id]-[name].chunk.js",
 		path: outputPath,
-		publicPath: '/assets/',
 		pathinfo: true
 	},
 	
@@ -206,7 +205,7 @@ module.exports = {
 				test: /\.scss$/,
 				include: path.join(__dirname, 'src'),
 				use: extractSCSS.extract({
-					publicPath: '/assets/',
+					// publicPath: '../',
 					fallback: 'style',
 					use: [
 						{
@@ -233,12 +232,26 @@ module.exports = {
 			},
 			{
 				test: /\.(ttf|eot|svg|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                exclude: /assets\/img\/logos/,
 				use: [
 					{
 						loader: 'file',
 						options: {
-							publicPath: '/assets/',
+							publicPath: '../',
 							name: 'fonts/[name].[ext]'
+						}
+					}
+				]
+			},
+			{
+				test: /\.svg$/,
+                // exclude: /logo.svg/,
+				use: [
+					{
+						loader: 'file',
+						options: {
+							// publicPath: '../',
+							name: 'img/logos/[name].[ext]'
 						}
 					}
 				]
@@ -249,7 +262,7 @@ module.exports = {
 					{
 						loader: 'file',
 						options: {
-							publicPath: '/assets/',
+							publicPath: '../',
 							name: 'img/[name].[ext]'
 						}
 					}
@@ -261,7 +274,7 @@ module.exports = {
 					{
 						loader: 'file',
 						options: {
-							publicPath: '/assets/',
+							// publicPath: '../',
 							name: 'video/[name].[ext]'
 						}
 					}
@@ -273,9 +286,6 @@ module.exports = {
 	plugins: getPlugins(),
 	
 	devServer: {
-		headers: {
-			"Access-Control-Allow-Origin": "http://localhost:3000",
-			"Access-Control-Allow-Credentials": "true" },
 		contentBase: outputPath,
 		port: 3000
 	}

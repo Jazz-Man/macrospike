@@ -1,16 +1,18 @@
 @import "../variables";
 @import "../mixin";
 
+$get-nav-height: ($navbar-padding-x + $navbar-padding-y)*2;
+
 #page-header {
-  min-height: 56px;
-  }
+  min-height: $get-nav-height;
+}
 
 #page-content {
   margin-bottom: 50px;
-  margin-top: 56px;
+  margin-top: $get-nav-height;
   position: relative;
-  }
+}
 
 #page-footer {
   min-height: 50px;
-  }
+}
