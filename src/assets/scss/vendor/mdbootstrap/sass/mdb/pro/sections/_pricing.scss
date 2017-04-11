@@ -3,83 +3,63 @@
 .pricing-card {
   text-align: center;
 
-  .header {
-    color: #ffffff;
-    @extend .z-depth-1-half;
-    }
+  //.header {
+  //  color: #ffffff;
+  //  @extend .z-depth-1-half;
+  //  }
 
   .price {
     padding-top: 3rem;
     position: relative;
 
-    h1 {
-      font-size: 5rem;
-      padding: 1.5rem;
+    //h1 {
+    //  font-size: 5rem;
+    //  padding: 1.5rem;
+    //
+    //  //&:before {
+    //  //  content: "$";
+    //  //  font-size: 30px;
+    //  //  margin-left: -1.2rem;
+    //  //  margin-top: 0.7rem;
+    //  //  position: absolute;
+    //  //  }
+    //
+    //  //&:after {
+    //  //  content: "/mo";
+    //  //  font-size: 30px;
+    //  //  margin-top: 3rem;
+    //  //  position: absolute;
+    //  //  }
+    //  }
 
-      &:before {
-        content: "$";
-        font-size: 30px;
-        margin-left: -1.2rem;
-        margin-top: 0.7rem;
-        position: absolute;
-        }
-
-      &:after {
-        content: "/mo";
-        font-size: 30px;
-        margin-top: 3rem;
-        position: absolute;
-        }
-      }
-
-    .version {
-      background-color: $rgba-black-light;
-      padding: 1rem;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      @extend .z-depth-1;
-
-      h5 {
-        margin: 0;
-        padding: 0;
-        }
-      }
+    //.version {
+    //  //background-color: $rgba-black-light;
+    //  padding: 1rem;
+    //  //position: absolute;
+    //  //top: 0;
+    //  //width: 100%;
+    //  //@extend .z-depth-1;
+    //
+    //  h5 {
+    //    margin: 0;
+    //    padding: 0;
+    //    }
+    //  }
     }
 
-  .striped {
-    padding: .6rem;
 
-    .fa {
-      margin-right: 5px;
-      }
-
-    .fa-check {
-      color: #008000;
-      }
-
-    .fa-times {
-      color: #ff0000;
-      }
-
-    li {
-      border-bottom: 1px solid rgba(153, 153, 153, 0.298039);
-      margin-bottom: 1rem;
-      }
-    }
-  // Card overlay
-  &.card-overlay {
-    color: #ffffff;
-    display: block;
-
-    p {
-      color: #ffffff;
-      }
-
-    .price {
-      padding-top: 0;
-      }
-    }
+  //&.card-overlay {
+  //  color: #ffffff;
+  //  display: block;
+  //
+  //  p {
+  //    color: #ffffff;
+  //    }
+  //
+  //  .price {
+  //    padding-top: 0;
+  //    }
+  //  }
   }
 
 // Additional pricing cards

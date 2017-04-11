@@ -59,32 +59,32 @@ ul {
     }
   }
 
-.jumbotron,
-.card,
-.badge,
-.alert,
-.nav .nav-link,
-.navbar-toggler,
-.navbar,
-.breadcrumb,
-.page-item:last-child .page-link,
-.page-item:first-child .page-link,
-.pagination-lg .page-item:last-child .page-link,
-.pagination-lg .page-item:first-child .page-link,
-.pagination-sm .page-item:first-child .page-link,
-.pagination-sm .page-item:last-child .page-link,
-.list-group .list-group-item,
-.modal-content,
-.tooltip-inner,
-.popover,
-.dropdown-menu,
-.input-group-addon,
-.file-custom,
-.card .card-header,
-.nav-tabs,
-img {
-  @include border-radius(2px);
-  }
+//.jumbotron,
+//.card,
+//.badge,
+//.alert,
+//.nav .nav-link,
+//.navbar-toggler,
+//.navbar,
+//.breadcrumb,
+//.page-item:last-child .page-link,
+//.page-item:first-child .page-link,
+//.pagination-lg .page-item:last-child .page-link,
+//.pagination-lg .page-item:first-child .page-link,
+//.pagination-sm .page-item:first-child .page-link,
+//.pagination-sm .page-item:last-child .page-link,
+//.list-group .list-group-item,
+//.modal-content,
+//.tooltip-inner,
+//.popover,
+//.dropdown-menu,
+//.input-group-addon,
+//.file-custom,
+//.card .card-header,
+//.nav-tabs,
+//img {
+//  @include border-radius(2px);
+//  }
 
 .jumbotron,
 .card,
@@ -360,9 +360,6 @@ body {
   width: auto;
   height: auto;
   z-index: -100;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   background-size: cover;
   }

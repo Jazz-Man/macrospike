@@ -3,8 +3,8 @@ extends common/layout
 block append defaultTitle
 	title MacroSpike
 
-block contentClass
-	- var contentClass = ''
+block vars
+	- var bodyClass = ''
 
 block append content
 
@@ -13,3 +13,5 @@ block append content
 	include sections/home/preview
 	include sections/home/live-performance
 	include sections/home/testimonials
+	include sections/home/pricing
+	include sections/home/subscribe

@@ -244,42 +244,21 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.svg$/,
-                // exclude: /logo.svg/,
-				use: [
-					{
-						loader: 'file',
-						options: {
-							// publicPath: '../',
-							name: 'img/logos/[name].[ext]'
-						}
-					}
-				]
-			},
-			{
-				test: /\.(png|gif|jpg|jpeg)$/,
+				test: /\.(png|gif|jpg|jpeg|svg|webm|mp4|ogv)$/,
 				use: [
 					{
 						loader: 'file',
 						options: {
 							publicPath: '../',
-							name: 'img/[name].[ext]'
+                            // useRelativePath:true,
+                            // outputPath: '/',
+                            // publicPath: '',
+                            // outputPath: 'static/fonts/',
+							name: '[path][name].[ext]'
 						}
 					}
 				]
 			},
-			{
-				test: /\.(webm|mp4|ogv)$/,
-				use: [
-					{
-						loader: 'file',
-						options: {
-							// publicPath: '../',
-							name: 'video/[name].[ext]'
-						}
-					}
-				]
-			}
 		],
 	},
 	
