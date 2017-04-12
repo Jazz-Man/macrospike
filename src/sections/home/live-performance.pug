@@ -1,9 +1,10 @@
-section.container.section.feature-box
+section.section.feature-box
 	h1.section-heading Live Performance
-	.row.features-small
-		- var n = 1;
-		while n <= 4
-			-var idCurrent = n++
-			.col-md-6
-				h4.feature-title Chart Title #{idCurrent}
-				img.img-fluid(src=require('assets/img/screen/chart-title-' + idCurrent + '-min.png'))
+	.container
+		.row.features-small
+			- var n = 1;
+			while n <= 4
+				-var idCurrent = n++
+				.col-md-6
+					h4.feature-title Chart Title #{idCurrent}
+					img.img-fluid(src=require('assets/img/screen/chart-title-' + idCurrent + '-min.png'))

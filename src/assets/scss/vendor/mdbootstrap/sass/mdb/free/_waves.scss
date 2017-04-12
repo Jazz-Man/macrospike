@@ -1,13 +1,4 @@
 
-/*!
- * Waves v0.7.5
- * http://fian.my.id/Waves 
- * 
- * Copyright 2014-2016 Alfiana E. Sibuea and other contributors 
- * Released under the MIT license 
- * https://github.com/fians/Waves/blob/master/LICENSE 
- */
-
 @mixin waves-transition($transition){
     -webkit-transition: $transition;
     -moz-transition: $transition; 
@@ -16,15 +7,10 @@
 }
 
 @mixin waves-transform($string){
-    -webkit-transform: $string;
-    -moz-transform: $string;
-    -ms-transform: $string;
-    -o-transform: $string;
     transform: $string;
 }
 
 @mixin waves-box-shadow($shadow){
-    -webkit-box-shadow: $shadow;
     box-shadow: $shadow;
 }
 
@@ -32,9 +18,6 @@
     position: relative; 
     cursor: pointer;
     overflow: hidden;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     z-index: 1;
@@ -65,9 +48,6 @@
     &.waves-light .waves-ripple {
         background: rgba(255,255,255,0.4);
         $gradient: rgba(255,255,255,0.2) 0,rgba(255,255,255,.3) 40%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 60%,rgba(255,255,255,0) 70%;
-        background: -webkit-radial-gradient($gradient);
-        background: -o-radial-gradient($gradient);
-        background: -moz-radial-gradient($gradient);
         background: radial-gradient($gradient);
     }
     

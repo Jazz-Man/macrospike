@@ -14,14 +14,12 @@
 //Global
 @import "mdb/free/global"; 
   
-// MDB Free  
-//@import "mdb/free/roboto";
+// MDB Free
 @import "mdb/free/typography";
-//@import "mdb/free/animations";
-//@import "mdb/free/waves";
+@import "mdb/free/waves";
 @import "mdb/free/helpers";
 @import "mdb/free/buttons";  
-@import "mdb/free/forms-basic";
+//@import "mdb/free/forms-basic";
 @import "mdb/free/cards-basic";  
 @import "mdb/free/navbars";
 @import "mdb/free/hover-effects";  
@@ -29,10 +27,10 @@
 @import "mdb/free/carousels-basic"; 
  
 // MDB Premium  
-@import "mdb/pro/forms-pro"; 
+//@import "mdb/pro/forms-pro";
 //@import "mdb/pro/tabs";
-@import "mdb/pro/msc"; 
-@import "mdb/pro/progress";
+//@import "mdb/pro/msc";
+//@import "mdb/pro/progress";
 //@import "mdb/pro/accordion";
 //@import "mdb/pro/buttons-pro";
 //@import "mdb/pro/social-buttons";
@@ -50,7 +48,7 @@
 //@import "mdb/pro/scrollbar";
 //@import "mdb/pro/ecommerce";
 //@import "mdb/pro/skins";
-@import "mdb/pro/chips"; 
+//@import "mdb/pro/chips";
 //@import "mdb/pro/parallax";
 // DATE & TIME PICKERS 
 //@import "mdb/pro/date_picker/default.scss";
@@ -60,7 +58,7 @@
 //@import "mdb/pro/sections/blog";
 //@import "mdb/pro/sections/magazine";
 //@import "mdb/pro/sections/pricing";
-@import "mdb/pro/sections/testimonials";
+//@import "mdb/pro/sections/testimonials";
 @import "mdb/pro/sections/features";
 //@import "mdb/pro/sections/team";
 //@import "mdb/pro/sections/form-sets";

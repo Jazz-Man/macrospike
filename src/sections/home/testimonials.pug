@@ -8,33 +8,34 @@ mixin testimonialCarouselItem(icon)
 		h3.font-weight-normal.mb-5.mt-4.section-heading Carlos, Spain
 		p=testimonialsText
 
-section.container.section
+section.section
+	.container
 
-	.carousel.testimonial-carousel.text-center.slide(id=testimonialsCarosselID data-ride='carousel' data-interval='false')
-		ol.carousel-indicators
-			- var n = 0;
-				while n <= 4
-					-var idCurrent = n++
-					if n == 0
-						li.active(data-target='#'+testimonialsCarosselID, data-slide-to=idCurrent)
-					else
-						li(data-target='#'+testimonialsCarosselID, data-slide-to=idCurrent)
+		.carousel.testimonial-carousel.text-center.slide(id=testimonialsCarosselID data-ride='carousel' data-interval='false')
+			ol.carousel-indicators
+				- var n = 0;
+					while n <= 4
+						-var idCurrent = n++
+						if n == 0
+							li.active(data-target='#'+testimonialsCarosselID, data-slide-to=idCurrent)
+						else
+							li(data-target='#'+testimonialsCarosselID, data-slide-to=idCurrent)
 
-		.carousel-inner(role='listbox')
-			- var n = 1;
-				while n <= 5
-					-var idCurrent = n++
-					if n == 1
-						.carousel-item.mb-5.active
-							+testimonialCarouselItem(idCurrent)
+			.carousel-inner(role='listbox')
+				- var n = 1;
+					while n <= 5
+						-var idCurrent = n++
+						if n == 1
+							.carousel-item.mb-5.active
+								+testimonialCarouselItem(idCurrent)
 
-					else
-						.carousel-item.mb-5
-							+testimonialCarouselItem(idCurrent)
+						else
+							.carousel-item.mb-5
+								+testimonialCarouselItem(idCurrent)
 
-		a.carousel-control-prev(href='#'+testimonialsCarosselID role='button' data-slide='prev')
-			span.carousel-control-prev-icon(aria-hidden='true')
-			span.sr-only Previous
-		a.carousel-control-next(href='#'+testimonialsCarosselID role='button' data-slide='next')
-			span.carousel-control-next-icon(aria-hidden='true')
-			span.sr-only Next
+			a.carousel-control-prev(href='#'+testimonialsCarosselID role='button' data-slide='prev')
+				span.carousel-control-prev-icon(aria-hidden='true')
+				span.sr-only Previous
+			a.carousel-control-next(href='#'+testimonialsCarosselID role='button' data-slide='next')
+				span.carousel-control-next-icon(aria-hidden='true')
+				span.sr-only Next

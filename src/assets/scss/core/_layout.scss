@@ -8,7 +8,7 @@ $get-nav-height: ($navbar-padding-x + $navbar-padding-y)*2;
 }
 
 #page-content {
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
   margin-top: $get-nav-height;
   position: relative;
 }

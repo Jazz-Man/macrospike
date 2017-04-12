@@ -150,11 +150,13 @@ module.exports = {
 			'./assets/scss'
 		]
 	},
+    devtool: 'source-map',
 	output: {
 		filename: 'js/[name].js',
 		chunkFilename: "js/[id]-[name].chunk.js",
 		path: outputPath,
-		pathinfo: true
+		pathinfo: true,
+        sourceMapFilename: '[file].map'
 	},
 	
 	target: 'web',
@@ -231,20 +233,33 @@ module.exports = {
 				})
 			},
 			{
-				test: /\.(ttf|eot|svg|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                exclude: /assets\/img\/logos/,
+                test: /assets\/fonts\/\.(woff(2)?)(\?[a-z0-9=&.]+)?$/,
+                use: [
+                    {
+                    	loader: 'url',
+                    	options: {
+                           limit: '10000',
+                            mimetype:'application/font-woff',
+                           name: '[path][name].[ext]'
+                    	}
+                    }
+                ]
+			},
+			{
+				test: /assets\/fonts\/\.(ttf|eot|svg?)(\?[a-z0-9=&.]+)?$/,
 				use: [
 					{
 						loader: 'file',
 						options: {
-							publicPath: '../',
-							name: 'fonts/[name].[ext]'
+							// publicPath: '../',
+							name: '[path][name].[ext]'
 						}
 					}
 				]
 			},
 			{
 				test: /\.(png|gif|jpg|jpeg|svg|webm|mp4|ogv)$/,
+                exclude: /assets\/fonts/,
 				use: [
 					{
 						loader: 'file',
@@ -263,7 +278,7 @@ module.exports = {
 	},
 	
 	plugins: getPlugins(),
-	
+
 	devServer: {
 		contentBase: outputPath,
 		port: 3000
