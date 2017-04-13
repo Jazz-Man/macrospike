@@ -1,0 +1,35 @@
+// MDB Hover effects
+.view {
+  cursor: default;
+  overflow: hidden;
+  position: relative;
+
+  .mask,
+  .content {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%
+    }
+
+  .mask {
+    background-attachment: fixed;
+    }
+
+  img,
+  video {
+    display: block;
+    position: relative;
+    }
+  }
+
+.full-bg-img {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  }

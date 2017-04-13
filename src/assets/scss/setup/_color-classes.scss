@@ -33,3 +33,5 @@ $color_value in $md-shades {
     color: $color_value !important;
   }
 }
+
+@include bg-variant('.bg-primary-darken', $brand-primary-darken);

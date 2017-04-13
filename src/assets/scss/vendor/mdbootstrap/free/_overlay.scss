@@ -1,0 +1,16 @@
+// Overlays
+.overlay {
+  &:hover .mask {
+    opacity: 1;
+  }
+
+  img,
+  video {
+    transition: all .2s linear;
+  }
+
+  .mask {
+    opacity: 0;
+    transition: all .4s ease-in-out;
+  }
+}

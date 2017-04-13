@@ -1,10 +1,10 @@
-section.section.feature-box
-	h1.section-heading Live Performance
+section.section.feature-box.py-5
+	h2.display-4.proxima-nova-font.text-info.section-heading Live Performance
 	.container
 		.row.features-small
 			- var n = 1;
 			while n <= 4
 				-var idCurrent = n++
-				.col-md-6
-					h4.feature-title Chart Title #{idCurrent}
-					img.img-fluid(src=require('assets/img/screen/chart-title-' + idCurrent + '-min.png'))
+				.col-md-6.mb-5
+					h2.feature-title.h2-responsive Chart Title #{idCurrent}
+					img.img-fluid.z-depth-1(src=require('assets/img/screen/chart-title-' + idCurrent + '-min.png'))

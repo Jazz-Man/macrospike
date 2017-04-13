@@ -1,0 +1,71 @@
+.img-overlay {
+  position: relative;
+
+  &:after {
+    background: rgba(0, 0, 0, .17);
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: background 0.4s;
+    width: 100%;
+  }
+
+  &:hover {
+    &:after {
+      background: rgba(0, 0, 0, .35);
+    }
+  }
+
+  &.light {
+    &:after {
+      background: rgba(255, 255, 255, .17);
+    }
+
+    &:hover {
+      &:after {
+        background: rgba(255, 255, 255, .35);
+      }
+    }
+  }
+
+  &.blue {
+    &:after {
+      background: rgba(0, 145, 234, .17);
+    }
+
+    &:hover {
+      &:after {
+        background: rgba(0, 145, 234, .35);
+      }
+    }
+  }
+
+  &.green {
+    &:after {
+      background: rgba(76, 175, 80, .17);
+    }
+
+    &:hover {
+      &:after {
+        background: rgba(76, 175, 80, .35);
+      }
+    }
+  }
+
+  &.red {
+    &:after {
+      background: rgba(213, 0, 0, .17);
+    }
+
+    &:hover {
+      &:after {
+        background: rgba(213, 0, 0, .35);
+      }
+    }
+  }
+}
