@@ -1,0 +1,9 @@
+/*********************
+  Mixins
+**********************/
+
+@mixin placeholder {
+    &::placeholder {
+        @content
+    }
+}

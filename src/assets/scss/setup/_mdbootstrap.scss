@@ -1,39 +1,36 @@
 @charset "UTF-8";
-
 // MDB Framework //
 // Mixins
-@import "data/prefixer";
-@import "data/mixins";
+@import "prefixer";
 // Variables
-@import "data/colors";
-@import "data/md-colors";
-@import "data/function";
-@import "data/gradients";
-@import "data/color-classes";
-//@import "data/variables-b4";
-@import "data/variables";
+//@import "colors";
+@import "md-colors";
+@import "function";
+@import "gradients";
+@import "color-classes";
+//@import "mdbootstrap-variables";
 //Global
-@import "free/global";
+@import "../vendor/mdbootstrap/free/global";
   
 // MDB Free
-@import "free/typography";
-@import "free/waves";
-@import "free/section";
-@import "free/helpers";
-@import "free/buttons";
-@import "free/media";
+@import "../vendor/mdbootstrap/free/typography";
+@import "../vendor/mdbootstrap/free/waves";
+@import "../vendor/mdbootstrap/free/section";
+@import "../vendor/mdbootstrap/free/helpers";
+@import "../vendor/mdbootstrap/free/buttons";
+@import "../vendor/mdbootstrap/free/media";
 //@import "free/video";
 //@import "free/jumbotron";
 //@import "free/forms-basic";
-@import "free/cards-basic";
-@import "free/navbar";
+@import "../vendor/mdbootstrap/free/cards-basic";
+@import "../vendor/mdbootstrap/free/navbar";
 //@import "free/nav";
-@import "free/pagination";
-@import "free/pager";
-@import "free/tooltip";
-@import "free/hover-effects";
-@import "free/footer";
-@import "free/carousels-basic";
+@import "../vendor/mdbootstrap/free/pagination";
+@import "../vendor/mdbootstrap/free/pager";
+@import "../vendor/mdbootstrap/free/tooltip";
+@import "../vendor/mdbootstrap/free/hover-effects";
+@import "../vendor/mdbootstrap/free/footer";
+@import "../vendor/mdbootstrap/free/carousels-basic";
  
 // MDB Premium  
 //@import "pro/forms-pro";
@@ -48,7 +45,7 @@
 //@import "pro/light-box";
 //@import "pro/side-nav";
 //@import "pro/navbars-pro";
-@import "pro/carousels-pro";
+@import "../vendor/mdbootstrap/pro/carousels-pro";
 //@import "pro/modals-pro";
 //@import "pro/toasts";
 //@import "pro/scrollspy";
@@ -68,7 +65,7 @@
 //@import "pro/sections/magazine";
 //@import "pro/sections/pricing";
 //@import "pro/sections/testimonials";
-@import "sections/features";
+@import "../vendor/mdbootstrap/sections/features";
 //@import "pro/sections/team";
 //@import "pro/sections/form-sets";
 //@import "pro/sections/templates";

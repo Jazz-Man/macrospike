@@ -25,7 +25,7 @@ $color in $colors {
 
 // Shade classes
 @each $color,
-$color_value in $shades {
+$color_value in $md-shades {
   .#{$color} {
     background-color: $color_value !important;
   }

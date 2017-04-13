@@ -1,4 +1,4 @@
-@import "../variables";
+@import "../setup/variables";
 
 $_text-inputs-list-autofill: (
   "input",
@@ -13,7 +13,7 @@ $_text-inputs-list-autofill: (
     &:hover,
     &:focus{
       border: 0;
-      -webkit-text-fill-color: $color-black;
+      -webkit-text-fill-color: $black;
       box-shadow: 0 0 0 1000px transparent inset;
       transition: background-color 5000s ease-in-out 0s;
       background:  none;
