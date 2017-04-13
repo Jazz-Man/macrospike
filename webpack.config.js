@@ -87,19 +87,6 @@ function jadePage(name) {
 			],
 			body: [
 				{
-					tag: "script",
-					src: "http://maps.google.com/maps/api/js?key=AIzaSyBEDfNcQRmKQEyulDN8nGWjLYPm8s4YB58&libraries=places"
-				},
-				{
-					tag: "script",
-					src: "https://www.gstatic.com/charts/loader.js"
-				},
-				"https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js",
-				{
-					tag: "script",
-					innerHTML: "var wpApiSettings = {'root':'http://dev.upages.com.ua/wp-json/','nonce':'a530fa0ec6','versionString':'wp/v2'};"
-				},
-				{
 					tag: "noscript",
 					innerHTML: "JavaScript is disabled in your browser. <a href='http://www.enable-javascript.com/' target='_blank'>Here</a> is how to enable it."
 				}

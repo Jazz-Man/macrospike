@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+// MDB Framework //
+// Mixins
+@import "data/prefixer";
+@import "data/mixins";
+// Variables
+@import "data/colors";
+@import "data/md-colors";
+@import "data/function";
+@import "data/gradients";
+@import "data/color-classes";
+//@import "data/variables-b4";
+@import "data/variables";
+//Global
+@import "free/global";
+  
+// MDB Free
+@import "free/typography";
+@import "free/waves";
+@import "free/section";
+@import "free/helpers";
+@import "free/buttons";
+@import "free/media";
+//@import "free/video";
+//@import "free/jumbotron";
+//@import "free/forms-basic";
+@import "free/cards-basic";
+@import "free/navbar";
+//@import "free/nav";
+@import "free/pagination";
+@import "free/pager";
+@import "free/tooltip";
+@import "free/hover-effects";
+@import "free/footer";
+@import "free/carousels-basic";
+ 
+// MDB Premium  
+//@import "pro/forms-pro";
+//@import "pro/tabs";
+//@import "pro/msc";
+//@import "pro/progress";
+//@import "pro/accordion";
+//@import "pro/buttons-pro";
+//@import "pro/social-buttons";
+//@import "pro/cards-pro";
+//@import "pro/dropdowns-pro";
+//@import "pro/light-box";
+//@import "pro/side-nav";
+//@import "pro/navbars-pro";
+@import "pro/carousels-pro";
+//@import "pro/modals-pro";
+//@import "pro/toasts";
+//@import "pro/scrollspy";
+//@import "pro/charts-pro";
+//@import "pro/animations-pro";
+//@import "pro/scrollbar";
+//@import "pro/ecommerce";
+//@import "pro/skins";
+//@import "pro/chips";
+//@import "pro/parallax";
+// DATE & TIME PICKERS 
+//@import "pro/date_picker/default.scss";
+//@import "pro/date_picker/default.date.scss";
+//@import "pro/date_picker/default.time.scss";
+// SECTIONS
+//@import "pro/sections/blog";
+//@import "pro/sections/magazine";
+//@import "pro/sections/pricing";
+//@import "pro/sections/testimonials";
+@import "sections/features";
+//@import "pro/sections/team";
+//@import "pro/sections/form-sets";
+//@import "pro/sections/templates";
