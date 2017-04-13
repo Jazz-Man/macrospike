@@ -1,0 +1,41 @@
+.st-indigo {
+  border-left: 4px solid blue;
+  small {
+    border-left: 2px solid blue;
+  }
+}
+
+.st-red {
+  border-left: 4px solid red;
+  small {
+    border-left: 2px solid red;
+  }
+}
+
+.st-teal {
+  border-left: 4px solid #009688;
+  small {
+    border-left: 2px solid #009688;
+  }
+}
+
+.st-orange {
+  border-left: 4px solid #ff6f00;
+  small {
+    border-left: 2px solid #ff6f00;
+  }
+}
+
+.st-blue {
+  border-left: 4px solid #2196f3;
+  small {
+    border-left: 2px solid #2196f3;
+  }
+}
+
+.st-mdb {
+  border-left: 4px solid $mdb-color;
+  small {
+    border-left: 2px solid $mdb-color;
+  }
+}
