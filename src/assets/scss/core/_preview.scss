@@ -1,5 +1,11 @@
-//.preview {
-//  .fx-bolt {
-//    background-color: #0d4f73;
-//  }
-//}
+.section.preview {
+
+  .preview-screen {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-height: 350px;
+  }
+
+}
