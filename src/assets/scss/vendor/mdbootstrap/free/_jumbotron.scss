@@ -20,3 +20,9 @@
     margin-top: -40px;
     }
   }
+
+.section {
+  .jumbotron {
+    @extend .z-depth-2;
+  }
+}
