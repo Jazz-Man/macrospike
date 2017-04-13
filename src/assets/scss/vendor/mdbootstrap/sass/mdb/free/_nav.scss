@@ -1,0 +1,31 @@
+// Scrollspy free
+.nav-pills {
+
+  &.horizontal-spy {
+    .nav-item {
+      .active {
+        border-bottom: 2px solid $mdb-color;
+        border-left: none;
+        }
+      &:hover {
+        background-color: transparent;
+        color: $mdb-color;
+        font-weight: 500;
+        border-left: none;
+        }
+      }
+    }
+
+
+  }
+
+//Nav normalize
+.nav-pills .nav-item.open .nav-link,
+.nav-pills .nav-item.open .nav-link:focus,
+.nav-pills .nav-item.open .nav-link:hover,
+.nav-pills .nav-link.active,
+.nav-pills .nav-link.active:focus,
+.nav-pills .nav-link.active:hover {
+  background-color: transparent;
+  color: #000000;
+  }

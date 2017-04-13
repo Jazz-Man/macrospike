@@ -1,0 +1,6 @@
+.tooltip {
+  .tooltip-inner {
+    padding: 0.4rem 0.8rem;
+    @extend .z-depth-1-half;
+    }
+  }

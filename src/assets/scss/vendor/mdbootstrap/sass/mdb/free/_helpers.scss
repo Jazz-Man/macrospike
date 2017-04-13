@@ -31,12 +31,6 @@
   transform: translateY(-50%);
   }
 
-.img-fluid {
-  display: block;
-  height: auto;
-  max-width: 100%;
-  }
-
 .inline-ul > li {
   display: inline;
   }
@@ -85,19 +79,6 @@
 
   }
 
-
-// Section title
-.section-title {
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 3rem;
-  padding: 0.7rem;
-  small {
-    text-transform: none;
-    padding-left: 7px;
-    margin-left: 10px;
-    }
-  }
 
 .st-indigo {
   border-left: 4px solid blue;

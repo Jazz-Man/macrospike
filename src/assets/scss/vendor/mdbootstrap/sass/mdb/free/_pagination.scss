@@ -1,0 +1,42 @@
+.pagination {
+  &.pg-blue {
+    .active .page-link {
+      background-color: $primary-color;
+      }
+    }
+  &.pg-red {
+    .active .page-link {
+      background-color: $danger-color;
+      }
+    }
+  &.pg-teal {
+    .active .page-link {
+      background-color: $default-color;
+      }
+    }
+  &.pg-darkgrey {
+    .active .page-link {
+      background-color: $special-color;
+      }
+    }
+  &.pg-dark {
+    .active .page-link {
+      background-color: $elegant-color;
+      }
+    }
+  &.pg-bluegrey {
+    .active .page-link {
+      background-color: #3f729b;
+      }
+    }
+  &.pg-amber {
+    .active .page-link {
+      background-color: #ff6f00;
+      }
+    }
+  &.pg-purple {
+    .active .page-link {
+      background-color: #5e35b1;
+      }
+    }
+  }

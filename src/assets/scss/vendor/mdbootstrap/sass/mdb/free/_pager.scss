@@ -1,0 +1,148 @@
+.pager {
+
+  a,
+  .disabled > a {
+    color: #ffffff;
+    }
+
+  &.pg-blue {
+    li a {
+      background-color: $primary-color;
+
+      &:focus {
+        background-color: $primary-color;
+        color: #ffffff;
+        }
+
+      &:hover {
+        background-color: $primary-color;
+        color: #ffffff;
+        }
+      }
+    }
+
+  &.pg-red {
+
+    li a {
+      background-color: $danger-color;
+
+      &:focus {
+        background-color: $danger-color;
+        color: #ffffff;
+        }
+
+      &:hover {
+        background-color: $danger-color;
+        color: #ffffff;
+        }
+      }
+    }
+
+  &.pg-teal {
+
+    li a {
+      background-color: $default-color;
+
+      &:focus {
+        background-color: $default-color;
+        color: #ffffff;
+        }
+
+      &:hover {
+        background-color: $default-color;
+        color: #ffffff;
+        }
+      }
+    }
+
+  &.pg-darkgrey {
+
+    li a {
+      background-color: $special-color;
+
+      &:focus {
+        background-color: $special-color;
+        color: #ffffff;
+        }
+
+      &:hover {
+        background-color: $special-color;
+        color: #ffffff;
+        }
+      }
+    }
+
+  &.pg-dark {
+
+    li a {
+      background-color: $elegant-color;
+
+      &:focus {
+        background-color: $elegant-color;
+        color: #ffffff;
+        }
+
+      &:hover {
+        background-color: $elegant-color;
+        color: #ffffff;
+        }
+      }
+    }
+
+  &.pg-bluegrey {
+
+    li a {
+      background-color: #3f729b;
+
+      &:focus {
+        background-color: #3f729b;
+        color: #ffffff;
+        }
+
+      &:hover {
+        background-color: #3f729b;
+        color: #ffffff;
+        }
+      }
+    }
+
+  &.pg-amber {
+
+    li a {
+      background-color: #ff6f00;
+
+      &:focus {
+        background-color: #ff6f00;
+        color: #ffffff;
+        }
+
+      &:hover {
+        background-color: #ff6f00;
+        color: #ffffff;
+        }
+      }
+    }
+
+  &.pg-purple {
+
+    li a {
+      background-color: #5e35b1;
+
+      &:focus {
+        background-color: #5e35b1;
+        color: #ffffff;
+        }
+
+      &:hover {
+        background-color: #5e35b1;
+        color: #ffffff;
+        }
+      }
+    }
+  }
+
+.pager .disabled > a,
+.pager .disabled > a:focus,
+.pager .disabled > a:hover {
+  background-color: inerhit !important;
+  }

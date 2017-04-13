@@ -17,17 +17,25 @@
 // MDB Free
 @import "mdb/free/typography";
 @import "mdb/free/waves";
+@import "mdb/free/section";
 @import "mdb/free/helpers";
-@import "mdb/free/buttons";  
-//@import "mdb/free/forms-basic";
+@import "mdb/free/buttons";
+@import "mdb/free/media";
+@import "mdb/free/video";
+@import "mdb/free/jumbotron";
+@import "mdb/free/forms-basic";
 @import "mdb/free/cards-basic";  
-@import "mdb/free/navbars";
+@import "mdb/free/navbar";
+@import "mdb/free/nav";
+@import "mdb/free/pagination";
+@import "mdb/free/pager";
+@import "mdb/free/tooltip";
 @import "mdb/free/hover-effects";  
 @import "mdb/free/footer";  
 @import "mdb/free/carousels-basic"; 
  
 // MDB Premium  
-//@import "mdb/pro/forms-pro";
+@import "mdb/pro/forms-pro";
 //@import "mdb/pro/tabs";
 //@import "mdb/pro/msc";
 //@import "mdb/pro/progress";

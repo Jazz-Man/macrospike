@@ -1,0 +1,17 @@
+// Make sections full width
+section {
+  flex: 0 0 100%;
+  }
+
+// Section title
+.section-title {
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  padding: 0.7rem;
+  small {
+    text-transform: none;
+    padding-left: 7px;
+    margin-left: 10px;
+    }
+  }
