@@ -1,5 +1,5 @@
 var $$ = require('domtastic');
-require('./module/viewport');
+//require('./module/viewport');
 var Hooks = require('./module/hooks');
 // var spop = require('./module/spop');
 var doc = $$(document);
@@ -16,7 +16,7 @@ function init(e) {
 	
 	// require('./module/side-nav');
 	
-	require('./components/responsive');
+	require('./module/responsive');
 	
 	// require('./components/wpas');
 	// require('./components/profile');
