@@ -1,0 +1,50 @@
+.how-it-works {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center bottom;
+
+  &.how-it-works-fox-1 {
+    background-image: url("../../img/fox/how-it-works/fox-how-it-works-1.png");
+  }
+  &.how-it-works-fox-2 {
+    background-image: url("../../img/fox/how-it-works/fox-how-it-works-2.png");
+  }
+
+  &.how-it-works-fox-3 {
+    background-image: url("../../img/fox/how-it-works/fox-how-it-works-3.png");
+  }
+  &.how-it-works-fox-4 {
+    background-image: url("../../img/fox/how-it-works/fox-how-it-works-4.png");
+  }
+  &.how-it-works-fox-5 {
+    background-image: url("../../img/fox/how-it-works/fox-how-it-works-5.png");
+  }
+
+  .video-animation {
+    position: fixed;
+  }
+
+  &.icon-bar {
+
+    .icon-bar-item {
+
+      [class*="-icon"] {
+
+        &:after {
+          content: '';
+          display: block;
+          background-size: contain;
+          background: url('../../img/icons/arrow_down-icon.png') no-repeat center;
+          @include size(3rem);
+        }
+
+      }
+
+      &:last-child [class*="-icon"]:after {
+        background: none;
+      }
+
+    }
+  }
+}

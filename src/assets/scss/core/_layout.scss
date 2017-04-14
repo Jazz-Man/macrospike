@@ -1,6 +1,6 @@
 @import "../setup/variables";
 
-$get-nav-height: ($navbar-padding-x + $navbar-padding-y)*2;
+$get-nav-height: ($navbar-padding-x + $navbar-padding-y)*2.3;
 
 #page-header {
   min-height: $get-nav-height;
