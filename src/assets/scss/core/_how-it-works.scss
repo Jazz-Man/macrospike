@@ -1,12 +1,13 @@
+@import "../setup/variables";
+
 .how-it-works {
-  background-repeat: no-repeat;
+  background: no-repeat fixed center bottom;
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center bottom;
 
   &.how-it-works-fox-1 {
     background-image: url("../../img/fox/how-it-works/fox-how-it-works-1.png");
   }
+
   &.how-it-works-fox-2 {
     background-image: url("../../img/fox/how-it-works/fox-how-it-works-2.png");
   }
@@ -14,9 +15,11 @@
   &.how-it-works-fox-3 {
     background-image: url("../../img/fox/how-it-works/fox-how-it-works-3.png");
   }
+
   &.how-it-works-fox-4 {
     background-image: url("../../img/fox/how-it-works/fox-how-it-works-4.png");
   }
+
   &.how-it-works-fox-5 {
     background-image: url("../../img/fox/how-it-works/fox-how-it-works-5.png");
   }
@@ -47,4 +50,33 @@
 
     }
   }
+
+  .macrospike-way-list {
+    counter-reset: my-badass-counter;
+
+    dt {
+      margin-bottom: 1.5rem;
+
+      &:before,
+      .start-with-1 {
+        background-color: $brand-primary;
+        color: $white;
+        display: inline-block;
+        margin-right: .5rem;
+        padding: .3rem .6rem;
+        position: relative;
+      }
+
+      .start-with-1 {
+        margin-left: .5rem;
+      }
+
+      &:before {
+        content: counter(my-badass-counter);
+        counter-increment: my-badass-counter;
+      }
+    }
+
+  }
+
 }

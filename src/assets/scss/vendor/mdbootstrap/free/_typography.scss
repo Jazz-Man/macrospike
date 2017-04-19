@@ -7,21 +7,21 @@ h4,
 h5,
 h6 {
   font-weight: 300;
-  }
+}
 
 html {
   @media only screen and (min-width: 0) {
     font-size: 15px;
-    }
+  }
 
   @media only screen and (min-width: $medium-screen) {
     font-size: 15.5px;
-    }
+  }
 
   @media only screen and (min-width: $large-screen) {
     font-size: 16px;
-    }
   }
+}
 
 .text-fluid {
   font-weight: 300;
@@ -29,27 +29,27 @@ html {
   @while $i <=$intervals {
     @media only screen and (min-width: 360+ ($i * $interval-size)) {
       font-size: 1.2rem * (1+ (.02 * $i));
-      }
-    $i: $i+1;
     }
+    $i: $i+1;
+  }
   // Handle below 360px screen
   @media only screen and (max-width: 360px) {
     font-size: 1.2rem;
-    }
   }
+}
 
 p {
   &.lead {
     font-weight: 400;
-    }
   }
+}
 
 blockquote p {
   font-size: 0.9rem;
   padding-bottom: 1rem;
   padding-left: 2rem;
   padding-top: 1rem;
-  }
+}
 
 /* Responsive Headings */
 /* Extra Small Devices, Phones */
@@ -58,84 +58,84 @@ blockquote p {
   .h1-responsive {
     font-size: 150%;
     font-weight: 500;
-    }
+  }
 
   .h2-responsive {
     font-size: 145%;
-    }
+  }
 
   .h3-responsive {
     font-size: 135%;
-    }
+  }
 
   .h4-responsive {
     font-size: 135%;
-    }
+  }
 
   .h5-responsive {
     font-size: 135%;
-    }
   }
+}
 
 /* Small Devices, Tablets */
 
 @media only screen and (min-width: 768px) {
   .h1-responsive {
     font-size: 170%;
-    }
+  }
 
   .h2-responsive {
     font-size: 140%;
-    }
+  }
 
   .h3-responsive {
     font-size: 125%;
-    }
+  }
 
   .h4-responsive {
     font-size: 125%;
-    }
+  }
 
   .h5-responsive {
     font-size: 125%;
-    }
   }
+}
 
 @media only screen and (min-width: 992px) {
   .h1-responsive {
     font-size: 200%;
-    }
+  }
 
   .h2-responsive {
     font-size: 170%;
-    }
+  }
   .h3-responsive {
     font-size: 140%;
-    }
+  }
   .h4-responsive {
     font-size: 125%;
-    }
+  }
   .h5-responsive {
     font-size: 125%;
-    }
   }
+}
 
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1200px) {
   .h1-responsive {
     font-size: 250%;
-    }
+  }
   .h2-responsive {
     font-size: 200%;
-    }
+  }
   .h3-responsive {
     font-size: 170%;
-    }
+  }
   .h4-responsive {
     font-size: 140%;
-    }
+  }
   .h5-responsive {
     font-size: 125%;
-    }
   }
+}
