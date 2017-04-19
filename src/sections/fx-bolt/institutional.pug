@@ -1,3 +1,30 @@
-//
-   Created by jazzman on 20.04.17.
+mixin institutionalCardIcon(text,icon)
+  .card.z-depth-0.text-center
+    object.card-img.w-75.m-auto(data=require('assets/img/icons/' + icon + '.svg') type="image/svg+xml")
+    .card-block
+      p.card-text=text
 
+section.section.py-5.institutional
+  .container
+    .row
+      .col-6.align-self-md-center
+        .row
+          .col-6.mt-5
+            +institutionalCardIcon('Machine Readable','machine')
+          .col-6.mt-5
+            +institutionalCardIcon('Algorithmic Framework','algorithmic')
+          .col-6.mt-5.mx-auto
+            +institutionalCardIcon('No Latency','noLatency')
+      .col-5
+        .card.z-depth-0.transparent
+          .card-block
+            h2.card-title.proxima-nova-font.text-primary.
+              Institutional Product for a Retail Price
+            p.card-text.mb-4.
+              When it comes to economic news, audio feeds are a thing of the past. Nowadays most events are released
+              in digital format, which makes them readable by computers and quickly accessible by algos. Powered by
+              state-of-the-art algorithmic frameworks, FX BOLT indeed takes speed very seriously. In less than a
+              millisecond news events are processed and ready to be acted upon.
+            p.card-text.mb-4.
+              With FX BOLT subscribers get an institutional product for a retail price. This is a strategy that has
+              worked for hedge funds and institutional traders for decades.

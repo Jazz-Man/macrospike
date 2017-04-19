@@ -1,11 +1,18 @@
 body.fx-bolt {
 
   .calculated {
-
     color: rgba(255, 255, 255, .8);
+    }
 
-    .card-text {
-      line-height: 30px;
+  .card-text {
+    line-height: 30px;
+    }
+
+  .institutional {
+
+    .card-img {
+      //width: 178px;
+      height: 100px;
       }
     }
 
