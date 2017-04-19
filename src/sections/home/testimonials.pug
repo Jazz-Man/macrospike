@@ -8,9 +8,9 @@ mixin testimonialCarouselItem(icon)
 		h3.font-weight-normal.mb-5.mt-4.section-heading Carlos, Spain
 		p=testimonialsText
 
-section.section
+section.section.py-5.pattern-10.grey.lighten-4
 	.container
-		.carousel.testimonial-carousel.text-center.slide(id=testimonialsCarosselID data-ride='carousel' data-interval='false')
+		.carousel.testimonial-carousel.text-center.slide(id=testimonialsCarosselID data-ride='carousel')
 			ol.carousel-indicators
 				- var n = 0;
 					while n <= 4
