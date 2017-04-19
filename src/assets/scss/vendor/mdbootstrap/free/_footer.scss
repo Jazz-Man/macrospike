@@ -4,7 +4,7 @@ footer.page-footer {
   color: #ffffff;
   margin-top: 20px;
   padding-top: 20px;
-
+  
   .footer-copyright {
     background-color: rgba(0, 0, 0, 0.2);
     color: rgba(255, 255, 255, .8);
@@ -12,27 +12,32 @@ footer.page-footer {
     line-height: 50px;
     overflow: hidden;
     text-align: center;
-    }
+  }
+  
   a {
     color: #ffffff;
-    }
+  }
+  
   .title {
     text-transform: uppercase;
-    }
+  }
+  
   .call-to-action {
-    text-align: center;
-    padding-top: 1.3rem;
     padding-bottom: 0.5rem;
+    padding-top: 1.3rem;
+    text-align: center;
+    
     ul li {
       display: inline-block;
       padding-right: 10px;
-      }
     }
+  }
+  
   .social-section {
     text-align: center;
     ul li {
       display: inline-block;
-
-      }
+      
     }
   }
+}
