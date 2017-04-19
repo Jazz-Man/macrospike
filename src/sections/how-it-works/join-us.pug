@@ -1,2 +1,32 @@
-section.section.view.how-it-works.how-it-works-fox-5.full-height.text-center.bg-primary-darken
-   h1.display-4.my-5 JOIN US
+- var ourProductCarosselID = 'our-product'
+section.section.view.how-it-works.how-it-works-fox-5.full-height.bg-primary-darken
+	.container.h-100
+		.row.h-100
+			.col-md-4.col-sm-12.align-self-md-center.text-white
+				h2.proxima-nova-font.my-5.text-uppercase join us
+				p No matter if you are new to trading or if you are an experienced trader that seeks to expand his repertoire of trading techniques — MacroSpike is the right choice for either of you.
+				p.font-weight-bold Join MacroSpike today and discover the power of macroeconomic newstrading.
+				form.mt-5
+					.form-group
+						input.form-control.p-4(type='email' placeholder='Enter your email')
+					.form-group
+						button.btn.btn-block.btn-lg.btn-outline-white.p-4(type="submit") Subscribe
+
+			.col-md-4.col-sm-12.offset-md-4.align-self-md-center.text-center
+				h2.proxima-nova-font.my-5.text-uppercase.text-white our product
+
+				.carousel.slide(id=ourProductCarosselID data-ride='carousel' data-interval='false')
+					ol.carousel-indicators
+						li.active(data-target='#' + ourProductCarosselID data-slide-to='0')
+						li(data-target='#' + ourProductCarosselID data-slide-to='1')
+					.carousel-inner.z-depth-1-half(role='listbox')
+						.carousel-item.active
+							img.img-fluid(src=require('assets/img/screen/fx-bold-screen-clean.png'))
+						.carousel-item
+							img.img-fluid(src=require('assets/img/screen/macro-trade-screen-clean.png'))
+					a.carousel-control-prev(href='#' + ourProductCarosselID role='button' data-slide='prev')
+						span.carousel-control-prev-icon.rounded-circle(aria-hidden='true')
+						span.sr-only Previous
+					a.carousel-control-next(href='#' + ourProductCarosselID role='button' data-slide='next')
+						span.carousel-control-next-icon.rounded-circle(aria-hidden='true')
+						span.sr-only Next
