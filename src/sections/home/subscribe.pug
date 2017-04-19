@@ -2,12 +2,12 @@ section.section.subscribe.mb-0.pt-5.bg-primary
   .container
     .row
       .col-md-6
-        object.d-block.info__macro(data=require('assets/img/svg/mailboxes.svg') type='image/svg+xml' width="372" height="255")
+        img.img-fluid.info__macro(src=require('assets/img/svg/mailboxes.svg') type='image/svg+xml' width="372" height="255")
       .col-md-6.white-text
         h1.section-heading.proxima-nova-font Join our Newsletter
-        form
+        form.my-5
           .row
-            .col-md-7
+            .col-md-7.col-sm-12
               input.form-control.p-4(type='email' placeholder='Enter your email')
-            .col-md-5
+            .col-md-5.col-sm-12
               button.btn.btn-block.btn-lg.btn-outline-white.p-4(type="submit") Submit

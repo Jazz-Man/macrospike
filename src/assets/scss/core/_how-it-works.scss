@@ -1,0 +1,135 @@
+@import "../setup/variables";
+
+.how-it-works {
+  background: no-repeat fixed center bottom;
+  background-size: cover;
+  
+  &.how-it-works-fox-1 {
+    background-image: url("../../img/fox/how-it-works/fox-how-it-works-1.png");
+  }
+  
+  &.how-it-works-fox-2 {
+    background-image: url("../../img/fox/how-it-works/fox-how-it-works-2.png");
+  }
+  
+  &.how-it-works-fox-3 {
+    background-image: url("../../img/fox/how-it-works/fox-how-it-works-3.png");
+  }
+  
+  &.how-it-works-fox-4 {
+    background-image: url("../../img/fox/how-it-works/fox-how-it-works-4.png");
+  }
+  
+  &.how-it-works-fox-5 {
+    background-image: url("../../img/fox/how-it-works/fox-how-it-works-5.png");
+  }
+  
+  .video-animation {
+    position: fixed;
+  }
+  
+  &.icon-bar {
+    
+    .icon-bar-item {
+      
+      [class*="-icon"] {
+        
+        &:after {
+          content: '';
+          display: block;
+          background-size: contain;
+          background: url('../../img/icons/arrow_down-icon.png') no-repeat center;
+          @include size(3rem);
+        }
+        
+      }
+      
+      &:last-child [class*="-icon"]:after {
+        background: none;
+      }
+      
+    }
+  }
+  
+  .macrospike-way-list {
+    counter-reset: my-badass-counter;
+    
+    dt {
+      margin-bottom: 1.5rem;
+      
+      &:before,
+      .start-with-1 {
+        background-color: $brand-primary;
+        color: $white;
+        display: inline-block;
+        margin-right: .5rem;
+        padding: .3rem .6rem;
+        position: relative;
+      }
+      
+      .start-with-1 {
+        margin-left: .5rem;
+      }
+      
+      &:before {
+        content: counter(my-badass-counter);
+        counter-increment: my-badass-counter;
+      }
+    }
+    
+  }
+  
+  .carousel {
+    
+    .carousel-indicators {
+      
+      bottom: 0;
+      
+      li {
+        background-color: rgba($brand-danger, .5);
+        
+        &.active {
+          background-color: $brand-danger;
+        }
+      }
+      
+    }
+    
+    @include media-breakpoint-up(sm) {
+      
+      .carousel-control-prev {
+        left: -$carousel-control-width;
+      }
+      
+      .carousel-control-next {
+        right: -$carousel-control-width;
+      }
+    }
+    
+    @include media-breakpoint-down(sm){
+      .carousel-control-prev {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
+      }
+  
+      .carousel-control-next {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
+      }
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      border: 2px solid $white;
+      @include size(2.3rem);
+    }
+    
+    .carousel-control-prev-icon {
+      background-image: url(../img/svg/arrow_left.svg);
+    }
+    
+    .carousel-control-next-icon {
+      background-image: url(../img/svg/arrow_right.svg);
+    }
+    
+  }
+  
+}

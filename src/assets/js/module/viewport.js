@@ -122,5 +122,6 @@ function view_port_init() {
 }
 
 Hooks.addAction("_init", view_port_init);
+Hooks.addAction("pageLoader.processEnd", view_port_init);
 
 module.exports = ViewPort;
