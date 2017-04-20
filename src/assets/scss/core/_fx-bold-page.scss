@@ -1,19 +1,269 @@
 body.fx-bolt {
-
-  .calculated {
-    color: rgba(255, 255, 255, .8);
+  
+  .introduction {
+    background: url("../../img/overlays/Trading-floor.jpeg") no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    
+    .container {
+      
+      z-index: 2;
     }
-
-  .card-text {
-    line-height: 30px;
+    
+    &:after {
+      @include size(100%);
+      background: rgba($black, .7);
+      content: "";
+      left: 0;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      
     }
-
-  .institutional {
-
-    .card-img {
-      //width: 178px;
-      height: 100px;
+  }
+  
+  .interfaces {
+    
+    .section-heading {
+      font-size: 36px;
+      letter-spacing: .2px;
+      text-align: center;
+      
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+        line-height: 22px;
+        text-align: left;
       }
     }
-
+    
+    .description-title {
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+      }
+    }
+    
+    .lead {
+      @include media-breakpoint-down(sm) {
+        font-size: 15px;
+      }
+    }
   }
+  
+  .how-it-works {
+    
+    .section-heading {
+      font-size: 36px;
+      letter-spacing: .2px;
+      text-align: center;
+      
+      @include media-breakpoint-down(sm) {
+        font-size: 24px;
+        text-align: left;
+      }
+    }
+    
+    .divider-short {
+      @include media-breakpoint-down(sm) {
+        float: left;
+      }
+    }
+    
+    .description-title {
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+      }
+    }
+    
+    .lead {
+      line-height: 30px;
+      //letter-spacing: -.8px;
+      //color: rgba(93, 93, 93, .8);
+      
+      @include media-breakpoint-down(sm) {
+        font-size: 12px;
+        line-height: 18px;
+        //letter-spacing: -.5px;
+      }
+    }
+  }
+  
+  .calculated {
+    color: rgba(255, 255, 255, .8);
+    
+    .desktop {
+      display: none;
+      
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
+    }
+    
+    .tablet {
+      display: none;
+      
+      @include media-breakpoint-between(sm, md) {
+        display: block;
+      }
+    }
+    
+    .mob {
+      display: none;
+      
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+    }
+  }
+  
+  .card-text {
+    letter-spacing: .1px;
+    line-height: 30px;
+    
+    @include media-breakpoint-down(sm) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  
+  .institutional {
+    
+    .description-title {
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+      }
+    }
+    
+    .card-img {
+      height: 6rem;
+      
+      @include media-breakpoint-down(sm) {
+        height: 5rem;
+      }
+    }
+  }
+  
+  .member {
+    
+    .section-heading {
+      text-align: center;
+      
+      @include media-breakpoint-down(sm) {
+        text-align: left;
+        line-height: 24px;
+        font-size: 18px;
+      }
+    }
+    
+    .card {
+      height: 362px;
+      overflow: hidden;
+      
+      @include media-breakpoint-between(lg, xl) {
+        height: 23rem;
+      }
+      
+      @include media-breakpoint-between(md, lg) {
+        height: 30rem;
+      }
+      
+      @include media-breakpoint-between(sm, md) {
+        height: 28rem;
+      }
+      
+      @include media-breakpoint-down(sm) {
+        height: 20rem;
+      }
+      
+      &:hover {
+        
+        .card-text {
+          opacity: 1;
+        }
+        
+        .card-img {
+          bottom: -285px;
+          opacity: 0;
+        }
+        
+      }
+    }
+    
+    .card-img {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      transition: .4s;
+    }
+    
+    .card-text {
+      font-size: 18px;
+      line-height: 26px;
+      opacity: 0;
+      transition: .4s;
+    }
+    
+    .trade-calendar {
+      background-color: #0d4f73;
+    }
+    
+    .chatroom {
+      background-color: #146a98;
+    }
+    
+    .macrocharts {
+      background-color: #1a80b6;
+    }
+    
+    .trade-plans {
+      background-color: #2897d2;
+    }
+  }
+  
+  .testimonial-carousel {
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+      
+      &:hover {
+        
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          border: 2px solid $brand-primary;
+          border-radius: 50%;
+        }
+      }
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      @include size(2.3rem);
+    }
+    
+    .carousel-control-prev-icon {
+      background-image: url("../../img/svg/arrow_left_blue.svg");
+    }
+    
+    .carousel-control-next-icon {
+      background-image: url("../../img/svg/arrow_right_blue.svg");
+    }
+    
+    .carousel-indicators {
+      
+      li {
+        background: transparent;
+        border: 2px solid $hr-border-color;
+        border-radius: 50%;
+        height: 12px;
+        max-width: 12px;
+        
+        &.active {
+          background-color: $brand-primary;
+        }
+      }
+    }
+    
+  }
+  
+}

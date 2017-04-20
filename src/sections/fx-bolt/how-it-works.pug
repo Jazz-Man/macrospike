@@ -3,24 +3,24 @@ mixin fxboltCardIcon(text,icon)
     .card.z-depth-0.text-center
       img.card-img-top.w-50.m-auto(src=require('assets/img/icons/' + icon + '.svg'))
       .card-block
-        p.card-text=text
+        p.lead=text
 
 section.section.py-5.how-it-works
   .container
     .row
-      .col-6.m-auto
-        h1.section-heading.proxima-nova-font.text-center.mb-5.
+      .col-sm-8.m-auto
+        h1.section-heading.proxima-nova-font.my-2.
           How FX BOLT works
-        hr.divider-short.w-50.mb-5
+        hr.divider-short.w-25.mb-5
     .row
-      .col-6
+      .col-sm-6.flex-last.flex-md-first
         .row
           +fxboltCardIcon('More than 50 news per month','more')
           +fxboltCardIcon('No Latency','noLatency2')
           +fxboltCardIcon('Economic data from all over the world','economic')
           +fxboltCardIcon('Proximity to major data centers','proximity')
-      .col-6
-        h2.section-heading.proxima-nova-font.text-primary.mt-0.mb-4.
+      .col-sm-6
+        h2.section-heading.proxima-nova-font.text-primary.mt-0.mb-4.description-title.
           Be the First
         p.lead.
           FX Bolt is a news clicker that turns economic data into

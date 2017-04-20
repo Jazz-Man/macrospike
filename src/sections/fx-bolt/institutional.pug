@@ -7,18 +7,18 @@ mixin institutionalCardIcon(text,icon)
 section.section.py-5.institutional
   .container
     .row
-      .col-6.align-self-md-center
+      .col-sm-6.align-self-md-center.flex-last.flex-md-first
         .row
-          .col-6.mt-5
+          .col-6
             +institutionalCardIcon('Machine Readable','machine')
-          .col-6.mt-5
+          .col-6
             +institutionalCardIcon('Algorithmic Framework','algorithmic')
-          .col-6.mt-5.mx-auto
+          .col-6.mx-auto
             +institutionalCardIcon('No Latency','noLatency')
-      .col-5
+      .col-sm-5
         .card.z-depth-0.transparent
           .card-block
-            h2.card-title.proxima-nova-font.text-primary.
+            h2.card-title.proxima-nova-font.text-primary.description-title.
               Institutional Product for a Retail Price
             p.card-text.mb-4.
               When it comes to economic news, audio feeds are a thing of the past. Nowadays most events are released
