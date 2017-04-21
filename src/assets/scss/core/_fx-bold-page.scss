@@ -156,24 +156,24 @@ body.fx-bolt {
     }
     
     .card {
-      height: 362px;
+      //height: 362px;
       overflow: hidden;
       
-      @include media-breakpoint-between(lg, xl) {
-        height: 23rem;
-      }
-      
-      @include media-breakpoint-between(md, lg) {
-        height: 30rem;
-      }
-      
-      @include media-breakpoint-between(sm, md) {
-        height: 28rem;
-      }
-      
-      @include media-breakpoint-down(sm) {
-        height: 20rem;
-      }
+      //@include media-breakpoint-between(lg, xl) {
+      //  height: 23rem;
+      //}
+      //
+      //@include media-breakpoint-between(md, lg) {
+      //  height: 30rem;
+      //}
+      //
+      //@include media-breakpoint-between(sm, md) {
+      //  height: 28rem;
+      //}
+      //
+      //@include media-breakpoint-down(sm) {
+      //  height: 20rem;
+      //}
       
       &:hover {
         
@@ -182,7 +182,7 @@ body.fx-bolt {
         }
         
         .card-img {
-          bottom: -285px;
+          //bottom: -285px;
           opacity: 0;
         }
         
@@ -190,10 +190,10 @@ body.fx-bolt {
     }
     
     .card-img {
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      right: 0;
+      //bottom: 0;
+      //left: 0;
+      //position: absolute;
+      //right: 0;
       transition: .4s;
     }
     
