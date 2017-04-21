@@ -6,11 +6,6 @@ body.fx-bolt {
     overflow: hidden;
     position: relative;
     
-    .container {
-      
-      z-index: 2;
-    }
-    
     &:after {
       @include size(100%);
       background: rgba($black, .7);
@@ -20,6 +15,14 @@ body.fx-bolt {
       top: 0;
       z-index: 1;
       
+    }
+    
+    .shape {
+      z-index: 2;
+    }
+    
+    .container {
+      z-index: 3;
     }
   }
   
@@ -77,13 +80,10 @@ body.fx-bolt {
     
     .lead {
       line-height: 30px;
-      //letter-spacing: -.8px;
-      //color: rgba(93, 93, 93, .8);
       
       @include media-breakpoint-down(sm) {
         font-size: 12px;
         line-height: 18px;
-        //letter-spacing: -.5px;
       }
     }
   }
@@ -156,25 +156,6 @@ body.fx-bolt {
     }
     
     .card {
-      //height: 362px;
-      overflow: hidden;
-      
-      //@include media-breakpoint-between(lg, xl) {
-      //  height: 23rem;
-      //}
-      //
-      //@include media-breakpoint-between(md, lg) {
-      //  height: 30rem;
-      //}
-      //
-      //@include media-breakpoint-between(sm, md) {
-      //  height: 28rem;
-      //}
-      //
-      //@include media-breakpoint-down(sm) {
-      //  height: 20rem;
-      //}
-      
       &:hover {
         
         .card-text {
@@ -182,26 +163,21 @@ body.fx-bolt {
         }
         
         .card-img {
-          //bottom: -285px;
           opacity: 0;
         }
         
       }
     }
     
-    .card-img {
-      //bottom: 0;
-      //left: 0;
-      //position: absolute;
-      //right: 0;
-      transition: .4s;
+    .card-img,
+    .card-text {
+      transition: $transition-fade;
     }
     
     .card-text {
       font-size: 18px;
       line-height: 26px;
       opacity: 0;
-      transition: .4s;
     }
     
     .trade-calendar {
@@ -261,6 +237,36 @@ body.fx-bolt {
         &.active {
           background-color: $brand-primary;
         }
+      }
+    }
+    
+  }
+  
+  .order {
+    
+    margin-top: -5rem;
+  
+    @include media-breakpoint-down(sm) {
+      //margin-top: 0;
+      padding-top: 5rem;
+    }
+    
+    .pricing-card {
+      background-image: linear-gradient(to right, rgba($black, .1), transparent), linear-gradient(#fff, #fff);
+    }
+    
+    .card-title {
+      font-size: 48px;
+    }
+    
+    .icon-bar-item {
+      
+      img {
+        @include size(50px);
+      }
+      
+      .icon-description {
+        color: rgba($white, .6);
       }
     }
     
