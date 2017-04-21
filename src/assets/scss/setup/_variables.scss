@@ -95,9 +95,9 @@
 $white: #fff !default;
 $black: #000 !default;
 $red: #d0323f !default;
-$orange: #ec5a1d !default;
+$orange: #ff8400 !default;
 $yellow: #ffd500 !default;
-$green: #5cb85c !default;
+$green: #1c8a4f !default;
 $blue: #146a98 !default;
 $blue-darken: #0d4f73 !default;
 $teal: #1a80b6 !default;
@@ -182,7 +182,8 @@ $sizes: (
 // Settings for the `<body>` element.
 
 $body-bg: $white !default;
-$body-color: $gray-dark !default;
+$body-color: #5d5d5d !default;
+//$body-color: $gray-dark !default;
 $inverse-bg: $gray-dark !default;
 $inverse-color: $gray-lighter !default;
 
@@ -296,7 +297,7 @@ $blockquote-border-color: $gray-lighter !default;
 $blockquote-border-width: .25rem !default;
 
 $hr-border-color: rgba($black, .1) !default;
-$hr-border-width: $border-width !default;
+$hr-border-width: .15rem !default;
 
 $mark-padding: .2em !default;
 

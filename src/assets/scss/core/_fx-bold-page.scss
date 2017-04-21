@@ -1,0 +1,275 @@
+body.fx-bolt {
+  
+  .introduction {
+    background: url("../../img/overlays/Trading-floor.jpeg") no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    
+    &:after {
+      @include size(100%);
+      background: rgba($black, .7);
+      content: "";
+      left: 0;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      
+    }
+    
+    .shape {
+      z-index: 2;
+    }
+    
+    .container {
+      z-index: 3;
+    }
+  }
+  
+  .interfaces {
+    
+    .section-heading {
+      font-size: 36px;
+      letter-spacing: .2px;
+      text-align: center;
+      
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+        line-height: 22px;
+        text-align: left;
+      }
+    }
+    
+    .description-title {
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+      }
+    }
+    
+    .lead {
+      @include media-breakpoint-down(sm) {
+        font-size: 15px;
+      }
+    }
+  }
+  
+  .how-it-works {
+    
+    .section-heading {
+      font-size: 36px;
+      letter-spacing: .2px;
+      text-align: center;
+      
+      @include media-breakpoint-down(sm) {
+        font-size: 24px;
+        text-align: left;
+      }
+    }
+    
+    .divider-short {
+      @include media-breakpoint-down(sm) {
+        float: left;
+      }
+    }
+    
+    .description-title {
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+      }
+    }
+    
+    .lead {
+      line-height: 30px;
+      
+      @include media-breakpoint-down(sm) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+  
+  .calculated {
+    color: rgba(255, 255, 255, .8);
+    
+    .desktop {
+      display: none;
+      
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
+    }
+    
+    .tablet {
+      display: none;
+      
+      @include media-breakpoint-between(sm, md) {
+        display: block;
+      }
+    }
+    
+    .mob {
+      display: none;
+      
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+    }
+  }
+  
+  .card-text {
+    letter-spacing: .1px;
+    line-height: 30px;
+    
+    @include media-breakpoint-down(sm) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  
+  .institutional {
+    
+    .description-title {
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+      }
+    }
+    
+    .card-img {
+      height: 6rem;
+      
+      @include media-breakpoint-down(sm) {
+        height: 5rem;
+      }
+    }
+  }
+  
+  .member {
+    
+    .section-heading {
+      text-align: center;
+      
+      @include media-breakpoint-down(sm) {
+        text-align: left;
+        line-height: 24px;
+        font-size: 18px;
+      }
+    }
+    
+    .card {
+      &:hover {
+        
+        .card-text {
+          opacity: 1;
+        }
+        
+        .card-img {
+          opacity: 0;
+        }
+        
+      }
+    }
+    
+    .card-img,
+    .card-text {
+      transition: $transition-fade;
+    }
+    
+    .card-text {
+      font-size: 18px;
+      line-height: 26px;
+      opacity: 0;
+    }
+    
+    .trade-calendar {
+      background-color: #0d4f73;
+    }
+    
+    .chatroom {
+      background-color: #146a98;
+    }
+    
+    .macrocharts {
+      background-color: #1a80b6;
+    }
+    
+    .trade-plans {
+      background-color: #2897d2;
+    }
+  }
+  
+  .testimonial-carousel {
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+      
+      &:hover {
+        
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          border: 2px solid $brand-primary;
+          border-radius: 50%;
+        }
+      }
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      @include size(2.3rem);
+    }
+    
+    .carousel-control-prev-icon {
+      background-image: url("../../img/svg/arrow_left_blue.svg");
+    }
+    
+    .carousel-control-next-icon {
+      background-image: url("../../img/svg/arrow_right_blue.svg");
+    }
+    
+    .carousel-indicators {
+      
+      li {
+        background: transparent;
+        border: 2px solid $hr-border-color;
+        border-radius: 50%;
+        height: 12px;
+        max-width: 12px;
+        
+        &.active {
+          background-color: $brand-primary;
+        }
+      }
+    }
+    
+  }
+  
+  .order {
+    
+    margin-top: -5rem;
+  
+    @include media-breakpoint-down(sm) {
+      //margin-top: 0;
+      padding-top: 5rem;
+    }
+    
+    .pricing-card {
+      background-image: linear-gradient(to right, rgba($black, .1), transparent), linear-gradient(#fff, #fff);
+    }
+    
+    .card-title {
+      font-size: 48px;
+    }
+    
+    .icon-bar-item {
+      
+      img {
+        @include size(50px);
+      }
+      
+      .icon-description {
+        color: rgba($white, .6);
+      }
+    }
+    
+  }
+  
+}

@@ -1,55 +1,20 @@
 // TYPOGRAPHY
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 300;
-}
+//.text-fluid {
+//  font-weight: 300;
+//  $i: 0;
+//  @while $i <=$intervals {
+//    @media only screen and (min-width: 360+ ($i * $interval-size)) {
+//      font-size: 1.2rem * (1+ (.02 * $i));
+//    }
+//    $i: $i+1;
+//  }
+//  // Handle below 360px screen
+//  @media only screen and (max-width: 360px) {
+//    font-size: 1.2rem;
+//  }
+//}
 
-html {
-  @media only screen and (min-width: 0) {
-    font-size: 15px;
-  }
-
-  @media only screen and (min-width: $medium-screen) {
-    font-size: 15.5px;
-  }
-
-  @media only screen and (min-width: $large-screen) {
-    font-size: 16px;
-  }
-}
-
-.text-fluid {
-  font-weight: 300;
-  $i: 0;
-  @while $i <=$intervals {
-    @media only screen and (min-width: 360+ ($i * $interval-size)) {
-      font-size: 1.2rem * (1+ (.02 * $i));
-    }
-    $i: $i+1;
-  }
-  // Handle below 360px screen
-  @media only screen and (max-width: 360px) {
-    font-size: 1.2rem;
-  }
-}
-
-p {
-  &.lead {
-    font-weight: 400;
-  }
-}
-
-blockquote p {
-  font-size: 0.9rem;
-  padding-bottom: 1rem;
-  padding-left: 2rem;
-  padding-top: 1rem;
-}
 
 /* Responsive Headings */
 /* Extra Small Devices, Phones */
