@@ -38,10 +38,10 @@ body.how-it-works {
       [class*="-icon"] {
         
         &:after {
+          background: url('../../img/icons/arrow_down-icon.png') no-repeat center;
+          background-size: contain;
           content: '';
           display: block;
-          background-size: contain;
-          background: url('../../img/icons/arrow_down-icon.png') no-repeat center;
           @include size(3rem);
         }
         
@@ -58,7 +58,7 @@ body.how-it-works {
     counter-reset: my-badass-counter;
     
     dt {
-      margin-bottom: 1.5rem;
+      margin-bottom: .5rem;
       
       &:before,
       .start-with-1 {
