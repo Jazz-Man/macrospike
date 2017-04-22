@@ -92,10 +92,10 @@
 // Grayscale and brand colors for use across Bootstrap.
 
 // Start with assigning color names to specific hex values.
-$white: #fff !default;
-$black: #000 !default;
+$white: #ffffff !default;
+$black: #000000 !default;
 $red: #d0323f !default;
-$orange: #ff8400 !default;
+$orange: #ec5a1d !default;
 $yellow: #ffd500 !default;
 $green: #1c8a4f !default;
 $blue: #146a98 !default;
@@ -175,6 +175,21 @@ $sizes: (
         50: 50%,
         75: 75%,
         100: 100%
+) !default;
+
+$sizes-vh: (
+        25-vh: 25vh,
+        50-vh: 50vh,
+        75-vh: 75vh,
+        100-vh: 100vh
+) !default;
+
+$zindex: (
+  "xl" : 9000,
+  "lg" : 8000,
+  "md" : 7000,
+  "sm" : 6000,
+  "xs" : 5000
 ) !default;
 
 // Body
