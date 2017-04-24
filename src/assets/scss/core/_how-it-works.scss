@@ -5,6 +5,11 @@ body.how-it-works {
   [class*="how-it-works-fox-"] {
     background: no-repeat fixed center bottom;
     background-size: cover;
+    
+    @include media-breakpoint-down(sm) {
+      background: none;
+      
+    }
   }
   
   .how-it-works-fox-1 {
@@ -133,6 +138,49 @@ body.how-it-works {
       background-image: url(../img/svg/arrow_right.svg);
     }
     
+  }
+  
+  .section {
+    height: 100vh;
+    
+    @include media-breakpoint-down(sm) {
+      height: 100%;
+    }
+    
+    &.first-screen {
+      height: 80vh;
+    }
+  }
+  
+  .card {
+    background-color: transparent;
+    
+    @include media-breakpoint-up(md) {
+      box-shadow: none;
+    }
+  }
+  
+  @include media-breakpoint-down(sm) {
+    
+    .first-screen .card-block {
+      background-color: lighten($brand-info, 5%);
+    }
+    
+    .how-it-works .card-block {
+      background-color: lighten($brand-warning, 5%);
+    }
+    
+    .the-macrospike-way .card-block {
+      background-color: lighten($gray-lighter, 5%);
+    }
+    
+    .tradition-is-freedom .card-block {
+      background-color: lighten(color("shades", "white"), 5%);
+    }
+    
+    .join-us .card-block {
+      background-color: lighten($brand-primary-darken, 5%);
+    }
   }
   
 }
