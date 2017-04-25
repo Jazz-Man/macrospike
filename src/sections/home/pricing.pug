@@ -1,56 +1,62 @@
 section.section.pricing.featured.white-text.py-5.text-center.mb-0.bg-info
-	h1.display-4.my-5.proxima-nova-font Pricing
 
-	.container
-		.card-deck
-			.card.pricing-card.fx-bolt.white-text.py-5.mb-5
-				.price.header.pt-0.mb-5
-					.z-depth-0.transparent.p-3
-						object.feature-title.info__fx(data=require('assets/img/logos/FX_bolt_logo_new.svg') type='image/svg+xml' width="300" height="50")
-					h1.display-3.font-weight-bold.pt-4.proxima-nova-font $79
-					h5.m-0.p-0 Monthly
+  h1.display-4.my-5.proxima-nova-font Pricing
 
-				.card-block.p-2
-					ul
-						li.mb-3 FX BOLT
-						li.mb-3 Chat Room
-						li.mb-3 MacroCharts
-						li.mb-3 Daily Trade Plans
-						li.mb-3 iOS/Android App
+  .card.col-3.fox.transparent.z-depth-0.align-self-end.push-lg-9
+    object(data=require('assets/img/svg/fox.svg') type='image/svg+xml')
 
-				.card-block.m-auto
-					.dropdown
-						button.btn.btn-block.btn-info.btn-lg.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-							| Dropdown
-						.dropdown-menu
-							a.dropdown-item(href='#') Action
-							a.dropdown-item(href='#') Another action
-							a.dropdown-item(href='#') Something else here
-							a.dropdown-item(href='#') Separated link
-					a.btn.btn-block.btn-danger.mt-3(href="#") Checkout
+  .container
+    .row
+      .col-sm-10.mx-auto
+        .card-deck
+          .card.pricing-card.fx-bolt.white-text.py-5.mb-5
+            .price.header.pt-0.mb-5
+              .z-depth-0.transparent.p-3
+                object.feature-title.info__fx(data=require('assets/img/logos/FX_bolt_logo_new.svg') type='image/svg+xml' width="300" height="50")
+              h1.display-3.font-weight-bold.pt-4.proxima-nova-font $79
+              h5.m-0.p-0.price-desc.proxima-nova-font Monthly
+
+            .card-block.p-2
+              ul.pricing-featured
+                li FX BOLT
+                li Chat Room
+                li MacroCharts
+                li Daily Trade Plans
+                li iOS/Android App
+
+            .card-block.m-auto
+              .dropdown
+                button.btn.btn-block.btn-info.btn-lg.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                  | Dropdown
+                .dropdown-menu
+                  a.dropdown-item(href='#') Action
+                  a.dropdown-item(href='#') Another action
+                  a.dropdown-item(href='#') Something else here
+                  a.dropdown-item(href='#') Separated link
+              a.btn.btn-block.btn-danger.mt-3(href="#") Checkout
 
 
-			.card.pricing-card.macrotrader.white-text.py-5.mb-5
-				.price.header.pt-0.mb-5
-					.z-depth-0.transparent.p-3
-						object.feature-title.info__macro(data=require('assets/img/logos/macrotrader_logo_new.svg') type='image/svg+xml' width="300" height="50")
-					h1.display-3.font-weight-bold.pt-4.proxima-nova-font $199
-					h5.m-0.p-0 Monthly
-				.card-block.p-2
-					ul
-						li.mb-3 MacroTrader
-						li.mb-3 Chat Room
-						li.mb-3 MacroCharts
-						li.mb-3 Daily Trade Plans
-						li.mb-3 iOS/Android App
+          .card.pricing-card.macrotrader.white-text.py-5.mb-5
+            .price.header.pt-0.mb-5
+              .z-depth-0.transparent.p-3
+                object.feature-title.info__macro(data=require('assets/img/logos/macrotrader_logo_new.svg') type='image/svg+xml' width="300" height="50")
+              h1.display-3.font-weight-bold.pt-4.proxima-nova-font $199
+              h5.m-0.p-0.price-desc.proxima-nova-font Monthly
+            .card-block.p-2
+              ul.pricing-featured
+                li MacroTrader
+                li Chat Room
+                li MacroCharts
+                li Daily Trade Plans
+                li iOS/Android App
 
-				.card-block.m-auto
-					.dropdown
-						button.btn.btn-block.btn-info.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-							| Dropdown
-						.dropdown-menu
-							a.dropdown-item(href='#') Action
-							a.dropdown-item(href='#') Another action
-							a.dropdown-item(href='#') Something else here
-							a.dropdown-item(href='#') Separated link
-					a.btn.btn-block.btn-danger.mt-3(href="#") Checkout
+            .card-block.m-auto
+              .dropdown
+                button.btn.btn-block.btn-info.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                  | Dropdown
+                .dropdown-menu
+                  a.dropdown-item(href='#') Action
+                  a.dropdown-item(href='#') Another action
+                  a.dropdown-item(href='#') Something else here
+                  a.dropdown-item(href='#') Separated link
+              a.btn.btn-block.btn-danger.mt-3(href="#") Checkout

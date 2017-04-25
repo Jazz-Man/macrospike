@@ -1,0 +1,53 @@
+.section.member {
+
+  .section-heading {
+
+    @include media-breakpoint-down(sm) {
+      font-size: 18px;
+      line-height: 24px;
+      text-align: left;
+      }
+    }
+
+  .card {
+
+    &:hover {
+
+      .card-text {
+        opacity: 1;
+        }
+
+      .card-img {
+        opacity: 0;
+        }
+
+      }
+    }
+
+  .card-img,
+  .card-text {
+    transition: $transition-fade;
+    }
+
+  .card-text {
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0;
+    }
+
+  .trade-calendar {
+    background-color: #0d4f73;
+    }
+
+  .chatroom {
+    background-color: #146a98;
+    }
+
+  .macrocharts {
+    background-color: #1a80b6;
+    }
+
+  .trade-plans {
+    background-color: #2897d2;
+    }
+  }

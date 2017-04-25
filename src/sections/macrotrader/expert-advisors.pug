@@ -1,73 +1,73 @@
 section.section.py-5.expert-advisors.pattern-10.grey.lighten-4
-	.container
-		.row
-			.col-12
-				h2.px-3.proxima-nova-font.h2-responsive.text-uppercase.text-primary.
-					expert advisors
-		.row(role='tabpanel')
-			.col-sm-5
-				ul.nav.nav-pills(role='tablist')
-					li.nav-item
-						a.nav-link.active(data-toggle='tab' data-duration='350' data-height='true' href='.fxbolt-ea' role='tab' aria-controls='fxbolt-ea' aria-expanded='true') FXBolt EA
-					li.nav-item
-						a.nav-link(data-toggle='tab' data-duration='350' data-height='true' href='.macro-straddle' role='tab' aria-controls='macro-straddle' aria-expanded='false') MacroStraddle
-					li.nav-item
-						a.nav-link(data-toggle='tab' data-duration='350' data-height='true' href='.macro-ticks' role='tab' aria-controls='macro-ticks' aria-expanded='false') MacroTicks
-			.col-sm-12.tab-content
-				.fxbolt-ea.row.tab-pane.fade.active.show(role='tabpanel' aria-labelledby='fxbolt-ea-tab' aria-expanded='true')
-					.col-sm-5
-						.card.z-depth-0.transparent
-							.card-block
-								p.card-text.mb-sm-4.
-									FX BOLT EA lets you trade with enhanced speed and less ressource usage on multiple trading terminals simulatously.
+  .container
+    .row
+      .col-12
+        h2.px-3.proxima-nova-font.h2-responsive.text-uppercase.text-primary.
+          expert advisors
+    .row(role='tabpanel')
+      .col-sm-5
+        ul.nav.nav-pills(role='tablist')
+          li.nav-item
+            a.nav-link.active(data-toggle='tab' data-duration='350' data-height='true' href='.fxbolt-ea' role='tab' aria-controls='fxbolt-ea' aria-expanded='true') FXBolt EA
+          li.nav-item
+            a.nav-link(data-toggle='tab' data-duration='350' data-height='true' href='.macro-straddle' role='tab' aria-controls='macro-straddle' aria-expanded='false') MacroStraddle
+          li.nav-item
+            a.nav-link(data-toggle='tab' data-duration='350' data-height='true' href='.macro-ticks' role='tab' aria-controls='macro-ticks' aria-expanded='false') MacroTicks
+      .col-sm-12.tab-content
+        .fxbolt-ea.row.tab-pane.fade.active.show(role='tabpanel' aria-labelledby='fxbolt-ea-tab' aria-expanded='true')
+          .col-sm-5.mb-4
+            .card.z-depth-0.transparent
+              .card-block
+                p.card-text.mb-sm-4.
+                  FX BOLT EA lets you trade with enhanced speed and less ressource usage on multiple trading terminals simulatously.
 
-								dl.expert-advisors-list
-									dt FX BOLT Trigger system
-									dt Trade Scheduler
-									dt Time and pip-based partial close conditions
-									dt Automatic SL and TP adjustment
-									dt MaxSpread and MaxPrespike
+                dl.expert-advisors-list
+                  dt FX BOLT Trigger system
+                  dt Trade Scheduler
+                  dt Time and pip-based partial close conditions
+                  dt Automatic SL and TP adjustment
+                  dt MaxSpread and MaxPrespike
 
-							img.card-img.m-auto(src=require('assets/img/screen/trade signal-min.png'))
-
-
-					.col-sm-7
-						.card.z-depth-0.transparent
-							img.card-img.m-auto(src=require('assets/img/screen/FX-bolt-var-2.png'))
-
-				.macro-straddle.row.tab-pane.fade(role='tabpanel' aria-labelledby='macro-straddle-tab' aria-expanded='false')
-					.col-sm-5
-						.card.z-depth-0.transparent
-							.card-block
-								p.card-text.mb-sm-4.
-									Trade sudden market breakouts purely based on price action.
-									Increase execution speed by placing stop orders on your broker’s server previous to the release.
-									Trade political news, Central Bank Statements or speeches.
-
-								dl.expert-advisors-list
-									dt Dynamic tick-by-tick order adjustment
-									dt Time based order close
-									dt Scaling-Out option
-									dt TP and SL
-									dt MaxSpread
-
-					.col-sm-7
-						.card.z-depth-0.transparent
-							img.card-img.m-auto(src=require('assets/img/screen/Macrostraddle-min.png'))
+              img.card-img.m-auto(src=require('assets/img/screen/trade signal-min.png'))
 
 
-				.macro-ticks.tab-pane.fade(role='tabpanel' aria-labelledby='macro-ticks-tab' aria-expanded='false')
-					.col-sm-5
-						.card.z-depth-0.transparent
-							.card-block
-								p.card-text.mb-sm-4.
-									Accurately track your broker’s price ticks.
-									Analyse their feeds and learn how to identify good liquidity.
-									Upload your files to the MacroCharts module and create custom charts using your personal instrument and price feed.
+          .col-sm-7.mb-4
+            .card.z-depth-0.transparent
+              img.card-img.m-auto(src=require('assets/img/screen/FX-bolt-var-2.png'))
 
-								dl.expert-advisors-list
-									dt Tick-tracking with millisecond timestamps
-									dt Create your own Tick charts with MacroCharts
-					.col-sm-7
-						.card.z-depth-0.transparent
-							img.card-img.m-auto(src=require('assets/img/screen/MacroTricks-min.png'))
+        .macro-straddle.row.tab-pane.fade(role='tabpanel' aria-labelledby='macro-straddle-tab' aria-expanded='false')
+          .col-sm-5.mb-4
+            .card.z-depth-0.transparent
+              .card-block
+                p.card-text.mb-sm-4.
+                  Trade sudden market breakouts purely based on price action.
+                  Increase execution speed by placing stop orders on your broker’s server previous to the release.
+                  Trade political news, Central Bank Statements or speeches.
+
+                dl.expert-advisors-list
+                  dt Dynamic tick-by-tick order adjustment
+                  dt Time based order close
+                  dt Scaling-Out option
+                  dt TP and SL
+                  dt MaxSpread
+
+          .col-sm-7.mb-4
+            .card.z-depth-0.transparent
+              img.card-img.m-auto(src=require('assets/img/screen/Macrostraddle-min.png'))
+
+
+        .macro-ticks.row.tab-pane.fade(role='tabpanel' aria-labelledby='macro-ticks-tab' aria-expanded='false')
+          .col-sm-5.mb-4
+            .card.z-depth-0.transparent
+              .card-block
+                p.card-text.mb-sm-4.
+                  Accurately track your broker’s price ticks.
+                  Analyse their feeds and learn how to identify good liquidity.
+                  Upload your files to the MacroCharts module and create custom charts using your personal instrument and price feed.
+
+                dl.expert-advisors-list
+                  dt Tick-tracking with millisecond timestamps
+                  dt Create your own Tick charts with MacroCharts
+          .col-sm-7.mb-4
+            .card.z-depth-0.transparent
+              img.card-img.m-auto(src=require('assets/img/screen/MacroTricks-min.png'))

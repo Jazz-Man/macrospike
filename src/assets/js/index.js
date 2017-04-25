@@ -20,7 +20,7 @@ function init(e) {
 	
 	// require('./components/wpas');
 	// require('./components/profile');
-	// require('./module/fitvids');
+//	 require('./module/fitvids');
 //   // require('./components/rating');
 //   // require('./components/add-listing-form');
 	

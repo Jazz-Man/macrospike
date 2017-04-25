@@ -1,17 +1,19 @@
 extends common/layout
 
 block append defaultTitle
-	title MacroSpike
+  title MacroSpike
 
 block vars
-	- var bodyClass = ''
+  - var bodyClass = 'home'
 
 block append content
 
-	include sections/home/first-block
-	include sections/home/why-macrospike
-	include sections/home/preview
-	include sections/home/live-performance
-	include sections/testimonials
-	include sections/home/pricing
-	include sections/home/subscribe
+  include sections/home/first-block
+  include sections/home/why-macrospike
+  include sections/home/preview
+  include sections/home/live-performance
+  section.section.testimonials.py-5.pattern-10.grey.lighten-4.shape-container
+    .shape.shape-pattern-3.bg-info
+    include sections/testimonials
+  include sections/home/pricing
+  include sections/home/subscribe

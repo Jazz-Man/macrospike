@@ -14,4 +14,6 @@ $get-nav-height: ($navbar-padding-x + $navbar-padding-y)*2.3;
 
 #page-footer {
   min-height: 50px;
+  position: relative;
+  display: block;
 }

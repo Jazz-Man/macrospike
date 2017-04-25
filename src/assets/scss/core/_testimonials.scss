@@ -4,19 +4,6 @@
     overflow: hidden;
   }
 
-  //.avatar {
-  //  @include border-radius(50%);
-  //  background: #ffffff;
-  //  border: 5px solid #ffffff;
-  //  height: 120px;
-  //  margin: -65px auto 0;
-  //  overflow: hidden;
-  //  width: 120px;
-  //
-  //  img {
-  //    width: 100%;
-  //  }
-  //}
 
   .card-block {
     text-align: center;
@@ -34,6 +21,47 @@
       font-size: 5rem;
     }
   }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+
+    &:hover {
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        border: 2px solid $brand-primary;
+        border-radius: 50%;
+        }
+      }
+    }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    @include size(2.3rem);
+    }
+
+  .carousel-control-prev-icon {
+    background-image: url("../../img/svg/arrow_left_blue.svg");
+    }
+
+  .carousel-control-next-icon {
+    background-image: url("../../img/svg/arrow_right_blue.svg");
+    }
+
+  .carousel-indicators {
+
+    li {
+      background: transparent;
+      border: 2px solid $hr-border-color;
+      border-radius: 50%;
+      height: 12px;
+      max-width: 12px;
+
+      &.active {
+        background-color: $brand-primary;
+        }
+      }
+    }
 
   .testimonial {
     margin-left: 15%;

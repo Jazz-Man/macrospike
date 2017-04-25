@@ -25,5 +25,14 @@
         clip-path: polygon(100% 100%, 100% 0%, 100% 75%, 0% 100%);
       }
     }
+
+    &.shape-pattern-3 {
+      bottom: -1px;
+      clip-path: polygon(50% 100%, 100% 80%, 100% 100%, 0 100%, 0 80%);
+
+      @include media-breakpoint-down(md) {
+        clip-path: polygon(50% 100%, 100% 85%, 100% 100%, 0 100%, 0 85%);
+        }
+    }
   }
 }

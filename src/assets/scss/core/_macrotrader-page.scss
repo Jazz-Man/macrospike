@@ -1,6 +1,6 @@
 body.macrotrader {
   .introduction {
-    
+
     &:after {
       @include size(100%);
       background: rgba($black, .7);
@@ -9,183 +9,54 @@ body.macrotrader {
       position: absolute;
       top: 0;
       z-index: 1;
-      
-    }
-    
+
+      }
+
     .mask {
       z-index: 2;
+      }
     }
-  }
-  
+
   .expert-advisors {
-    
+
     dt {
       font-weight: normal;
-      
+
       &:before {
         content: "—";
         display: inline-block;
         margin-right: .5rem;
         position: relative;
+        }
       }
-    }
-    
+
     .tab-content > .active,
     .tab-content > .show {
       display: flex !important;
-    }
-    
+      }
+
     .nav {
-      
+
       .nav-link {
         background-color: #146a98;
         border: 3px solid #146a98;
         color: #ffffff;
-  
+
         &.active {
           background-color: #ffffff;
           color: #146a98;
-          
+
+          }
         }
-      }
-      
+
       @include media-breakpoint-down(sm) {
         display: block;
-        
+
         .nav-link {
           text-align: center;
+          }
         }
       }
     }
+
   }
-  
-  .member {
-    
-    .section-heading {
-      text-align: center;
-      
-      @include media-breakpoint-down(sm) {
-        font-size: 18px;
-        line-height: 24px;
-        text-align: left;
-      }
-    }
-    
-    .card {
-      &:hover {
-        
-        .card-text {
-          opacity: 1;
-        }
-        
-        .card-img {
-          opacity: 0;
-        }
-        
-      }
-    }
-    
-    .card-img,
-    .card-text {
-      transition: $transition-fade;
-    }
-    
-    .card-text {
-      font-size: 18px;
-      line-height: 26px;
-      opacity: 0;
-    }
-    
-    .trade-calendar {
-      background-color: #0d4f73;
-    }
-    
-    .chatroom {
-      background-color: #146a98;
-    }
-    
-    .macrocharts {
-      background-color: #1a80b6;
-    }
-    
-    .trade-plans {
-      background-color: #2897d2;
-    }
-  }
-  
-  .testimonial-carousel {
-    
-    .carousel-control-prev,
-    .carousel-control-next {
-      
-      &:hover {
-        
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-          border: 2px solid $brand-primary;
-          border-radius: 50%;
-        }
-      }
-    }
-    
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      @include size(2.3rem);
-    }
-    
-    .carousel-control-prev-icon {
-      background-image: url("../../img/svg/arrow_left_blue.svg");
-    }
-    
-    .carousel-control-next-icon {
-      background-image: url("../../img/svg/arrow_right_blue.svg");
-    }
-    
-    .carousel-indicators {
-      
-      li {
-        background: transparent;
-        border: 2px solid $hr-border-color;
-        border-radius: 50%;
-        height: 12px;
-        max-width: 12px;
-        
-        &.active {
-          background-color: $brand-primary;
-        }
-      }
-    }
-    
-  }
-  
-  .order {
-    
-    margin-top: -5rem;
-    
-    @include media-breakpoint-down(sm) {
-      //margin-top: 0;
-      padding-top: 5rem;
-    }
-    
-    .pricing-card {
-      background-image: linear-gradient(to right, rgba($black, .1), transparent), linear-gradient(#fff, #fff);
-    }
-    
-    .card-title {
-      font-size: 48px;
-    }
-    
-    .icon-bar-item {
-      
-      img {
-        @include size(50px);
-      }
-      
-      .icon-description {
-        color: rgba($white, .6);
-      }
-    }
-    
-  }
-  
-}

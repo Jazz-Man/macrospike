@@ -1,0 +1,29 @@
+.section.order {
+
+  margin-top: -5rem;
+
+  @include media-breakpoint-down(sm) {
+    //margin-top: 0;
+    padding-top: 5rem;
+    }
+
+  .pricing-card {
+    background-image: linear-gradient(to right, rgba($black, .1), transparent), linear-gradient(#ffffff, #ffffff);
+    }
+
+  .card-title {
+    font-size: 48px;
+    }
+
+  .icon-bar-item {
+
+    img {
+      @include size(50px);
+      }
+
+    .icon-description {
+      color: rgba($white, .6);
+      }
+    }
+
+  }

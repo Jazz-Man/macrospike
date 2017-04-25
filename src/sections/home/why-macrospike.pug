@@ -1,22 +1,21 @@
 mixin promoCardIcon(text,icon)
-	.card.z-depth-0.transparent
-		.card-block
-			- var attributes = {
-			- 'class':'display-4 card-title font-weight-normal mx-auto '+icon,
-			- };
-			h4&attributes(attributes)
-				if block
-					block
-			p.card-text=text
+  .card.z-depth-0.transparent
+    - var attributes = {
+    - 'class':'card-img mx-auto '+icon
+    - };
+    div&attributes(attributes)
+    .card-block
+      p.lead=text
 
 
-section.section.py-5
-	.container
-		.row
-			.col-md-12
-				.card-group.text-center.promo
-					+promoCardIcon('Events Every Month','icon-50')
-					+promoCardIcon('High Automation','icon-85')
-					+promoCardIcon('Profitable Trades','icon-90')
-					+promoCardIcon('Low Screen Time','icon-1')
-					+promoCardIcon('Overtrading','icon-0')
+section.section.py-5.grey.why-macrospike.lighten-4.shape-container
+  .shape.shape-pattern-1.grey.lighten-4
+  .container
+    .row
+      .col
+        .card-group.text-center.promo
+          +promoCardIcon('Events Every Month','icon-50')
+          +promoCardIcon('High Automation','icon-85')
+          +promoCardIcon('Profitable Trades','icon-90')
+          +promoCardIcon('Low Screen Time','icon-1')
+          +promoCardIcon('Overtrading','icon-0')

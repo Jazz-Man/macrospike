@@ -3,38 +3,37 @@
 
 
 mixin testimonialCarouselItem(icon)
-	.col-md-10.m-auto
-		img.img-fluid.z-depth-0.m-auto(src=require('assets/img/testimonials/testimonials-icon-' + icon + '.png'))
-		h3.font-weight-normal.mb-5.mt-4.section-heading Carlos, Spain
-		p=testimonialsText
+  .col-md-10.m-auto
+    img.img-fluid.z-depth-0.m-auto(src=require('assets/img/testimonials/testimonials-icon-' + icon + '.png'))
+    h3.font-weight-normal.mb-5.mt-4.section-heading Carlos, Spain
+    p=testimonialsText
 
-section.section.testimonials.py-5.pattern-10.grey.lighten-4
-	.container
-		.carousel.testimonial-carousel.text-center.slide(id=testimonialsCarosselID data-ride='carousel')
-			ol.carousel-indicators
-				- var n = 0;
-					while n <= 4
-						-var idCurrent = n++
-						if n == 0
-							li.active(data-target='#'+testimonialsCarosselID, data-slide-to=idCurrent)
-						else
-							li(data-target='#'+testimonialsCarosselID, data-slide-to=idCurrent)
+.container
+  .carousel.testimonial-carousel.text-center.slide(id=testimonialsCarosselID data-ride='carousel')
+    ol.carousel-indicators
+      - var n = 0;
+        while n <= 4
+          -var idCurrent = n++
+          if n == 0
+            li.active(data-target='#' + testimonialsCarosselID, data-slide-to=idCurrent)
+          else
+            li(data-target='#' + testimonialsCarosselID, data-slide-to=idCurrent)
 
-			.carousel-inner(role='listbox')
-				- var n = 1;
-					while n <= 5
-						-var idCurrent = n++
-						if n == 1
-							.carousel-item.mb-5.active
-								+testimonialCarouselItem(idCurrent)
+    .carousel-inner(role='listbox')
+      - var n = 1;
+        while n <= 5
+          -var idCurrent = n++
+          if n == 1
+            .carousel-item.mb-5.active
+              +testimonialCarouselItem(idCurrent)
 
-						else
-							.carousel-item.mb-5
-								+testimonialCarouselItem(idCurrent)
+          else
+            .carousel-item.mb-5
+              +testimonialCarouselItem(idCurrent)
 
-			a.carousel-control-prev(href='#'+testimonialsCarosselID role='button' data-slide='prev')
-				span.carousel-control-prev-icon(aria-hidden='true')
-				span.sr-only Previous
-			a.carousel-control-next(href='#'+testimonialsCarosselID role='button' data-slide='next')
-				span.carousel-control-next-icon(aria-hidden='true')
-				span.sr-only Next
+    a.carousel-control-prev(href='#' + testimonialsCarosselID role='button' data-slide='prev')
+      span.carousel-control-prev-icon(aria-hidden='true')
+      span.sr-only Previous
+    a.carousel-control-next(href='#' + testimonialsCarosselID role='button' data-slide='next')
+      span.carousel-control-next-icon(aria-hidden='true')
+      span.sr-only Next
