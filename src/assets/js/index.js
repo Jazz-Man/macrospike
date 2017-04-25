@@ -14,7 +14,9 @@ function init(e) {
 	
 	// require('./module/auch');
 	
-	// require('./module/side-nav');
+//	var smoothscroll = require('./module/smoothscroll');
+	
+//	console.log(smoothscroll);
 	
 	require('./module/responsive');
 	
