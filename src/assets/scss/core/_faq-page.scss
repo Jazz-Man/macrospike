@@ -1,0 +1,36 @@
+body.faq {
+  
+  section.section {
+    background: url("../../img/fox/FAQ.png") no-repeat fixed center bottom;
+    background-size: cover;
+    height: 100vh;
+    
+    @include media-breakpoint-down(sm) {
+      background: none;
+      height: 100%;
+      
+    }
+    
+    &.bg-1 {
+      background-color: #34495e;
+    }
+    
+    &.bg-2 {
+      background-color: #3498db;
+    }
+    
+    &.bg-3 {
+      background-color: #282a2b;
+    }
+    
+    .card-header {
+      .card-title {
+        color: #34495e;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+    
+  }
+  
+}
