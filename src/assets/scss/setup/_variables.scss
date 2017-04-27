@@ -354,7 +354,7 @@ $table-sm-cell-padding: .3rem !default;
 
 $table-bg: transparent !default;
 
-$table-inverse-bg: $gray-dark !default;
+$table-inverse-bg: $brand-primary !default;
 $table-inverse-color: $body-bg !default;
 
 $table-bg-accent: rgba($black, .05) !default;
@@ -364,7 +364,7 @@ $table-bg-active: $table-bg-hover !default;
 $table-head-bg: $gray-lighter !default;
 $table-head-color: $gray !default;
 
-$table-border-width: $border-width !default;
+$table-border-width: 1px !default;
 $table-border-color: $gray-lighter !default;
 
 // Buttons
