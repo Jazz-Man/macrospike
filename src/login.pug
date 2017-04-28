@@ -1,37 +1,38 @@
 extends common/layout
 
 block append defaultTitle
-  title Login | uPages
+	title Login | MacroSpike
 
 block contentClass
-  - var contentClass = 'full-height'
+	- var contentClass = 'login'
 
 block append content
-  .view.h-100.zindex-xs.full-bg-img
-    .flex-center
-      .container
-        .row
-          .col-md-6.col-lg-5.mx-auto
-            .card
-              .card-block
-                .text-center.text-uppercase
-                  h3 Login
-                form#login-form
-                  .md-form
-                    i.fa.fa-envelope.prefix
-                    input#username(type='username' name='username' placeholder='Your email')
-                  .md-form
-                    i.fa.fa-lock.prefix
-                    input#password(type='password' name='password' placeholder='Your password')
-                  fieldset.form-group
-                    input#checkbox1(type='checkbox' checked)
-                    label(for='checkbox1') Remember my
-                  .text-xs-center
-                    button.btn.elegant-color-dark.width-100#sign-in(type='submit') Sign In
-                .text-right
-                  | Немає аккаунта?
-                  button.btn.btn-info.btn-sm(type='button')
-                    i.fa.fa-user.left
-                    | Зареєструватись
+	section.section.view.bg-primary-darken.pb-3.full-height
+		.container.h-100
+			.row.h-100
+				.col-sm-4.mx-auto.align-self-center
+					h2.section-title.text-center.text-white Login
 
-                a(href='#' data-modal-external-file='modal_reset_password.html' data-target='modal-reset-password') Відновити пароль
+					.card.bg-primary
+						.header.p-3
+								img.card-img.w-25.mx-auto(src=require('assets/img/logos/macrotrader-logo_white_simple.svg'))
+						.card-block
+							form#login-form
+								.form-group.input-group.input-group-lg
+									.input-group-addon
+										i.fa.fa-envelope.prefix
+									input.form-control#username(type='username' name='username' placeholder='Your email')
+								.form-group.input-group.input-group-lg
+									.input-group-addon
+										i.fa.fa-lock.prefix
+									input.form-control#password(type='password' name='password' placeholder='Your password')
+
+								.form-group
+									label.custom-control.custom-checkbox
+										input.custom-control-input(type='checkbox' checked)
+										span.custom-control-indicator.bg-primary-darken
+										span.custom-control-description.text-white Check this custom checkbox
+								.form-group
+									button.btn.btn-block.btn-success.mt-3(type='submit') Sign In
+
+							a.btn.btn-link(href='#' data-modal-external-file='modal_reset_password.html' data-target='modal-reset-password') Відновити пароль
