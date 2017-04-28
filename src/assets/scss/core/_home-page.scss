@@ -1,87 +1,88 @@
+$home-select-indicator:str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#ffffff' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23");
+
 body.home {
-
+  
   .intro {
-
+    
     .card-title {
-
+      
       font-size: 1.5rem;
       line-height: 1.2;
-
-      }
-
+      
+    }
+    
     .font-up {
       font-size: 2.2rem;
       line-height: 43.2px;
-      }
-
     }
-
+    
+  }
+  
   .why-macrospike {
-
+    
     @include media-breakpoint-down(sm) {
-
+      
       .card {
-
+        
         display: inline-flex;
         width: 50%;
-
+        
         &:last-child {
           width: 100%;
-          }
         }
-
+      }
+      
       .card-block {
         padding: .5rem;
-        }
-
+      }
+      
       .lead {
         font-size: 1rem;
-        }
-
       }
-
+      
+    }
+    
     .card-img {
-
+      
       background-repeat: no-repeat;
       background-size: contain;
       height: 11rem;
       width: 9rem;
-
+      
       @include media-breakpoint-down(sm) {
         height: 9rem;
         width: 7rem;
-        }
-
+      }
+      
       &.icon-50 {
         background-image: url("../../img/icons/+50-min.png");
-        }
-
+      }
+      
       &.icon-85 {
         background-image: url("../../img/icons/85_-min.png");
-        }
-
+      }
+      
       &.icon-90 {
         background-image: url("../../img/icons/90_-min.png");
-        }
-
+      }
+      
       &.icon-1 {
         background-image: url("../../img/icons/1h-min.png");
-        }
-
+      }
+      
       &.icon-0 {
         background-image: url("../../img/icons/0_-min.png");
-        }
-
       }
-
+      
     }
-
+    
+  }
+  
   .pricing {
-
+    
     overflow: hidden;
     position: relative;
-    //margin-top: -5rem;
-
+    
     .fox {
       bottom: 0;
       display: none;
@@ -90,34 +91,43 @@ body.home {
       right: 0;
       transition: opacity .5s linear;
       z-index: 1;
-
+      
       @include media-breakpoint-up(xl) {
         display: flex;
-        }
-
       }
-
+      
+    }
+    
     .fx-bolt {
       background-color: #259a9e;
-      }
-
+    }
+    
     .macrotrader {
       background-color: #146a98;
-
-      }
-
+      
+    }
+    
     .price-desc {
       color: rgba(color("shades", "white"), .5);
       font-size: 1rem;
-      }
-
+    }
+    
     .pricing-featured {
       margin-bottom: 0;
-
+      
       li {
         margin-bottom: .5rem;
-        }
       }
-
     }
+    
+    select {
+      background: $brand-info $home-select-indicator no-repeat right $custom-select-padding-x center;
+      background-size: $custom-select-bg-size;
+      color: $white;
+      padding: $btn-padding-y $btn-padding-x;
+      text-align-last: center;
+      
+    }
+    
   }
+}

@@ -213,7 +213,7 @@ module.exports = {
 						{
 							loader: 'sass',
 							options: {
-								sourceMap: !isProd
+								sourceMap: true
 							}
 						}
 					]
