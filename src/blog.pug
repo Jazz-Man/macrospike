@@ -1,61 +1,490 @@
 extends common/layout
 
 block append content
-	.container
-		.row
-			.col-md-9.col-sm-9
-				section
-				- var n = 1;
-					while n <= 12
-						-var idCurrent = n++
-						article.blog-post
-							a(href='blog-detail.html')
-								img(src=require('assets/img/items/' + idCurrent + '.jpg') alt='')
-							header
-								a(href='blog-detail.html')
-									h2 Vivamus porta orci eu turpis vulputate ornare fusce hendrerit arcu risu
-							figure.meta
-								a.link.icon(href='#')
-									i.fa.fa-user
-									| Admin
-								a.link.icon(href='#')
-									i.fa.fa-calendar
-									| 06/04/2014
-								.tags
-									a.tag.article(href='#') Architecture
-									a.tag.article(href='#') Design
-									a.tag.article(href='#') Trend
-							p
-								| Fusce quis nulla volutpat, rhoncus ligula ut, pulvinar nisi. In dapibus urna sit amet accumsan
-								| tristique. Donec odio ligula, luctus venenatis varius id, tincidunt ac ipsum. Cras commodo,
-								| velit nec aliquam dictum, tortor velit dictum ipsum, sed ornare nunc leo nec ipsum. Vestibulum
-								| sagittis sapien vitae tristique mollis. Aliquam hendrerit nulla semper, viverra mi et,
-								| hendrerit mauris. Maecenas hendrerit congue ultrices. In laoreet erat blandit eros aliquet,
-								| in malesuada sem rutrum. In placerat porta egestas.
-							a.btn.btn-rounded.btn-default.btn-framed.btn-small(href='blog-detail.html') Read More
-				section
-					.center
-						nav(aria-label='Page navigation')
-							ul.pagination
-								li.disabled.previous
-									a(href='#' aria-label='Previous')
-										i.arrow_left
-								li
-									a(href='#') 1
-								li
-									a(href='#') 2
-								li.active
-									a(href='#') 3
-								li
-									a(href='#') 4
-								li
-									a(href='#') 5
-								li.next
-									a(href='#' aria-label='Next')
-										i.arrow_right
-			.col-md-3.col-sm-3
-				aside.sidebar
-					section
-						//+sidebarSearchFilter
-					section
-						//+recentItems
+  .container
+    .row
+      .col-sm-8.mt-5
+        - var n = 1;
+          while n <= 12
+            -var idCurrent = n++
+            article.card.mb-5
+              img.card-img.img-thumbnail(src=require('assets/img/items/' + idCurrent + '.jpg') alt='')
+              .card-block
+                a(href='blog-detail.html')
+                  h4.card-title Vivamus porta orci eu turpis vulputate ornare fusce hendrerit arcu risu
+
+                .meta.text-muted
+                  ul.list-inline
+                    li.list-inline-item
+                      i.fa.fa-clock-o.fa-fw
+                      | 06/04/2014 |
+                    li.list-inline-item
+                      i.fa.fa-user-o.fa-fw
+                      | Autor |
+                    li.list-inline-item
+                      i.fa.fa-comments-o.fa-fw
+                      | 5 |
+                    li.list-inline-item
+                      i.fa.fa-newspaper-o.fa-fw
+                      | Categories:
+                      a(href="#") Blog
+
+
+              .card-block
+                p.card-text
+                  | Fusce quis nulla volutpat, rhoncus ligula ut, pulvinar nisi. In dapibus urna sit amet accumsan
+                  | tristique. Donec odio ligula, luctus venenatis varius id, tincidunt ac ipsum. Cras commodo,
+                  | velit nec aliquam dictum, tortor velit dictum ipsum, sed ornare nunc leo nec ipsum. Vestibulum
+                  | sagittis sapien vitae tristique mollis.
+
+              .card-block
+                a.btn.btn-primary(href='blog-detail.html') Read More
+      .col-xl-4.col-md-12.mt-5
+        // Section: News widget
+        section.section.widget-content.wow.fadeIn(data-wow-delay='0.3s', style='visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;')
+          // Nav tabs
+          ul.nav.nav-tabs.tabs-3.widget-tabs.primary-color(role='tablist')
+            li.nav-item.waves-effect.waves-light
+              a.nav-link.active(data-toggle='tab', href='#panel1', role='tab', aria-expanded='true') RECOMMEND
+            li.nav-item.waves-effect.waves-light
+              a.nav-link(data-toggle='tab', href='#panel2', role='tab', aria-expanded='false') RECENT
+            li.nav-item.waves-effect.waves-light
+              a.nav-link(data-toggle='tab', href='#panel3', role='tab', aria-expanded='false') TOP REVIEWS
+          // Tab panels
+          .tab-content.widget-tabs-content
+            // Panel 1
+            #panel1.tab-pane.fade.in.active.show(role='tabpanel', aria-expanded='true')
+              .single-post
+                // First row
+                .row
+                  // Image
+                  .col-4
+                    .view.overlay.hm-white-slight
+                      img.img-fluid(src='https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20%2891%29.jpg', alt='')
+                      a
+                        .mask.waves-light.waves-effect.waves-light
+                  // / Image
+                  // Excerpt
+                  .col-8
+                    .post-data
+                      p
+                        i.fa.fa-clock-o
+                        |  20/08/2016
+                      a
+                        i.fa.fa-comments-o
+                        |  145
+                    h6 How effectively work in café?
+                  // / Excerpt
+                // / First row
+              .single-post
+                // Second row
+                .row
+                  // Image
+                  .col-4
+                    .view.overlay.hm-white-slight
+                      img.img-fluid(src='https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20%2889%29.jpg', alt='')
+                      a
+                        .mask.waves-light.waves-effect.waves-light
+                  // / Image
+                  // Excerpt
+                  .col-8
+                    .post-data
+                      p
+                        i.fa.fa-clock-o
+                        |  13/08/2016
+                      a
+                        i.fa.fa-comments-o
+                        |  107
+                    h6 Safe summer holidays with kids.
+                  // / Excerpt
+                // / Second row
+              .single-post
+                // Third row
+                .row
+                  // Image
+                  .col-4
+                    .view.overlay.hm-white-slight
+                      img.img-fluid(src='https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20%283%29.jpg', alt='')
+                      a
+                        .mask.waves-light.waves-effect.waves-light
+                  // / Image
+                  // Excerpt
+                  .col-8
+                    .post-data
+                      p
+                        i.fa.fa-clock-o
+                        |  09/07/2016
+                      a
+                        i.fa.fa-comments-o
+                        |  123
+                    h6 10 best pizzerias in Europe.
+                  // / Excerpt
+                // / Third row
+            // / Panel 1
+            // Panel 2
+            #panel2.tab-pane.fade(role='tabpanel', aria-expanded='false')
+              .single-post
+                // First row
+                .row
+                  // Image
+                  .col-4
+                    .view.overlay.hm-white-slight
+                      img.img-fluid(src='https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20%2885%29.jpg', alt='')
+                      a
+                        .mask.waves-light.waves-effect.waves-light
+                  // / Image
+                  // Excerpt
+                  .col-8
+                    .post-data
+                      p
+                        i.fa.fa-clock-o
+                        |  24/08/2016
+                      a
+                        i.fa.fa-comments-o
+                        |  63
+                    h6 How to start career in New York?
+                  // / Excerpt
+                // / First row
+              .single-post
+                // Second row
+                .row
+                  // Image
+                  .col-4
+                    .view.overlay.hm-white-slight
+                      img.img-fluid(src='https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20%289%29.jpg', alt='')
+                      a
+                        .mask.waves-light.waves-effect.waves-light
+                  // / Image
+                  // Excerpt
+                  .col-8
+                    .post-data
+                      p
+                        i.fa.fa-clock-o
+                        |  23/08/2016
+                      a
+                        i.fa.fa-comments-o
+                        |  54
+                    h6 Find the best office in San Francisco.
+                  // / Excerpt
+                // / Second row
+              .single-post
+                // Third row
+                .row
+                  // Image
+                  .col-4
+                    .view.overlay.hm-white-slight
+                      img.img-fluid(src='https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2830%29.jpg', alt='')
+                      a
+                        .mask.waves-light.waves-effect.waves-light
+                  // / Image
+                  // Excerpt
+                  .col-8
+                    .post-data
+                      p
+                        i.fa.fa-clock-o
+                        |  22/08/2016
+                      a
+                        i.fa.fa-comments-o
+                        |  81
+                    h6 Top 6 startups from Berlin.
+                  // / Excerpt
+                // / Third row
+            // / Panel 2
+            // Panel 3
+            #panel3.tab-pane.fade(role='tabpanel', aria-expanded='false')
+              .single-post
+                // First row
+                .row
+                  // Image
+                  .col-4
+                    .view.overlay.hm-white-slight
+                      img.img-fluid(src='https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20%2864%29.jpg', alt='')
+                      a
+                        .mask.waves-light.waves-effect.waves-light
+                  // / Image
+                  // Excerpt
+                  .col-8
+                    .post-data
+                      p
+                        i.fa.fa-clock-o
+                        |  18/08/2016
+                      a
+                        i.fa.fa-comments-o
+                        |  176
+                    h6 How to start surfing in Hawaii?
+                  // / Excerpt
+                // / First row
+              .single-post
+                // Second row
+                .row
+                  // Image
+                  .col-4
+                    .view.overlay.hm-white-slight
+                      img.img-fluid(src='https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20%2876%29.jpg', alt='')
+                      a
+                        .mask.waves-light.waves-effect.waves-light
+                  // / Image
+                  // Excerpt
+                  .col-8
+                    .post-data
+                      p
+                        i.fa.fa-clock-o
+                        |  25/06/2016
+                      a
+                        i.fa.fa-comments-o
+                        |  218
+                    h6 Summer holidays with a pet.
+                  // / Excerpt
+                // / Second row
+              .single-post
+                // Third row
+                .row
+                  // Image
+                  .col-4
+                    .view.overlay.hm-white-slight
+                      img.img-fluid(src='https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%2875%29.jpg', alt='')
+                      a
+                        .mask.waves-light.waves-effect.waves-light
+                  // / Image
+                  // Excerpt
+                  .col-8
+                    .post-data
+                      p
+                        i.fa.fa-clock-o
+                        |  26/02/2016
+                      a
+                        i.fa.fa-comments-o
+                        |  243
+                    h6 Prepare for expedition to Mount Everest.
+                  // / Excerpt
+                // / Third row
+            // / Panel 3
+          // / Tab panels
+        // / Section: News widget
+        // Section: Featured posts
+        section.section.widget-content
+          // Heading
+          nav.navbar.navbar-dark.sidebar-heading.wow.fadeIn.primary-color(data-wow-delay='0.3s', style='visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;')
+            .flex-center
+              p.white-text Featured posts
+          // / Heading
+          .single-post.wow.fadeIn(data-wow-delay='0.3s', style='visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;')
+            // First row
+            .row
+              // First column
+              .col-md-12
+                // Image
+                .view.overlay.hm-white-slight
+                  img(src='https://mdbootstrap.com/img/Photos/Slides/img%20%2892%29.jpg')
+                  a
+                    .mask.waves-light.waves-effect.waves-light
+                // Excerpt
+                .post-data.featured
+                  p
+                    i.fa.fa-clock-o
+                    |  21/08/2016
+                  a
+                    i.fa.fa-comments-o
+                    |  83
+                h6
+                  a My first trip alone around the world.
+              // / First column
+            // / First row
+          .single-post.wow.fadeIn(data-wow-delay='0.3s', style='visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;')
+            // First row
+            .row
+              // First column
+              .col-md-12
+                // Image
+                .view.overlay.hm-white-slight
+                  img(src='https://mdbootstrap.com/img/Photos/Slides/img%20%2857%29.jpg')
+                  a
+                    .mask.waves-light.waves-effect.waves-light
+                // Excerpt
+                .post-data.featured
+                  p
+                    i.fa.fa-clock-o
+                    |  03/08/2016
+                  a
+                    i.fa.fa-comments-o
+                    |  95
+                h6
+                  a What camera take for holidays in the mountains?
+              // / First column
+            // / First row
+          .single-post.wow.fadeIn(data-wow-delay='0.3s', style='visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;')
+            // First row
+            .row
+              // First column
+              .col-md-12
+                // Image
+                .view.overlay.hm-white-slight
+                  img(src='https://mdbootstrap.com/img/Photos/Slides/img%20%2888%29.jpg')
+                  a
+                    .mask.waves-light.waves-effect.waves-light
+                // Excerpt
+                .post-data.featured
+                  p
+                    i.fa.fa-clock-o
+                    |  16/07/2016
+                  a
+                    i.fa.fa-comments-o
+                    |  76
+                h6
+                  a Top 5 places in Warsaw where you eat the best lunch.
+              // / First column
+            // / First row
+        // / Section: Featured posts
+        // Section: Popular posts
+        section.section.widget-content.wow.fadeIn(data-wow-delay='0.3s', style='visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;')
+          // Heading
+          nav.navbar.navbar-dark.sidebar-heading.primary-color
+            .flex-center
+              p.white-text Popular posts
+          // / Heading
+          .single-post
+            .row
+              .col-4
+                // Image
+                .view.overlay.hm-white-slight
+                  img.img-fluid(src='https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20%28129%29.jpg', alt='')
+                  a
+                    .mask.waves-light.waves-effect.waves-light
+              // Excerpt
+              .col-8
+                .post-data
+                  p
+                    i.fa.fa-clock-o
+                    |  25/08/2016
+                  a
+                    i.fa.fa-comments-o
+                    |  114
+                h6
+                  a What colors fit to blonde girl?
+              // / Excerpt
+            // / First row
+          .single-post
+            // Second row
+            .row
+              // Image
+              .col-4
+                .view.overlay.hm-white-slight
+                  img.img-fluid(src='https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20%2828%29.jpg', alt='')
+                  a
+                    .mask.waves-light.waves-effect.waves-light
+              // / Image
+              // Excerpt
+              .col-8
+                .post-data
+                  p
+                    i.fa.fa-clock-o
+                    |  21/08/2016
+                  a
+                    i.fa.fa-comments-o
+                    |  96
+                h6
+                  a Marketing for luxury products.
+              // / Excerpt
+            // / Second row
+          .single-post
+            // Third row
+            .row
+              // Image
+              .col-4
+                .view.overlay.hm-white-slight
+                  img.img-fluid(src='https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20%2875%29.jpg', alt='')
+                  a
+                    .mask.waves-light.waves-effect.waves-light
+              // / Image
+              // Excerpt
+              .col-8
+                .post-data
+                  p
+                    i.fa.fa-clock-o
+                    |  19/07/2016
+                  a
+                    i.fa.fa-comments-o
+                    |  105
+                h6
+                  a Trends in the blogosphere for 2016.
+              // / Excerpt
+            // / Third row
+          .single-post
+            // Fourth row
+            .row
+              // Image
+              .col-4
+                .view.overlay.hm-white-slight
+                  img.img-fluid(src='https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20%2886%29.jpg', alt='')
+                  a
+                    .mask.waves-light.waves-effect.waves-light
+              // / Image
+              // Excerpt
+              .col-8
+                .post-data
+                  p
+                    i.fa.fa-clock-o
+                    |  26/06/2016
+                  a
+                    i.fa.fa-comments-o
+                    |  82
+                h6
+                  a The best donuts in Paris.
+              // / Excerpt
+            // / Fourth row
+          .single-post
+            // Fifth row
+            .row
+              // Image
+              .col-4
+                .view.overlay.hm-white-slight
+                  img.img-fluid(src='https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20%2813%29.jpg', alt='')
+                  a
+                    .mask.waves-light.waves-effect.waves-light
+              // / Image
+              // Excerpt
+              .col-8
+                .post-data
+                  p
+                    i.fa.fa-clock-o
+                    |  24/06/2016
+                  a
+                    i.fa.fa-comments-o
+                    |  77
+                h6
+                  a Vegan lunch with spinach and bean.
+              // / Excerpt
+            // / Fifth row
+        // / Section: Popular posts
+        // Section: Newsletter
+        section.section.wow.fadeIn(data-wow-delay='0.3s', style='visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;')
+          // Heading
+          nav.navbar.navbar-dark.sidebar-heading.primary-color
+            .flex-center
+              p.white-text Newsletter
+          // / Heading
+          // Newsletter
+          .card.z-depth-1.widget-spacing
+            .card-block
+              // Header
+              .text-center
+                h3
+                  i.fa.fa-pencil
+                  |  Subscribe:
+                hr.m-t-2.mb-2
+              // Body
+              p We'll write rarely, but only the best content.
+              br
+              // Body
+              .md-form
+                i.fa.fa-user.prefix
+                input#form3.form-control(type='text')
+                label(for='form3') Your name
+              .md-form
+                i.fa.fa-envelope.prefix
+                input#form2.form-control(type='text')
+                label(for='form2') Your email
+              .text-center
+                button.btn.btn-default.waves-effect.waves-light Send
+          // / Newsletter
+        // / Section: Newsletter

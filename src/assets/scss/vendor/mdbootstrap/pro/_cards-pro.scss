@@ -96,25 +96,25 @@
   &.card-dark {
 
     .activator {
-      color: #ffffff
+      color: $white;
       }
 
     .card-block {
       background-color: $elegant-color;
-      color: #ffffff;
+      color: $white;
 
       hr {
         background-color: #666666;
         }
 
       a {
-        color: #ffffff;
+        color: $white;
         }
       }
     }
   //Card Reveal
   .card-reveal {
-    background-color: #ffffff;
+    background-color: $white;
     display: none;
     height: 100%;
     overflow-y: auto;
@@ -157,7 +157,7 @@
       top: -28px;
       transform: translateZ(0);
       transform: translateX(0px);
-      transition: transform 0.35s ease;
+      transition: transform .35s ease;
       visibility: hidden;
       width: auto;
 
@@ -170,7 +170,7 @@
     .social-reveal-active {
       transform: translateZ(0);
       transform: translateX(-48px);
-      transition: transform 0.35s ease;
+      transition: transform .35s ease;
       visibility: visible;
       z-index: 11;
       }
@@ -201,10 +201,10 @@
       a {
         color: #9e9e9e;
         margin-left: 1rem;
-        @include transition (0.4s);
+        @include transition (.4s);
         &:hover {
           color: #d50000;
-          @include transition (0.4s);
+          @include transition (.4s);
           }
 
         &.active {
@@ -223,7 +223,7 @@
   position: relative;
 
   .face {
-    background-color: #ffffff;
+    background-color: $white;
     height: 100%;
     position: absolute;
     width: 100%;
@@ -245,7 +245,7 @@
         }
 
       .rotate-btn {
-        color: #000000;
+        color: $black;
         float: right;
         font-size: 1.2rem;
         margin-right: -8px;
@@ -272,8 +272,8 @@
     width: 120px;
 
     img {
-      background: none repeat scroll 0 0 #ffffff;
-      border: 5px solid #ffffff;
+      background: none repeat scroll 0 0 $white;
+      border: 5px solid $white;
       width: 100%;
       }
     }

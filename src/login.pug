@@ -1,38 +1,36 @@
 extends common/layout
 
 block append defaultTitle
-	title Login | MacroSpike
+  title Login | MacroSpike
 
 block contentClass
-	- var contentClass = 'login'
+  - var contentClass = 'login'
 
 block append content
-	section.section.view.bg-primary-darken.pb-3.full-height
-		.container.h-100
-			.row.h-100
-				.col-sm-4.mx-auto.align-self-center
-					h2.section-title.text-center.text-white Login
+  section.section.view.bg-primary-darken.pb-3.full-height
+    .container.h-100
+      .row.h-100
+        .col-sm-4.mx-auto.align-self-center
+          h2.section-title.text-center.text-white Login
 
-					.card.bg-primary
-						.header.p-3
-								img.card-img.w-25.mx-auto(src=require('assets/img/logos/macrotrader-logo_white_simple.svg'))
-						.card-block
-							form#login-form
-								.form-group.input-group.input-group-lg
-									.input-group-addon
-										i.fa.fa-envelope.prefix
-									input.form-control#username(type='username' name='username' placeholder='Your email')
-								.form-group.input-group.input-group-lg
-									.input-group-addon
-										i.fa.fa-lock.prefix
-									input.form-control#password(type='password' name='password' placeholder='Your password')
+          .card.bg-primary
+            .header.p-3
+              img.card-img.w-25.mx-auto(src=require('assets/img/logos/macrotrader-logo_white_simple.svg'))
+            .card-block
+              form#login-form
+                .form-group.input-group.input-group-lg
+                  .input-group-addon
+                    i.fa.fa-envelope.prefix
+                  input.form-control#username(type='username' name='username' placeholder='Your email')
+                .form-group.input-group.input-group-lg
+                  .input-group-addon
+                    i.fa.fa-lock.prefix
+                  input.form-control#password(type='password' name='password' placeholder='Your password')
 
-								.form-group
-									label.custom-control.custom-checkbox
-										input.custom-control-input(type='checkbox' checked)
-										span.custom-control-indicator.bg-primary-darken
-										span.custom-control-description.text-white Check this custom checkbox
-								.form-group
-									button.btn.btn-block.btn-success.mt-3(type='submit') Sign In
-
-							a.btn.btn-link(href='#' data-modal-external-file='modal_reset_password.html' data-target='modal-reset-password') Відновити пароль
+                .form-group
+                  label.custom-control.custom-checkbox
+                    input.custom-control-input(type='checkbox' checked)
+                    span.custom-control-indicator.bg-primary-darken
+                    span.custom-control-description.text-white Check this custom checkbox
+                .form-group
+                  button.btn.btn-block.btn-success.mt-3(type='submit') Sign In
