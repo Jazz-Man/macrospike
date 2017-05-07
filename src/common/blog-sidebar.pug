@@ -1,0 +1,104 @@
+.card.widget-content.mb-3(role='tabpanel')
+  .card-header.z-depth-1
+    ul.nav.nav-pills.nav-fill(role='tablist')
+      li.nav-item
+        a.nav-link.active.text-uppercase(data-toggle='tab' href='#panel1' role='tab' aria-expanded='true') recommend
+      li.nav-item
+        a.nav-link.text-uppercase(data-toggle='tab' href='#panel2' role='tab' aria-expanded='false') recent
+  .card-block
+    .tab-content.widget-tabs-content
+      #panel1.tab-pane.fade.in.active.show(role='tabpanel', aria-expanded='true')
+        - var n = 1;
+          while n <= 3
+            -var idCurrent = n++
+            .row
+              .col-sm-4
+                img.img-thumbnail(src=require('assets/img/items/' + idCurrent + '.jpg') alt='')
+              .col-sm-8
+                h5.card-title
+                  a(href="blog-detail.html") How effectively work in café?
+                .meta.text-muted
+                  ul.list-inline
+                    li.list-inline-item
+                      i.fa.fa-clock-o.fa-fw
+                      | 06/04/2014 |
+                    li.list-inline-item
+                      i.fa.fa-comments-o.fa-fw
+                      | #{idCurrent}
+      #panel2.tab-pane.fade(role='tabpanel', aria-expanded='false')
+        - var n = 4;
+          while n <= 6
+            -var idCurrent = n++
+            .row
+              .col-sm-4
+                img.img-thumbnail(src=require('assets/img/items/' + idCurrent + '.jpg') alt='')
+              .col-sm-8
+                h5.card-title
+                  a(href="blog-detail.html") How effectively work in café?
+                .meta.text-muted
+                  ul.list-inline
+                    li.list-inline-item
+                      i.fa.fa-clock-o.fa-fw
+                      | 06/04/2014 |
+                    li.list-inline-item
+                      i.fa.fa-comments-o.fa-fw
+                      | #{idCurrent}
+
+
+
+.card.widget-content.mb-3
+  .card-header.bg-inverse.text-white.z-depth-1
+    h4.card-title.text-center.text-uppercase Featured posts
+  .card-block
+    - var n = 6;
+      while n <= 9
+        -var idCurrent = n++
+        .row
+          .col-md-12
+            img.img-thumbnail(src=require('assets/img/items/' + idCurrent + '.jpg'))
+          .col-md-12
+            h5.card-title
+              a(href="blog-detail.html") My first trip alone around the world.
+            .meta.text-muted
+              ul.list-inline
+                li.list-inline-item
+                  i.fa.fa-clock-o.fa-fw
+                  | 06/04/2014 |
+                li.list-inline-item
+                  i.fa.fa-comments-o.fa-fw
+                  | #{idCurrent}
+        hr
+
+.card.widget-content.mb-3
+  .card-header.bg-info.text-white.z-depth-1
+    h4.card-title.text-center.text-uppercase Popular posts
+  .card-block
+    - var n = 9;
+      while n <= 13
+        -var idCurrent = n++
+        .row
+          .col-sm-4
+            img.img-thumbnail(src=require('assets/img/items/' + idCurrent + '.jpg') alt='')
+          .col-sm-8
+            h5.card-title
+              a(href="blog-detail.html") How effectively work in café?
+            .meta.text-muted
+              ul.list-inline
+                li.list-inline-item
+                  i.fa.fa-clock-o.fa-fw
+                  | 06/04/2014 |
+                li.list-inline-item
+                  i.fa.fa-comments-o.fa-fw
+                  | #{idCurrent}
+.card.widget-content.mb-3
+  .card-header.bg-success.text-white.z-depth-1
+    h4.card-title.text-center.text-uppercase Subscribe:
+  .card-block
+    form#subscribe
+      legend.col-form-legend We'll write rarely, but only the best content.
+      .form-group.input-group.input-group-lg
+        .input-group-addon
+          i.fa.fa-envelope.prefix
+        input.form-control#inputEmail3(type='email' placeholder='Your email')
+      .form-group
+        button.btn.btn-block.btn-success.mt-3(type='submit') Subscribe
