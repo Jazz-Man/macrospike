@@ -1,0 +1,16 @@
+.breadcrumb {
+
+  a {
+    @extend .breadcrumb-item;
+
+    }
+  }
+
+
+.flex-tab.tab-content {
+  > .active,
+  > .show {
+    display: flex !important;
+    }
+  }
+
