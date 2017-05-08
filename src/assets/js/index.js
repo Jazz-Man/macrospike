@@ -1,4 +1,5 @@
 var $$ = require('domtastic');
+var Parallax = require('parallax-js/source/parallax');
 //require('./module/viewport');
 var Hooks = require('./module/hooks');
 // var spop = require('./module/spop');

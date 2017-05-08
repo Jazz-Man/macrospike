@@ -7,114 +7,153 @@ block vars
   - var bodyClass = 'newstrading'
 
 block append content
-  .parallax.full-height
-    section#section-1.section.parallax-section
-      .parallax-layer.parallax-layer-base
-        .container.h-100
-          .row.h-100
-            .col-sm-6.align-self-center.mx-auto.text-center
-              .card.z-depth-0.transparent
-                .card-block
-                  h1.card-title.display-4.proxima-nova-font Newstrading:
-                  p.card-text.display-5.proxima-nova-font An introduction
 
-      .parallax-layer.parallax-layer-back
+  .parallax-test
+    #group1.parallax__group
+      .parallax__layer.parallax__layer--base
+        .title Base Layer
+    #group2.parallax__group
+      .parallax__layer.parallax__layer--base
+        .title Base Layer
+      .parallax__layer.parallax__layer--back
+        .title Background Layer
+    #group3.parallax__group
+      .parallax__layer.parallax__layer--fore
+        .title Foreground Layer
+      .parallax__layer.parallax__layer--base
+        .title Base Layer
+    #group4.parallax__group
+      .parallax__layer.parallax__layer--base
+        .title Base Layer
+      .parallax__layer.parallax__layer--back
+        .title Background Layer
+      .parallax__layer.parallax__layer--deep
+        .title Deep Background Layer
+    #group5.parallax__group
+      .parallax__layer.parallax__layer--fore
+        .title Foreground Layer
+      .parallax__layer.parallax__layer--base
+        .title Base Layer
+    #group6.parallax__group
+      .parallax__layer.parallax__layer--back
+        .title Background Layer
+      .parallax__layer.parallax__layer--base
+        .title Base Layer
+    #group7.parallax__group
+      .parallax__layer.parallax__layer--base
+        .title Base Layer
 
-    section#section-2.white
-      .container
-        .row
-          .col-sm-3.py-5
-            .card
-              .card-block
-                h4.card-title CONTENTS
-                ul.nav.flex-column
-                  li.nav-item
-                    a.nav-link.active(href='#macroeconomies') Macroeconomies
-                  li.nav-item
-                    a.nav-link(href='#mdo') News events
-                  li.nav-item
-                    a.nav-link(href='#mdo') Structure
-          .col-sm-9.py-5
-            .card#macroeconomies
-              .card-block
-                h2.card-title.h2-responsive.text-center MACROECONOMIES AND EXPECTATIONS
-                p.card-text.
-                  All Asset prices are influenced by macroeconomic factors. The broader the asset class, the more it relies on macroeconomic numbers. Thus, macroeconomic news play an important role in the price discovery of currency rates.
-                p.card-text.
-                  This article will outline some of main the questions regarding macroeconomic newstrading. It is primarily an introduction for novice newstraders but also holds valuable information to those that already have experience using fundamental data for their trading.
-                p.card-text.
-                  Why does Newstrading work? How does the market behave during a market event? How do I build an event-driven strategy?
-                p.card-text.
-                  We hope to shed some light on these question with our introduction.
-                p.card-text.
-                  Asset prices discount everything. Most traders have read this before but astonishingly how few retail traders really understand the true meaning of this statement.
-                p.card-text.
-                  Price is always a result of current supply and demand. At the same time it is hugely driven by expectations.
-                blockquote.blockquote
-                  p
-                    | “The current price of an asset is therefore an aggregate of its present future expectations.”
-                p.card-text.
-                  What does that have to do with Newstrading?
-
-                h2.card-title.h2-responsive.text-center ECONOMIES: COMPLEX BUT QUANTIFIABLE
-                p.card-text.
-                  Macroeconomic news reports are a means to quantify modern economies. Although economies are very complex these reports provide broad information about economic variables such as interest rates, employment, growth or inflation. These dynamics form long-term cycles and make economies trend.
-                p.card-text
-                  | A Central Bank is the key player when it comes to managing a countries currency. One of the most important task each Central Bank has is to manage. By setting interest rates they can directly influence the 
-                  strong cost of capital. 
-                  | The higher the interest rates, the more expensive it is to borrow money and therefore, the slower the velocity of money. On the other side, the higher the interest rates of a country, the more attractive a currency becomes for investors.
-                p.card-text.
-                  The immense power puts Central Banks at the top of the money supply chain of an economy.
-                p.card-text.
-                  Long-term macro traders invest in anticipation of macroeconomic trends and thus, in anticipation of future Central Bank moves. Front-running Central Banks has proven to be the most reliable ways to trade macro.
-              .card-img.mx-auto.py-5
-                img.img-fluid(src="https://macrospike.com/wp-content/uploads/2016/10/Diagram-Central-Banks.png")
-
-              .card-block
-                h2.card-title.h2-responsive.text-center PRICING IN NEW INFORMATION
-
-                p.card-text.
-                  Price is an aggregate of future expectations. Thus, each time a new macroeconomic report is published it is a test for investors if their expectations are still up-to-date.
-                p.card-text.
-                  Therefore, when a release surprises market participants it forces them to adjust their opinions about the economy which can transmit itself into a broader adjustment of market sentiment.
-                p.card-text.
-                  It opens a small window of opportunity: New information is available but not yet fully priced in. This is where MacroSpike’s analysis tools step in.
-                p.card-text.
-                  Our programs analyse news almost instantaneously and allow you to participate at the market move at the earliest possible stage.
-                p.card-text.font-weight-bold The big question is:
-                p.card-text.font-weight-bold How can we determine what the market expects?
-                p.card-text.
-                  After all, the market is a complex conglomerate of millions of participants who have very diverging views about the economy. And just as their expectations differ, so are the conclusions they draw from them.
-                p.card-text.
-                  While it is impossible to account for every market participants opinion when determining the current market bias, a time-proven approach is to derive it from economist forecasts. There are many professional forecasters working for large banks or other financial institutions. These economists are regularly surveyed by news agencies like Bloomberg to give their personal forecast for the outcome of a news event. By averaging their forecasts, one can get a pretty accurate idea on what the market’s expectation is.
-                p.card-text.
-                  Let’s take a look at what happens with a currency when a news report is published:
-
-                img.card-img.mx-auto.py-5(src='https://macrospike.com/wp-content/uploads/2016/10/chart-newstrading-1.jpg')
-
-              .card-block
-                p.card-text.
-                  On 20th January 2015 the Bank of Canada unexpectedly decided to cut interest rates by 0.25% from 1.0% to 0.75%. All economists  to had forecasted it would remain at 1.00%. In addition some even expected a gradual rise over the medium term. Hence, the cut came as a huge surprise to all market participants.
-                p.card-text Money instantly started to flow out of the Canadian Dollar.
-                p.card-text.
-                  During the initial reaction the Canadian Dollar spiked more than 100 pips against the US-Dollar. Over the next days the CAD weakness continued and it finished some 500 pips lower against the US-Dollar.
-                p.card-text.
-                  It is a great example on how a single news release can have a huge impact on the exchange rate of a currency and become the main driver of a market for several days.
-
-              .card-block
-                h2.card-title.h2-responsive.text-center ECONOMIC NEWS ARE TRENDSETTERS
-                p.card-text
-                  | Depending on the importance of a report, current sentiment and the size of the deviation the adjustment phase may last from a few seconds up to several days. Since not only investors but also Central Banks are data dependant, certain events can become
-                  b  catalysts for the initiation of new trends
-                  | .
-                p.card-text
-                  | To sum up our philosophical presumptions – macroeconomic data is has proven very valuable to gauge where an economy is heading.
-                  | A surprising event can change the way investors perceive the fundamental state of an economy.
-                  | Major players base their action on these releases as much as Central Banks are data dependant.
-                  | News releases are critical moments for every participant in today’s markets. That is why the retail market cannot ignore them.
-
-                p.card-text.
-                  To sum up our philosophical presumptions – macroeconomic data is has proven very valuable to gauge where an economy is heading.
-                  A surprising event can change the way investors perceive the fundamental state of an economy.
-                  Major players base their action on these releases as much as Central Banks are data dependant.
-                  News releases are critical moments for every participant in today’s markets. That is why the retail market cannot ignore them.
+  //.parallax.full-height
+  //  section#section-1.section.parallax-section.full-height(data-height-percent="75")
+  //    .parallax-layer.parallax-layer-base
+  //      .container.h-100
+  //        .row.h-100
+  //          .col-sm-6.align-self-center.mx-auto.text-center
+  //            .card.z-depth-0.transparent
+  //              .card-block
+  //                h1.card-title.display-4.proxima-nova-font Newstrading:
+  //                p.card-text.display-5.proxima-nova-font An introduction
+  //
+  //    .parallax-layer.parallax-layer-back
+  //
+  //  section#section-2.white
+  //    .container
+  //      .row
+  //        .col-sm-3.py-5
+  //          .card
+  //            .card-block
+  //              h4.card-title CONTENTS
+  //              ul.nav.flex-column
+  //                li.nav-item
+  //                  a.nav-link.active(href='#macroeconomies') Macroeconomies
+  //                li.nav-item
+  //                  a.nav-link(href='#mdo') News events
+  //                li.nav-item
+  //                  a.nav-link(href='#mdo') Structure
+  //        .col-sm-9.py-5
+  //          .card#macroeconomies
+  //            .card-block
+  //              h2.card-title.h2-responsive.text-center MACROECONOMIES AND EXPECTATIONS
+  //              p.card-text.
+  //                All Asset prices are influenced by macroeconomic factors. The broader the asset class, the more it relies on macroeconomic numbers. Thus, macroeconomic news play an important role in the price discovery of currency rates.
+  //              p.card-text.
+  //                This article will outline some of main the questions regarding macroeconomic newstrading. It is primarily an introduction for novice newstraders but also holds valuable information to those that already have experience using fundamental data for their trading.
+  //              p.card-text.
+  //                Why does Newstrading work? How does the market behave during a market event? How do I build an event-driven strategy?
+  //              p.card-text.
+  //                We hope to shed some light on these question with our introduction.
+  //              p.card-text.
+  //                Asset prices discount everything. Most traders have read this before but astonishingly how few retail traders really understand the true meaning of this statement.
+  //              p.card-text.
+  //                Price is always a result of current supply and demand. At the same time it is hugely driven by expectations.
+  //              blockquote.blockquote
+  //                p
+  //                  | “The current price of an asset is therefore an aggregate of its present future expectations.”
+  //              p.card-text.
+  //                What does that have to do with Newstrading?
+  //
+  //              h2.card-title.h2-responsive.text-center ECONOMIES: COMPLEX BUT QUANTIFIABLE
+  //              p.card-text.
+  //                Macroeconomic news reports are a means to quantify modern economies. Although economies are very complex these reports provide broad information about economic variables such as interest rates, employment, growth or inflation. These dynamics form long-term cycles and make economies trend.
+  //              p.card-text
+  //                | A Central Bank is the key player when it comes to managing a countries currency. One of the most important task each Central Bank has is to manage. By setting interest rates they can directly influence the 
+  //                strong cost of capital. 
+  //                | The higher the interest rates, the more expensive it is to borrow money and therefore, the slower the velocity of money. On the other side, the higher the interest rates of a country, the more attractive a currency becomes for investors.
+  //              p.card-text.
+  //                The immense power puts Central Banks at the top of the money supply chain of an economy.
+  //              p.card-text.
+  //                Long-term macro traders invest in anticipation of macroeconomic trends and thus, in anticipation of future Central Bank moves. Front-running Central Banks has proven to be the most reliable ways to trade macro.
+  //            .card-img.mx-auto.py-5
+  //              img.img-fluid.w-100(src="https://macrospike.com/wp-content/uploads/2016/10/Diagram-Central-Banks.png")
+  //
+  //            .card-block
+  //              h2.card-title.h2-responsive.text-center PRICING IN NEW INFORMATION
+  //
+  //              p.card-text.
+  //                Price is an aggregate of future expectations. Thus, each time a new macroeconomic report is published it is a test for investors if their expectations are still up-to-date.
+  //              p.card-text.
+  //                Therefore, when a release surprises market participants it forces them to adjust their opinions about the economy which can transmit itself into a broader adjustment of market sentiment.
+  //              p.card-text.
+  //                It opens a small window of opportunity: New information is available but not yet fully priced in. This is where MacroSpike’s analysis tools step in.
+  //              p.card-text.
+  //                Our programs analyse news almost instantaneously and allow you to participate at the market move at the earliest possible stage.
+  //              p.card-text.font-weight-bold The big question is:
+  //              p.card-text.font-weight-bold How can we determine what the market expects?
+  //              p.card-text.
+  //                After all, the market is a complex conglomerate of millions of participants who have very diverging views about the economy. And just as their expectations differ, so are the conclusions they draw from them.
+  //              p.card-text.
+  //                While it is impossible to account for every market participants opinion when determining the current market bias, a time-proven approach is to derive it from economist forecasts. There are many professional forecasters working for large banks or other financial institutions. These economists are regularly surveyed by news agencies like Bloomberg to give their personal forecast for the outcome of a news event. By averaging their forecasts, one can get a pretty accurate idea on what the market’s expectation is.
+  //              p.card-text.
+  //                Let’s take a look at what happens with a currency when a news report is published:
+  //
+  //              img.card-img.mx-auto.py-5.w-100(src='https://macrospike' +
+  //                                              '.com/wp-content/uploads/2016/10/chart-newstrading-1.jpg')
+  //
+  //            .card-block
+  //              p.card-text.
+  //                On 20th January 2015 the Bank of Canada unexpectedly decided to cut interest rates by 0.25% from 1.0% to 0.75%. All economists  to had forecasted it would remain at 1.00%. In addition some even expected a gradual rise over the medium term. Hence, the cut came as a huge surprise to all market participants.
+  //              p.card-text Money instantly started to flow out of the Canadian Dollar.
+  //              p.card-text.
+  //                During the initial reaction the Canadian Dollar spiked more than 100 pips against the US-Dollar. Over the next days the CAD weakness continued and it finished some 500 pips lower against the US-Dollar.
+  //              p.card-text.
+  //                It is a great example on how a single news release can have a huge impact on the exchange rate of a currency and become the main driver of a market for several days.
+  //
+  //            .card-block
+  //              h2.card-title.h2-responsive.text-center ECONOMIC NEWS ARE TRENDSETTERS
+  //              p.card-text
+  //                | Depending on the importance of a report, current sentiment and the size of the deviation the adjustment phase may last from a few seconds up to several days. Since not only investors but also Central Banks are data dependant, certain events can become
+  //                b  catalysts for the initiation of new trends
+  //                | .
+  //              p.card-text
+  //                | To sum up our philosophical presumptions – macroeconomic data is has proven very valuable to gauge where an economy is heading.
+  //                | A surprising event can change the way investors perceive the fundamental state of an economy.
+  //                | Major players base their action on these releases as much as Central Banks are data dependant.
+  //                | News releases are critical moments for every participant in today’s markets. That is why the retail market cannot ignore them.
+  //
+  //              p.card-text.
+  //                To sum up our philosophical presumptions – macroeconomic data is has proven very valuable to gauge where an economy is heading.
+  //                A surprising event can change the way investors perceive the fundamental state of an economy.
+  //                Major players base their action on these releases as much as Central Banks are data dependant.
+  //                News releases are critical moments for every participant in today’s markets. That is why the retail market cannot ignore them.
+  //.parallax.full-height
+  //  section

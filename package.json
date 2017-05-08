@@ -19,6 +19,7 @@
     "domtastic": "^0.12.3",
     "js-base64": "^2.1.9",
     "pace-js": "^1.0.2",
+    "parallax-js": "^1.0.0",
     "reqwest": "^2.0.5",
     "smoothscroll": "^0.3.0"
   },

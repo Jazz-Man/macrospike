@@ -45,6 +45,7 @@ a {
   -webkit-tap-highlight-color: transparent;
   // Gets rid of tap active state
   text-decoration: none;
+
   &:hover,
   &:focus {
     text-decoration: none;
@@ -52,72 +53,57 @@ a {
   }
 
 ul {
-  padding: 0;
   list-style-type: none;
+  padding: 0;
+
   li {
     list-style-type: none;
     }
   }
 
+
 //.jumbotron,
 //.card,
-//.badge,
-//.alert,
-//.nav .nav-link,
-//.navbar-toggler,
-//.navbar,
-//.breadcrumb,
-//.page-item:last-child .page-link,
-//.page-item:first-child .page-link,
-//.pagination-lg .page-item:last-child .page-link,
-//.pagination-lg .page-item:first-child .page-link,
-//.pagination-sm .page-item:first-child .page-link,
-//.pagination-sm .page-item:last-child .page-link,
-//.list-group .list-group-item,
-//.modal-content,
-//.tooltip-inner,
+//.list-group,
 //.popover,
+//.navbar,
 //.dropdown-menu,
-//.input-group-addon,
-//.file-custom,
-//.card .card-header,
-//.nav-tabs,
-//img {
-//  @include border-radius(2px);
+//.badge,
+//.chip {
+//  @extend .z-depth-1;
 //  }
 
-.jumbotron,
-.card,
-.list-group,
-.popover,
-.navbar,
-.dropdown-menu,
-.badge,
-.chip {
-  @extend .z-depth-1;
-  }
-
-.popover,
-.input-group-addon,
-.dropdown-menu,
-.pagination .page-item .page-link {
-  border: 0;
-  }
+//.popover,
+//.input-group-addon,
+//.dropdown-menu,
+//.pagination .page-item .page-link {
+//  border: 0;
+//  }
 
 // Circle pagination
-.pagination .active .page-link {
-  border-radius: 2px;
-  transition: all 0.2s linear;
-  @extend .z-depth-1;
-  }
 
-.pagination .page-link {
-  transition: all 0.3s linear;
-  &:hover {
+.pagination {
+
+  .page-link {
     transition: all 0.3s linear;
+
+    &:hover {
+      transition: all 0.3s linear;
+      }
+
+    &:focus {
+      background-color: transparent;
+      }
     }
-  &:focus {
-    background-color: transparent;
+
+  .active {
+
+    .page-link {
+      border-radius: 2px;
+      transition: all 0.2s linear;
+      @extend .z-depth-1;
+
+      }
     }
   }
 
@@ -127,15 +113,16 @@ ul {
   }
 
 // Shifting bacground fix
-body.modal-open {
-  overflow: inherit;
-  padding-right: 0 !important;
-  }
 
 body {
-  overflow: auto !important;
-  }
+  overflow: auto;
 
+  &.modal-open {
+    overflow: inherit;
+    padding-right: 0 !important;
+    }
+
+  }
 
 //Disabled cursor
 .disabled {

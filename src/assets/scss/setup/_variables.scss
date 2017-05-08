@@ -712,7 +712,7 @@ $state-danger-border: darken($state-danger-bg, 5%) !default;
 
 $card-spacer-x: 1.25rem !default;
 $card-spacer-y: .75rem !default;
-$card-border-width: 1px !default;
+$card-border-width: 0 !default;
 $card-border-radius: $border-radius !default;
 $card-border-color: rgba($black, .125) !default;
 $card-border-radius-inner: calc(#{$card-border-radius} - #{$card-border-width}) !default;
