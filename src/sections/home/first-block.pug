@@ -3,21 +3,26 @@ section.section.view.hm-black-strong.intro.full-height
     source(src=require('assets/video/video.mp4') type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
     source(src=require('assets/video/video.ogv') type='video/ogg; codecs="theora, vorbis"')
     source(src=require('assets/video/video.webm') type='video/webm; codecs="vp8, vorbis"')
-  .mask.shape-container.flex-center
+  .mask.shape-container
     .shape.shape-pattern-3.grey.lighten-4
-    .card.z-depth-0.transparent.text-center
-      .card-block.col-sm-6.mx-auto
-        #DIV_1.card-title.display-4.font-weight-bold.white-text.text-uppercase.proxima-nova-font
-          | don't waste time on technical indicators.
-          |  start
-          span.text-danger.font-up.px-1 trading
-          | like a
-          span.text-primary.font-up.px-1 professional.
+    .container.h-100
+      .row.h-100
+        .col-sm-10.mx-auto.align-self-center
+          .card.z-depth-0.transparent.text-center
+            .card-block
+              .card-title
+                h3.font-weight-bold.white-text.text-uppercase.proxima-nova-font.h3-responsive
+                  small
+                    | don't waste time on technical indicators.
+                    |  start
+                  span.text-danger.px-1 trading
+                  small like a
+                  span.text-primary.px-1 professional.
 
-      .card-block.col-sm-8.mx-auto
-        p.white-text.display-5.h3-responsive.
-          MacroSpike offers algorithmic trading applications to trade	on macroeconomic
-          indicators like interest rate decisions,	employment and inflation data.
+            .card-block.col-sm-8.mx-auto
+              p.white-text.card-text.
+                MacroSpike offers algorithmic trading applications to trade	on macroeconomic
+                indicators like interest rate decisions,	employment and inflation data.
 
-      .card-block
-        a.btn.btn-outline-white.btn-lg(href='#') How it works
+            .card-block
+              a.btn.btn-outline-white.btn-lg(href='#') How it works
