@@ -48,7 +48,7 @@ body.how-it-works {
           background-size: contain;
           content: "";
           display: block;
-          @include size(3rem);
+          @include size(3rem,40%);
         }
 
       }

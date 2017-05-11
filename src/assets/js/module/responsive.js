@@ -38,8 +38,15 @@ function pageContentSpase() {
 
 function getfullWrapperHeight() {
 	var  hf = heightHF();
+	var h;
 	
-	return win.prop('innerHeight') - (hf.header + hf.footer)
+	if(viewport.current === 'xs'){
+	 h = hf.header;
+	}else {
+		h = hf.header + hf.footer;
+	}
+	
+	return win.prop('innerHeight') - h
 }
 
 function setHeight(el) {
@@ -49,7 +56,6 @@ function setHeight(el) {
 	var h = getfullWrapperHeight();
 	
 	var heightPercent = _this.attr('data-height-percent');
-	console.log(heightPercent);
 	
 	if (heightPercent) {
 		h = (getfullWrapperHeight() * heightPercent) / 100;

@@ -3,34 +3,42 @@ section.section.feature-box.text-center.preview
 		.row.features-small
 			.col-md-6.bg-primary-darken
 				.row.h-100
-					.col-lg-6.col-sm-12.white-text.p-5
-						object.feature-title.info__fx(data=require('assets/img/logos/FX_bolt_logo.svg') type='image/svg+xml')
-						h4.feature-title Low Latency News Clicker
-						ul
-							li 0 ms Latency to NY4 Data Center
-							li Unlimited Clicks
-							li 3-Way-Trigger-System
-							li Trade Probability %
-							li FOREX, FUTURES, STOCKS
-							li All Trading Platforms
+					.col-lg-6.col-sm-12.white-text.py-4
+						.card.z-depth-0.transparent
+							.card-block
+								object.feature-title.info__fx.w-100(data=require('assets/img/logos/FX_bolt_logo.svg') type='image/svg+xml')
+							.card-block
+								h4.card-title Low Latency News Clicker
+								ul
+									li 0 ms Latency to NY4 Data Center
+									li Unlimited Clicks
+									li 3-Way-Trigger-System
+									li Trade Probability %
+									li FOREX, FUTURES, STOCKS
+									li All Trading Platforms
 
-						a.btn.btn-outline-white.btn-lg(href='#') Learn More
+							.card-block
+								a.btn.btn-outline-white.btn-lg.d-block.d-sm-inline-block(href='#') Learn More
 
 					.col-lg-6.hidden-sm-down.fx-bolt-screen.p-0
 						img.img-fluid.m-auto.preview-screen.h-100(src=require('assets/img/screen/fx-bold-screen.png'))
 
 			.col-md-6.bg-primary
 				.row.h-100
-					.col-lg-6.col-sm-12.white-text.p-5
-						object.feature-title.info__macro(data=require('assets/img/logos/macrotrader_logo.svg') type='image/svg+xml')
-						h4.feature-title Event-Driven Algorithmic Trade Station
-						ul
-							li FX BOLT EA: FX BOLT with Management Feature
-							li MacroStraddle EA: Straddle Trading EA
-							li MacroTicks EA: Tick Tracking EA and MacroCharts Builder
-							li Multi-Terminal Position Manager
+					.col-lg-6.col-sm-12.white-text.py-4
+						.card.z-depth-0.transparent
+							.card-block
+								object.feature-title.info__macro.w-100(data=require('assets/img/logos/macrotrader_logo.svg') type='image/svg+xml')
+							.card-block
+								h4.card-title Event-Driven Algorithmic Trade Station
+								ul
+									li FX BOLT EA: FX BOLT with Management Feature
+									li MacroStraddle EA: Straddle Trading EA
+									li MacroTicks EA: Tick Tracking EA and MacroCharts Builder
+									li Multi-Terminal Position Manager
 
-						a.btn.btn-outline-white.btn-lg(href='#') Learn More
+							.card-block
+								a.btn.btn-outline-white.btn-lg.d-block.d-sm-inline-block(href='#') Learn More
 
 					.col-lg-6.hidden-sm-down.macro-screen.p-0
 						img.img-fluid.m-auto.preview-screen.h-100(src=require('assets/img/screen/macro-trade-screen.png'))

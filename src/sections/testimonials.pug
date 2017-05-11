@@ -3,10 +3,10 @@
 
 
 mixin testimonialCarouselItem(icon)
-  .col-md-10.m-auto
-    img.img-fluid.z-depth-0.m-auto(src=require('assets/img/testimonials/testimonials-icon-' + icon + '.png'))
-    h3.font-weight-normal.mb-5.mt-4.section-heading Carlos, Spain
-    p=testimonialsText
+  .col-10.mx-auto
+      img.img-fluid.z-depth-0.m-auto(src=require('assets/img/testimonials/testimonials-icon-' + icon + '.png'))
+      h3.font-weight-normal.mb-5.mt-4.section-heading Carlos, Spain
+      p=testimonialsText
 
 .container
   .carousel.testimonial-carousel.text-center.slide(id=testimonialsCarosselID data-ride='carousel')
