@@ -14,182 +14,183 @@ block append content
 					.card.mb-3
 						.card-block#main-calendar-panel
 							h4.card-title Calendar
-							table#fxfxs_calendar.table.table-striped.table-bordered.table-hover
-								thead.thead-inverse
-									tr
-										th Hour
-										th Country
-										th Name
-										th Actual
-										th Exp.
-										th Prior
-										th Chart
-								tbody
-									tr.thead-inverse
-										th.text-center(id='Tue,Apr25', colspan='7') Tue, Apr 25
-									tr.event_row
-										td 10:00
-										td
-											img(alt='US', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/us.png')
-											| /US
-										td Consumer Confidence
-										td 120.3
-										td 122.5
-										td 125.6
-										td.text-center
-											a.btn.btn-primary.btn-sm(href='http://charts.macrospike.com/c/12665', target='_blank') Go to chart
-									tr.event_row
-										td 21:30
-										td
-											img(alt='AU', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/au.png')
-											| /AU
-										td CPI - Trimmed Mean
-										td 0.5
-										td 0.5
-										td 0.4
-										td.text-center
-											a.btn.btn-primary.btn-sm(href='http://charts.macrospike.com/c/12749', target='_blank') Go to chart
-									tr.thead-inverse
-										th.text-center(id='Wed,Apr26', colspan='7') Wed, Apr 26
-									tr.event_row
-										td 07:00
-										td
-											img(alt='TR', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/tr.png')
-											| /TR
-										td Interest Rate
-										td 8
-										td 8
-										td 8
-										td.text-center
-											a.btn.btn-primary.btn-sm(href='http://charts.macrospike.com/c/15433', target='_blank') Go to chart
-									tr.event_row
-										td 08:30
-										td
-											img(alt='CA', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/ca.png')
-											| /CA
-										td Core Retail Sales
-										td
-										td -0.3
-										td 1.7
-										td.text-center
-											a.btn.btn-primary.btn-sm(href='http://charts.macrospike.com/c/16258', target='_blank') Go to chart
-									tr
-										td 10:30
-										td
-											img(alt='US', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/us.png')
-											| /US
-										td DOE Crude Oil Inventories
-										td
-										td -
-										td -1034
-										td.text-center
-											a.btn.btn-primary.btn-sm(href='http://charts.macrospike.com/c/17518', target='_blank') Go to chart
-									tr.thead-inverse
-										th.text-center(id='Thu,Apr27', colspan='7') Thu, Apr 27
-									tr
-										td 03:30
-										td
-											img(alt='SE', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/se.png')
-											| /SE
-										td
-											div Interest Rate
-										td
-										td -
-										td -0.5
-										td.text-center
-											a.btn.btn-primary.btn-sm(href='http://charts.macrospike.com/c/17607', target='_blank') Go to chart
-									tr
-										td 07:45
-										td
-											img(alt='EU', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/eu.png')
-											| /EU
-										td Interest Rate
-										td
-										td -
-										td 0
-										td
-									tr
-										td 08:30
-										td
-											img(alt='US', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/us.png')
-											| /US
-										td Core Durable Goods
-										td
-										td 0.5
-										td 0.5
-										td
-									tr
-										td 10:30
-										td
-											img(alt='US', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/us.png')
-											| /US
-										td
-											div Natural Gas Storage
-										td
-										td
-										td
-										td
-									tr.thead-inverse
-										th.text-center(id='Fri,Apr28', colspan='7') Fri, Apr 28
-									tr
-										td 04:30
-										td
-											img(alt='GB', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/gb.png')
-											| /GB
-										td GDP - 1st Reading
-										td
-										td 0.4
-										td 0.7
-										td
-									tr
-										td 06:30
-										td
-											img(alt='RU', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/ru.png')
-											| /RU
-										td
-											div Interest Rate
-										td
-										td 9.5
-										td 9.75
-										td
-									tr
-										td 08:30
-										td
-											img(alt='US', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/us.png')
-											| /US
-										td GDP - Advance
-										td
-										td 1
-										td 2.1
-										td
-									tr
-										td 08:30
-										td
-											img(alt='CA', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/ca.png')
-											| /CA
-										td GDP
-										td
-										td -
-										td 0.6
-										td
-									tr
-										td 08:30
-										td
-											img(alt='US', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/us.png')
-											| /US
-										td Employment Cost Index
-										td
-										td 0.5
-										td 0.5
-										td
-									tr
-										td 10:00
-										td
-											img(alt='US', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/us.png')
-											| /US
-										td University of Michigan Sentiment
-										td
-										td 98.5
-										td 98
-										td
+							.table-responsive
+								table#fxfxs_calendar.table.table-striped.table-bordered.table-hover
+									thead.thead-inverse
+										tr
+											th Hour
+											th Country
+											th Name
+											th Actual
+											th Exp.
+											th Prior
+											th Chart
+									tbody
+										tr.thead-inverse
+											th.text-center(id='Tue,Apr25', colspan='7') Tue, Apr 25
+										tr.event_row
+											td 10:00
+											td
+												img(alt='US', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/us.png')
+												| /US
+											td Consumer Confidence
+											td 120.3
+											td 122.5
+											td 125.6
+											td.text-center
+												a.btn.btn-primary.btn-sm(href='http://charts.macrospike.com/c/12665', target='_blank') Go to chart
+										tr.event_row
+											td 21:30
+											td
+												img(alt='AU', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/au.png')
+												| /AU
+											td CPI - Trimmed Mean
+											td 0.5
+											td 0.5
+											td 0.4
+											td.text-center
+												a.btn.btn-primary.btn-sm(href='http://charts.macrospike.com/c/12749', target='_blank') Go to chart
+										tr.thead-inverse
+											th.text-center(id='Wed,Apr26', colspan='7') Wed, Apr 26
+										tr.event_row
+											td 07:00
+											td
+												img(alt='TR', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/tr.png')
+												| /TR
+											td Interest Rate
+											td 8
+											td 8
+											td 8
+											td.text-center
+												a.btn.btn-primary.btn-sm(href='http://charts.macrospike.com/c/15433', target='_blank') Go to chart
+										tr.event_row
+											td 08:30
+											td
+												img(alt='CA', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/ca.png')
+												| /CA
+											td Core Retail Sales
+											td
+											td -0.3
+											td 1.7
+											td.text-center
+												a.btn.btn-primary.btn-sm(href='http://charts.macrospike.com/c/16258', target='_blank') Go to chart
+										tr
+											td 10:30
+											td
+												img(alt='US', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/us.png')
+												| /US
+											td DOE Crude Oil Inventories
+											td
+											td -
+											td -1034
+											td.text-center
+												a.btn.btn-primary.btn-sm(href='http://charts.macrospike.com/c/17518', target='_blank') Go to chart
+										tr.thead-inverse
+											th.text-center(id='Thu,Apr27', colspan='7') Thu, Apr 27
+										tr
+											td 03:30
+											td
+												img(alt='SE', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/se.png')
+												| /SE
+											td
+												div Interest Rate
+											td
+											td -
+											td -0.5
+											td.text-center
+												a.btn.btn-primary.btn-sm(href='http://charts.macrospike.com/c/17607', target='_blank') Go to chart
+										tr
+											td 07:45
+											td
+												img(alt='EU', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/eu.png')
+												| /EU
+											td Interest Rate
+											td
+											td -
+											td 0
+											td
+										tr
+											td 08:30
+											td
+												img(alt='US', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/us.png')
+												| /US
+											td Core Durable Goods
+											td
+											td 0.5
+											td 0.5
+											td
+										tr
+											td 10:30
+											td
+												img(alt='US', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/us.png')
+												| /US
+											td
+												div Natural Gas Storage
+											td
+											td
+											td
+											td
+										tr.thead-inverse
+											th.text-center(id='Fri,Apr28', colspan='7') Fri, Apr 28
+										tr
+											td 04:30
+											td
+												img(alt='GB', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/gb.png')
+												| /GB
+											td GDP - 1st Reading
+											td
+											td 0.4
+											td 0.7
+											td
+										tr
+											td 06:30
+											td
+												img(alt='RU', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/ru.png')
+												| /RU
+											td
+												div Interest Rate
+											td
+											td 9.5
+											td 9.75
+											td
+										tr
+											td 08:30
+											td
+												img(alt='US', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/us.png')
+												| /US
+											td GDP - Advance
+											td
+											td 1
+											td 2.1
+											td
+										tr
+											td 08:30
+											td
+												img(alt='CA', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/ca.png')
+												| /CA
+											td GDP
+											td
+											td -
+											td 0.6
+											td
+										tr
+											td 08:30
+											td
+												img(alt='US', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/us.png')
+												| /US
+											td Employment Cost Index
+											td
+											td 0.5
+											td 0.5
+											td
+										tr
+											td 10:00
+											td
+												img(alt='US', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/us.png')
+												| /US
+											td University of Michigan Sentiment
+											td
+											td 98.5
+											td 98
+											td
 							p.card-text All times are EST.

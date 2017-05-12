@@ -9,7 +9,8 @@ block append content
           while n <= 12
             -var idCurrent = n++
             article.card.mb-3
-              img.card-img.img-thumbnail.w-100(src=require('assets/img/items/' + idCurrent + '.jpg') alt='')
+              .card-block
+                img.card-img.img-thumbnail.w-100.z-depth-1(src=require('assets/img/items/' + idCurrent + '.jpg') alt='')
               .card-block
                 h4.card-title
                   a(href='blog-detail.html')
