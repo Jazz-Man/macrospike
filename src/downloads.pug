@@ -1,16 +1,15 @@
 extends common/layout
 
 block append defaultTitle
-  title Map - uPages
+  title Downloads
+
+block vars
+  - var bodyClass = 'downloads'
 
 block append content
-
-  .container-fluid
-    .row.no-gatters.full-height
-      .col-md-4.results-wrapper
-        .row.no-gatters
-          .col-sm-12.p-0
-            .results.h-100
-              h2.results-title.m-3 Search Results
-                small.results-number.text-muted 30
-              .list-group#results-content
+  section.section.view.downloads.bg-primary-darken.icon-bar.how-it-works-fox-2.py-3.full-height
+    .container.h-100
+      .row.h-100
+        .col-md-5.col-sm-12.text-white.align-self-center
+          .card.z-depth-0.transparent
+            .card-block
