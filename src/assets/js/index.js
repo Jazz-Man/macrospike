@@ -20,6 +20,7 @@ function init(e) {
 //	console.log(smoothscroll);
 	
 	require('./module/responsive');
+	require('./components/table-responsive');
 	
 	// require('./components/wpas');
 	// require('./components/profile');

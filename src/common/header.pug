@@ -20,8 +20,10 @@ header#page-header.fixed-top.zindex-sm.z-depth-1
 						+dropdownMenu('','Products')
 							+link('/fx-bolt.html','FX BOLT')(class="dropdown-item")
 							+link('/macrotrader.html','MacroTrader')(class="dropdown-item")
-					li.nav-item
-						+link('/calendar.html','Calendar')(class="nav-link")
+					li.nav-item.dropdown
+						+dropdownMenu('','Calendar')
+							+link('/calendar.html','Desktop')(class="dropdown-item")
+							+link('/calendar-mobile.html','Mobile')(class="dropdown-item")
 					li.nav-item
 						+link('/blog.html','Blog')(class="nav-link")
 					li.nav-item.dropdown

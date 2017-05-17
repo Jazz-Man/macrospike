@@ -1,0 +1,60 @@
+extends common/layout
+
+block append defaultTitle
+	title Calendar
+
+block vars
+	- var bodyClass = 'calendar'
+
+block append content
+	section.section.py-5.white
+		.container
+			.row
+				.col-sm-12
+					.card.mb-3
+						.card-header.bg-primary
+							form.form-inline
+								select.custom-select.bg-primary.text-white
+									option Tue, Apr 25
+									option Wed, Apr 26
+									option Thu, Apr 27
+									option Fri, Apr 28
+
+						.card-block
+							table.table.table-striped.table-bordered.table-hover.d-flex.table-flip.carousel.slide(id='testimonials-carousel' data-ride='carousel' data-keyboard='true')
+								thead.thead-inverse
+									tr.d-flex
+										th Hour
+										th Country
+										th Name
+										th Actual
+										th Exp.
+										th Prior
+										th Chart
+
+								tbody.d-flex.carousel-inner(role='listbox')
+									tr.carousel-item.active
+										td.text-center 10:00
+										td.text-center
+											img(alt='US' src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/us.png')
+											| /US
+										td.text-center Consumer Confidence
+										td.text-center 120.3
+										td.text-center 122.5
+										td.text-center 125.6
+										td.text-center
+											a.btn.btn-primary.btn-sm(href='http://charts.macrospike.com/c/12665' target='_blank') Go to chart
+									tr.carousel-item
+										td.text-center 21:30
+										td.text-center
+											img(alt='AU', src='https://macrospike.com/wp-content/plugins/fxfxs_calendar/flags/au.png')
+											| /AU
+										td.text-center CPI - Trimmed Mean
+										td.text-center 0.5
+										td.text-center 0.5
+										td.text-center 0.4
+										td.text-center
+											a.btn.btn-primary.btn-sm(href='http://charts.macrospike.com/c/12749', target='_blank') Go to chart
+
+						.card-footer.bg-primary-darken.text-white
+							p All times are EST.

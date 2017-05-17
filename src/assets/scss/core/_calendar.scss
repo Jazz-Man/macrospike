@@ -1,0 +1,22 @@
+.table-flip {
+  //background: none;
+  //overflow: hidden;
+  
+  //thead {
+  //  flex-shrink: 0;
+  //  //min-width: min-content;
+  //}
+  
+  //tbody {
+  //  -webkit-overflow-scrolling: touch;
+  //  //overflow-x: auto;
+  //  //overflow-y: hidden;
+  //}
+  
+  tr {
+    flex-direction: column;
+    flex-shrink: 0;
+    min-width: 100%;
+  }
+  
+}

@@ -23,6 +23,7 @@ var pages = [
 	'fx-bolt',
 	'newstrading',
 	'calendar',
+	'calendar-mobile',
 	'terms-and-conditions',
 	'how-it-works',
 	'products'
