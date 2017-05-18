@@ -3,11 +3,9 @@ body.faq {
   section.section {
     background: url("../../img/fox/FAQ.png") no-repeat fixed center bottom;
     background-size: cover;
-    height: 100vh;
     
     @include media-breakpoint-down(sm) {
       background: none;
-      height: 100%;
       
     }
     
@@ -23,11 +21,24 @@ body.faq {
       background-color: #282a2b;
     }
     
-    .card-header {
-      .card-title {
-        color: #34495e;
-        font-size: 1rem;
-        font-weight: 700;
+    [data-toggle='collapse'] {
+      
+      &:before {
+        background-color: $brand-primary;
+        color: $white;
+        content: "\00D7";
+        display: inline-block;
+        font-family: serif;
+        margin-right: .5rem;
+        padding: .3rem .6rem;
+        position: relative;
+      }
+      
+      &.collapsed {
+        
+        &:before {
+          content: "+";
+        }
       }
     }
     

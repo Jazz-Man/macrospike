@@ -2,20 +2,18 @@ extends common/layout
 
 
 mixin faq(min,max,id)
+
 	div(id=id role='tablist' aria-multiselectable='true')
 		- var n = min;
 			while n < max
 				-var idHash = n++
-				.card
-					div(id='header-' + idHash+'-'+id class="card-header" role='tab')
-						h5.card-title
-							a(data-toggle='collapse' data-parent='#' + id href='#collapse-' + idHash+'-'+id aria-expanded='true' aria-controls='collapseOne')
-
-								| Do you offer a Demo version #{idHash}?
-					div.collapse(id='collapse-' + idHash+'-'+id role='tabpanel' aria-labelledby='header-' + idHash+'-'+id)
-						.card-block
-							p.card-text.
-								#{idHash}) No. We are convinced of our offerings and have it priced very fairly. We do not think offering a demo version would be neccessary.
+				.card-block.py-1
+					h5(id='header-' + idHash + '-' + id class="card-title" role='tab')
+						a(data-toggle='collapse' class='collapsed' data-parent='#' + id href='#collapse-' + idHash + '-' + id aria-expanded='true' aria-controls='collapseOne')
+							| Do you offer a Demo version #{idHash}?
+					.collapse(id='collapse-' + idHash + '-' + id role='tabpanel' aria-labelledby='header-' + idHash + '-' + id)
+						p.card-text.
+							#{idHash}) No. We are convinced of our offerings and have it priced very fairly. We do not think offering a demo version would be neccessary.
 
 block append defaultTitle
 	title FAQ
@@ -25,60 +23,58 @@ block vars
 
 block append content
 	section.section.view.bg-1.py-5
-		.container.h-100
-			.row.h-100
-				.col-md-4.col-sm-12.mb-3
-					.card
-						.card-block
-							h4.card-title.text-uppercase FXBOLT
+		.container
+			.row
+				.col-sm-10
+					.card-deck
+						.card.mb-3
+							.card-header
+								h4.card-title.text-uppercase FXBOLT
+							+faq(1,15,'accordion')
 
-					+faq(5,7,'accordion')
-				.col-md-4.col-sm-12.mb-3
-					.card
-						.card-block
-							h4.card-title.text-uppercase MACROMANAGER
-					+faq(0,10,'MACROMANAGER')
+						.card.mb-3
+							.card-header
+								h4.card-title.text-uppercase MACROMANAGER
+							+faq(0,10,'macromanager')
 	section.section.view.py-5.bg-info
-		.container.h-100
-			.row.h-100
-				.col-md-4.col-sm-12.mb-3
-					.card
-						.card-block
-							h4.card-title.text-uppercase MACROCHARTS
-
-					+faq(1,6,'macrocharts')
-				.col-md-4.col-sm-12.mb-3
-					.card
-						.card-block
-							h4.card-title.text-uppercase EVENTS
-					+faq(0,3,'events')
+		.container
+			.row
+				.col-sm-10
+					.card-deck
+						.card.mb-3
+							.card-header
+								h4.card-title.text-uppercase MACROCHARTS
+							+faq(1,6,'macrocharts')
+						.card.mb-3
+							.card-header
+								h4.card-title.text-uppercase EVENTS
+							+faq(0,3,'events')
 
 	section.section.view.py-5.bg-primary-darken
-		.container.h-100
-			.row.h-100
-				.col-md-4.col-sm-12.mb-3
-					.card
-						.card-block
-							h4.card-title.text-uppercase BROKER & LIQUIDITY
-
-					+faq(1,6,'broker-liquidity')
-				.col-md-4.col-sm-12.mb-3
-					.card
-						.card-block
-							h4.card-title.text-uppercase STRATEGY
-					+faq(2,9,'strategy')
+		.container
+			.row
+				.col-sm-10
+					.card-deck
+						.card.mb-3
+							.card-header
+								h4.card-title.text-uppercase BROKER & LIQUIDITY
+							+faq(1,6,'broker-liquidity')
+						.card.mb-3
+							.card-header
+								h4.card-title.text-uppercase STRATEGY
+							+faq(2,9,'strategy')
 
 	section.section.view.py-5.bg-primary
-		.container.h-100
-			.row.h-100
-				.col-md-4.col-sm-12.mb-3
-					.card
-						.card-block
-							h4.card-title.text-uppercase MEMBERSHIP
+		.container
+			.row
+				.col-sm-10
+					.card-deck
+						.card.mb-3
+							.card-header
+								h4.card-title.text-uppercase MEMBERSHIP
+							+faq(5,12,'membership')
 
-					+faq(5,12,'membership')
-				.col-md-4.col-sm-12.mb-3
-					.card
-						.card-block
-							h4.card-title.text-uppercase WEBSITE & APPS
-					+faq(0,12,'website-apps')
+						.card.mb-3
+							.card-header
+								h4.card-title.text-uppercase WEBSITE & APPS
+							+faq(0,12,'website-apps')
