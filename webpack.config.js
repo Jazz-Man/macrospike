@@ -26,6 +26,8 @@ var pages = [
 	'calendar-mobile',
 	'terms-and-conditions',
 	'how-it-works',
+	'tradeplan',
+	'tradeplan-detail',
 	'products'
 ];
 

@@ -1,0 +1,41 @@
+extends common/layout
+block append defaultTitle
+	title Trade Plans
+
+block append content
+	.container.pt-4
+		+breadcrumb
+		.row
+			section.col-sm-8
+				+pageTitle('Trade Plans')
+				- var n = 1;
+					while n <= 12
+						-var idCurrent = n++
+						article.card.mb-3
+							.card-block
+								h4.card-title
+									+link('/tradeplan-detail.html','Vivamus porta orci eu turpis vulputate ornare fusce hendrerit arcu risu')
+
+							.card-block
+								p.card-text
+									| Fusce quis nulla volutpat, rhoncus ligula ut, pulvinar nisi. In dapibus urna sit amet accumsan
+									| tristique. Donec odio ligula, luctus venenatis varius id, tincidunt ac ipsum. Cras commodo,
+									| velit nec aliquam dictum, tortor velit dictum ipsum, sed ornare nunc leo nec ipsum. Vestibulum
+									| sagittis sapien vitae tristique mollis.
+
+							.card-block
+								+link('/tradeplan-detail.html','Read More')(class="btn btn-primary")
+
+				nav(aria-label='Page navigation')
+					ul.pagination.justify-content-center
+						li.page-item.current-item
+							span.page-link.page-number.page-numbers.current 1
+						li.page-item
+							a.page-link.page-link.page-number.page-numbers(href='#') 2
+						li.page-item
+							a.page-link.next(href='#' aria-label='Next')
+								span(aria-hidden='true') »
+								span.sr-only Next
+
+			aside.col-sm-4
+				include common/blog-sidebar
