@@ -7,121 +7,122 @@ block append content
 	.container.pt-4
 		+breadcrumb
 		.row
-			.col-sm-8.white.py-3
-				.card.card-inverse.col-5.hm-black-light.mx-auto.transparent
-					img.card-img(alt='GB' src='https://macrospike.com/wp-content/uploads/country-flags-master/png1000px/us.png')
-					.card-img-overlay.mask
+			section.col-sm-8.white.py-3
+				.row.no-gutters
+					.card.card-inverse.col-sm-5.hm-black-light.mx-auto.transparent
+						img.card-img(alt='GB' src='https://macrospike.com/wp-content/uploads/country-flags-master/png1000px/us.png')
+						.card-img-overlay.mask
+							.card-block
+								h4.card-title.font-weight-bold.text-center.text-white
+									| GB Industrial Production
+
+					article.card.col-sm-12.mb-5.transparent.z-depth-0
 						.card-block
-							h4.card-title.font-weight-bold.text-center.text-white
-								| GB Industrial Production
+							table.table.table-striped.table-bordered.table-hover
+								thead.thead-inverse
+									tr
+										th.text-center Date
+										th.text-center Time
+										th.text-center Instrument
+								tbody
+									tr
+										td.text-center 08.06.2017
+										td.text-center 10:30
+										td.text-center GBP/USD
 
-				article.card.mb-5.transparent.z-depth-0
-					.card-block
-						table.table.table-striped.table-bordered.table-hover
-							thead.thead-inverse
-								tr
-									th.text-center Date
-									th.text-center Time
-									th.text-center Instrument
-							tbody
-								tr
-									td.text-center 08.06.2017
-									td.text-center 10:30
-									td.text-center GBP/USD
-
-					.card-block
-						table.table.table-striped.table-bordered.table-hover
-							tbody
-								td.text-center.font-weight-bold Signal Send
-								td.text-center Buy1
+						.card-block
+							table.table.table-striped.table-bordered.table-hover
+								tbody
+									td.text-center.font-weight-bold Signal Send
+									td.text-center Buy1
 
 
-					.card-block
-						table.table.table-striped.table-bordered.table-hover
-							thead.thead-inverse
-								tr
-									th.text-center Trigger 1
-									th.text-center Alt Trigger 1
-									th.text-center Trigger 2
-									th.text-center Alt Trigger 2
-									th.text-center Trigger 3
-									th.text-center Alt Trigger 3
-							tbody
-								tr
-									td.text-center 1
-									td.text-center 2
-									td.text-center 3
-									td.text-center 4
-									td.text-center 5
-									td.text-center 6
+						.card-block
+							table.table.table-striped.table-bordered.table-hover
+								thead.thead-inverse
+									tr
+										th.text-center Trigger 1
+										th.text-center Alt Trigger 1
+										th.text-center Trigger 2
+										th.text-center Alt Trigger 2
+										th.text-center Trigger 3
+										th.text-center Alt Trigger 3
+								tbody
+									tr
+										td.text-center 1
+										td.text-center 2
+										td.text-center 3
+										td.text-center 4
+										td.text-center 5
+										td.text-center 6
 
-					.card-block
-						table.table.table-striped.table-bordered.table-hover
-							thead.thead-inverse
-								tr
-									th.text-center Trigger 1 %
-									th.text-center Alt Trigger 1 %
-									th.text-center Trigger 2 %
-									th.text-center Alt Trigger 2 %
-									th.text-center Trigger 3 %
-									th.text-center Alt Trigger 3 %
-							tbody
-								tr
-									td.text-center 1
-									td.text-center 2
-									td.text-center 3
-									td.text-center 4
-									td.text-center 5
-									td.text-center 6
+						.card-block
+							table.table.table-striped.table-bordered.table-hover
+								thead.thead-inverse
+									tr
+										th.text-center Trigger 1 %
+										th.text-center Alt Trigger 1 %
+										th.text-center Trigger 2 %
+										th.text-center Alt Trigger 2 %
+										th.text-center Trigger 3 %
+										th.text-center Alt Trigger 3 %
+								tbody
+									tr
+										td.text-center 1
+										td.text-center 2
+										td.text-center 3
+										td.text-center 4
+										td.text-center 5
+										td.text-center 6
 
-					.card-block
-						table.table.table-striped.table-bordered.table-hover
-							thead.thead-inverse
-								tr
-									th.text-center Performance
-									th.text-center Risk Level
-									th.text-center Delay
-							tbody
-								tr
-									td.text-center 1
-									td.text-center 2
-									td.text-center Unlikely
+						.card-block
+							table.table.table-striped.table-bordered.table-hover
+								thead.thead-inverse
+									tr
+										th.text-center Performance
+										th.text-center Risk Level
+										th.text-center Delay
+								tbody
+									tr
+										td.text-center 1
+										td.text-center 2
+										td.text-center Unlikely
 
-					.card-block
-						h4.card-title.text-uppercase addiitional remarks
-						p
-							| Phasellus metus ipsum, sollicitudin lacinia turpis in, pellentesque pulvinar diam.
-							| Cras ultricies augue sapien, aliquam hendrerit mi suscipit at. Suspendisse vulputate felis eget
-							| felis convallis fermentum et eu nulla. Donec sagittis sit amet erat non eleifend. Mauris at convallis
-							| magna. Quisque pellentesque id mauris vitae placerat. Mauris facilisis odio nec metus cursus commodo.
-							| Integer vel libero nunc. Donec ac lorem commodo, laoreet elit eget, tempus ante. Quisque eu nunc blandit
-							| erat rutrum feugiat ac sed arcu. In nisi risus, molestie a sem adipiscing, porta volutpat velit.
-							| Pellentesque nec felis sit amet nunc porta tincidunt sit amet et justo.
+						.card-block
+							h4.card-title.text-uppercase addiitional remarks
+							p
+								| Phasellus metus ipsum, sollicitudin lacinia turpis in, pellentesque pulvinar diam.
+								| Cras ultricies augue sapien, aliquam hendrerit mi suscipit at. Suspendisse vulputate felis eget
+								| felis convallis fermentum et eu nulla. Donec sagittis sit amet erat non eleifend. Mauris at convallis
+								| magna. Quisque pellentesque id mauris vitae placerat. Mauris facilisis odio nec metus cursus commodo.
+								| Integer vel libero nunc. Donec ac lorem commodo, laoreet elit eget, tempus ante. Quisque eu nunc blandit
+								| erat rutrum feugiat ac sed arcu. In nisi risus, molestie a sem adipiscing, porta volutpat velit.
+								| Pellentesque nec felis sit amet nunc porta tincidunt sit amet et justo.
 
-					.card-block
-						h4.card-title.text-uppercase past trades
-						table.table.table-striped.table-bordered.table-hover
-							thead.thead-inverse
-								tr
-									th.text-center Date
-									th.text-center Signal
-									th.text-center Link
-									th.text-center Chart
-							tbody
-								tr
-									td.text-center 18.12.16
-									td.text-center Sell 2
-									td.text-center
-										a.btn.btn-primary.btn-sm(href='https://macrospike.com/uncategorized/gb-cpi-yy-17-01-2017/') Link
-									td.text-center
-										+link('/#','Open Chart')(class="btn btn-success btn-sm")
-								tr
-									td.text-center 16.11.16
-									td.text-center No Trade
-									td.text-center
-										a.btn.btn-primary.btn-sm(href='https://macrospike.com/uncategorized/gb-cpi-yy-17-01-2017/') Link
-									td.text-center
-										+link('/#','Open Chart')(class="btn btn-success btn-sm")
+						.card-block
+							h4.card-title.text-uppercase past trades
+							table.table.table-striped.table-bordered.table-hover
+								thead.thead-inverse
+									tr
+										th.text-center Date
+										th.text-center Signal
+										th.text-center Link
+										th.text-center Chart
+								tbody
+									tr
+										td.text-center 18.12.16
+										td.text-center Sell 2
+										td.text-center
+											a.btn.btn-primary.btn-sm(href='https://macrospike.com/uncategorized/gb-cpi-yy-17-01-2017/') Link
+										td.text-center
+											+link('/#','Open Chart')(class="btn btn-success btn-sm")
+									tr
+										td.text-center 16.11.16
+										td.text-center No Trade
+										td.text-center
+											a.btn.btn-primary.btn-sm(href='https://macrospike.com/uncategorized/gb-cpi-yy-17-01-2017/') Link
+										td.text-center
+											+link('/#','Open Chart')(class="btn btn-success btn-sm")
 
 
 			.col-sm-4
