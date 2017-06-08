@@ -196,7 +196,7 @@ $zindex: (
 //
 // Settings for the `<body>` element.
 
-$body-bg: $white !default;
+$body-bg: map-get($md-grey,'lighten-4') !default;
 $body-color: #5d5d5d !default;
 //$body-color: $gray-dark !default;
 $inverse-bg: $gray-dark !default;
