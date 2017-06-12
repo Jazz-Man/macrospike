@@ -9,6 +9,18 @@ jQuery.ajax({
 		'cache-control': 'no-cache'
 	}
 }).done(function (response) {
+	
+	/* response:
+	* {
+	 "token": "bla-bla",
+	 "user_email": "restapi@macrospike.com",
+	 "user_nicename": "restapi",
+	 "user_display_name": "restapi"
+	 }
+	*
+	* */
+
+
 	localStorage.setItem('token', response.token);
 	console.log(response);
 });
@@ -28,4 +40,16 @@ jQuery.ajax({
 	}
 }).done(function (response) {
 	console.log(response);
+	
+	/* response:
+	*
+	* {
+	 "code": "jwt_auth_valid_token",
+	 "data": {
+	 "status": 200
+	 }
+	 }
+	*
+	*
+	* */
 });
