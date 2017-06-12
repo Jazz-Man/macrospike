@@ -1,5 +1,4 @@
 var reqwest = require('reqwest');
-var Base64 = require('js-base64').Base64;
 
 function RestClient(host, options) {
 	this.host = host;
@@ -15,9 +14,6 @@ RestClient.prototype.conf = function (options) {
 			trailing:           '',
 			shortcut:           true,
 			contentType:        'application/json',
-//			'application/x-www-form-urlencoded': {
-//				encode: encodeUrl
-//			},
 			'application/json': {
 				encode: JSON.stringify,
 				decode: JSON.parse

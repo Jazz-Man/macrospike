@@ -1,11 +1,10 @@
 var $$ = require('domtastic');
-var Parallax = require('parallax-js/source/parallax');
 //require('./module/viewport');
 var Hooks = require('./module/hooks');
 // var spop = require('./module/spop');
 var doc = $$(document);
 
-// require('./module/ajaxloader')();
+require('./module/ajaxloader')();
 
 doc.on('complete', init);
 
@@ -13,14 +12,14 @@ doc.ready(init);
 
 function init(e) {
 	
-	// require('./module/auch');
+	require('./module/auch');
 	
 //	var smoothscroll = require('./module/smoothscroll');
 	
 //	console.log(smoothscroll);
 	
 	require('./module/responsive');
-	require('./components/table-responsive');
+	// require('./components/table-responsive');
 	
 	// require('./components/wpas');
 	// require('./components/profile');

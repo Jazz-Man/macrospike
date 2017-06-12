@@ -16,8 +16,7 @@ block append content
           .card.bg-primary
             .header.p-3
               img.card-img.w-25.mx-auto(src=require('assets/img/logos/macrotrader-logo_white_simple.svg'))
-            .card-block
-              form#login-form
+            .card-block#login-form
                 .form-group.input-group.input-group-lg
                   .input-group-addon
                     i.fa.fa-envelope.prefix
@@ -33,4 +32,4 @@ block append content
                     span.custom-control-indicator.bg-primary-darken
                     span.custom-control-description.text-white Check this custom checkbox
                 .form-group
-                  button.btn.btn-block.btn-success.mt-3(type='submit') Sign In
+                  button.btn.btn-block.btn-success.mt-3#sign-in(type='submit') Sign In
