@@ -132,9 +132,7 @@ function getPlugins() {
 module.exports = {
 	context: path.join(__dirname, 'src'),
 	entry: {
-		vendor: [
-			'expose?window.bsn!bootstrap.native'
-		],
+		vendor: './assets/js/vendor',
 		index: [
 			'./assets/js',
 			'./assets/scss'
@@ -173,6 +171,7 @@ module.exports = {
 		],
 		alias: {
 			'bootstrap.native': 'bootstrap.native/dist/bootstrap-native-v4',
+			'domtastic': 'domtastic/dist/domtastic'
 		}
 	},
 	resolveLoader: {
