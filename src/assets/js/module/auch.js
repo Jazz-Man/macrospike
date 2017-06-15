@@ -16,16 +16,17 @@ if (loginForm.length) {
 	signInBtn.on('click', function (e) {
 		e.preventDefault();
 		var username = loginForm.find('#username');
-		var password = loginForm.find('#password');
+		var password = loginForm.find('#passwd');
 
 		jwt.token.post({
 			username: Base64.encode(username.val()),
 			password: Base64.encode(password.val())
 		}).then(function (res) {
+			console.log(res);
 			localStorage.setItem('token', res.token);
-			jwt.validate.post().then(function (res) {
-				console.log(res);
-			})
+			// jwt.validate.post().then(function (res) {
+			// 	console.log(res);
+			// })
 			
 		}).catch(function (e) {
 			console.error( 'Error', e );
