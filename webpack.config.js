@@ -67,7 +67,6 @@ var extractSCSS = new ExtractTextPlugin({
 });
 
 
-
 function jadePage(name) {
 	return new HtmlWebpackPlugin({
 		filename: name + '.html',
@@ -120,11 +119,11 @@ function getPlugins() {
 		plugins.push(jadePage(e))
 	});
 	
-	// if (isProd) {
-	// 	plugins.push(
-	// 		new webpack.optimize.UglifyJsPlugin(uglifyOption)
-	// 	);
-	// }
+	if (isProd) {
+		plugins.push(
+			new webpack.optimize.UglifyJsPlugin(uglifyOption)
+		);
+	}
 	
 	return plugins;
 }
@@ -138,13 +137,13 @@ module.exports = {
 			'./assets/scss'
 		]
 	},
-    devtool: 'source-map',
+	devtool: 'source-map',
 	output: {
 		filename: 'js/[name].js',
 		chunkFilename: "js/[id]-[name].chunk.js",
 		path: outputPath,
 		pathinfo: true,
-        sourceMapFilename: '[file].map'
+		sourceMapFilename: '[file].map'
 	},
 	
 	target: 'web',
@@ -200,7 +199,14 @@ module.exports = {
 					fallback: 'style',
 					use: [
 						{
-							loader: 'css'
+							loader: 'css',
+							options: {
+								minimize: {
+									discardComments: {
+										removeAll: true
+									}
+								}
+							}
 						},
 						{
 							loader: 'autoprefixer'
@@ -222,17 +228,17 @@ module.exports = {
 				})
 			},
 			{
-                test: /assets\/fonts\/\.(woff(2)?)(\?[a-z0-9=&.]+)?$/,
-                use: [
-                    {
-                    	loader: 'url',
-                    	options: {
-                           limit: '10000',
-                            mimetype:'application/font-woff',
-                           name: '[path][name].[ext]'
-                    	}
-                    }
-                ]
+				test: /assets\/fonts\/\.(woff(2)?)(\?[a-z0-9=&.]+)?$/,
+				use: [
+					{
+						loader: 'url',
+						options: {
+							limit: '10000',
+							mimetype: 'application/font-woff',
+							name: '[path][name].[ext]'
+						}
+					}
+				]
 			},
 			{
 				test: /assets\/fonts\/\.(ttf|eot|svg?)(\?[a-z0-9=&.]+)?$/,
@@ -240,7 +246,6 @@ module.exports = {
 					{
 						loader: 'file',
 						options: {
-							// publicPath: '../',
 							name: '[path][name].[ext]'
 						}
 					}
@@ -248,16 +253,12 @@ module.exports = {
 			},
 			{
 				test: /\.(png|gif|jpg|jpeg|svg|webm|mp4|ogv)$/,
-                exclude: /assets\/fonts/,
+				exclude: /assets\/fonts/,
 				use: [
 					{
 						loader: 'file',
 						options: {
 							publicPath: '../',
-                            // useRelativePath:true,
-                            // outputPath: '/',
-                            // publicPath: '',
-                            // outputPath: 'static/fonts/',
 							name: '[path][name].[ext]'
 						}
 					}
@@ -267,7 +268,7 @@ module.exports = {
 	},
 	
 	plugins: getPlugins(),
-
+	
 	devServer: {
 		contentBase: outputPath,
 		port: 3000

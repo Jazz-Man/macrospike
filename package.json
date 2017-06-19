@@ -8,7 +8,7 @@
     "wds-prod": "NODE_ENV=production webpack-dev-server --hot --inline --devtool eval --history-api-fallback --watch --watch-content-base --colors",
     "webpack-watch": "webpack --watch --display-error-details",
     "webpack-test": "webpack --display-error-details",
-    "webpack-prod": "webpack --watch -p"
+    "webpack-prod": "webpack -p"
   },
   "author": "V.Senkiv <nika.senkiv@gmail.com>",
   "license": "ISC",
