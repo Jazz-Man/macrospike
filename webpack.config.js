@@ -1,69 +1,69 @@
-var path = require('path');
-var webpack = require('webpack');
-var forEach = require('lodash/forEach');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const forEach = require('lodash/forEach');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var pages = [
-	'404',
-	'blog',
-	'blog-detail',
-	'contact',
-	'detail',
-	'detail-2',
-	'index',
-	'downloads',
-	'submit',
-	'account',
-	'macrotrader',
-	'faq',
-	'login',
-	'register',
-	'reset-password',
-	'fx-bolt',
-	'newstrading',
-	'calendar',
-	'calendar-mobile',
-	'terms-and-conditions',
-	'how-it-works',
-	'tradeplan',
-	'tradeplan-detail',
-	'products'
+const pages = [
+    '404',
+    'blog',
+    'blog-detail',
+    'contact',
+    'detail',
+    'detail-2',
+    'index',
+    'downloads',
+    'submit',
+    'account',
+    'macrotrader',
+    'faq',
+    'login',
+    'register',
+    'reset-password',
+    'fx-bolt',
+    'newstrading',
+    'calendar',
+    'calendar-mobile',
+    'terms-and-conditions',
+    'how-it-works',
+    'tradeplan',
+    'tradeplan-detail',
+    'products'
 ];
 
-var isProd = process.env.NODE_ENV === 'production' ? true : false;
+const isProd = process.env.NODE_ENV === 'production' ? true : false;
 
-var outputPath = path.join(__dirname, 'dist');
+const outputPath = path.join(__dirname, 'dist');
 
-var uglifyOption = {
-	mangle: true,
-	output: {
-		comments: false
-	},
-	compress: {
-		dead_code: true,
-		drop_debugger: true,
-		unsafe: false,
-		conditionals: true,
-		comparisons: true,
-		evaluate: true,
-		booleans: true,
-		loops: true,
-		unused: true,
-		hoist_funs: true,
-		hoist_vars: true,
-		if_return: true,
-		join_vars: true,
-		cascade: true,
-		side_effects: true,
-		warnings: false
-	}
+const uglifyOption = {
+    mangle: true,
+    output: {
+        comments: false
+    },
+    compress: {
+        dead_code: true,
+        drop_debugger: true,
+        unsafe: false,
+        conditionals: true,
+        comparisons: true,
+        evaluate: true,
+        booleans: true,
+        loops: true,
+        unused: true,
+        hoist_funs: true,
+        hoist_vars: true,
+        if_return: true,
+        join_vars: true,
+        cascade: true,
+        side_effects: true,
+        warnings: false
+    }
 };
 
-var extractSCSS = new ExtractTextPlugin({
-	filename: 'css/[name].css',
-	disable: false,
-	allChunks: true
+const extractSCSS = new ExtractTextPlugin({
+    filename: 'css/[name].css',
+    disable: false,
+    allChunks: true
 });
 
 
@@ -98,9 +98,9 @@ function jadePage(name) {
 }
 
 function getPlugins() {
-	var plugins = [];
-	
-	plugins.push(
+    const plugins = [];
+
+    plugins.push(
 		new webpack.NoEmitOnErrorsPlugin(),
 		new webpack.DefinePlugin({
 			'process.env': {
