@@ -76,7 +76,7 @@ function jadePage(name) {
 		favicon: false,
 		template: '!!pug!./src/' + name + '.pug',
 		inject: false,
-		homePage: "http://localhost:3000",
+		homePage: "",
 		injectExtras: {
 			head: [
 				"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
@@ -128,6 +128,8 @@ function getPlugins() {
 	return plugins;
 }
 
+const _publicPath = isProd? '/assets/': '/'
+
 module.exports = {
 	context: path.join(__dirname, 'src'),
 	entry: {
@@ -142,6 +144,7 @@ module.exports = {
 		filename: 'js/[name].js',
 		chunkFilename: "js/[id]-[name].chunk.js",
 		path: outputPath,
+		publicPath: _publicPath,
 		pathinfo: true,
 		sourceMapFilename: '[file].map'
 	},
