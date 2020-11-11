@@ -10,7 +10,7 @@
     "webpack-test": "webpack --display-error-details",
     "build": "webpack -p"
   },
-  "author": "Vasyl Sokolyk <csokolyk@gmail.com>",
+  "author": "Vasyl Sokolyk <vsokolyk@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "bootstrap.native": "^2.0.10",
